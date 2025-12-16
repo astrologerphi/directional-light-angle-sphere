@@ -1,0 +1,24 @@
+{
+  "name": "directional-light-angle-sphere",
+  "version": "1.0.0",
+  "description": "Optional.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "@webgpu/types": "^0.1.68",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.0"
+  }
+}
