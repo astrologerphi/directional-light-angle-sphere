@@ -1,12 +1,19 @@
 {
   "name": "directional-light-angle-sphere",
   "version": "1.0.0",
-  "description": "Optional.",
-  "main": "index.js",
+  "description": "Visualize periodic change of directional light on a sphere using WebGPU",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
+  "keywords": [
+    "webgpu",
+    "react",
+    "typescript",
+    "visualization"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
