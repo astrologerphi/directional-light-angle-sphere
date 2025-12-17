@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Directional Light Angle Sphere</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./styles/main.css" />
+    </head>
+    <body>
+        <div class="app">
+            <header class="hero">
+                <div class="hero__copy">
+                    <p class="eyebrow">WebGPU Figure-8 Demo</p>
+                    <h1>Directional Light Angle Sphere</h1>
+                    <p class="subtitle">
+                        A lightweight visualization of a drifting light vector on a translucent sphere.
+                    </p>
+                </div>
+                <div class="hero__actions">
+                    <button id="toggleButton" class="primary" disabled>Loading...</button>
+                </div>
+            </header>
+
+            <main class="stage">
+                <canvas id="webgpuCanvas" aria-label="Directional light visualization" role="img"></canvas>
+                <div id="statusMessage" class="status"></div>
+            </main>
+
+            <section class="details">
+                <div>
+                    <h2>What you are seeing</h2>
+                    <p>
+                        The direction of a virtual light source drifts across the sphere following a lemniscate
+                        (figure-8) path. A glowing head and fading trail help illustrate recency.
+                    </p>
+                </div>
+                <div>
+                    <h3>Controls</h3>
+                    <p>
+                        Use the toggle button to pause or resume the animation. On unsupported browsers a compatibility
+                        notice appears instead of the canvas.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>

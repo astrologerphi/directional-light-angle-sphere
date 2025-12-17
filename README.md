@@ -1,104 +1,73 @@
 # Directional Light Angle Sphere
 
-A web application that visualizes the periodic change of directional light direction on a 3D sphere using WebGPU.
+A TypeScript + WebGPU visualization that shows how a directional light vector drifts across a translucent sphere following a lemniscate (figure-eight) path.
 
 ![App Screenshot](https://github.com/user-attachments/assets/23063659-04c8-43fe-b3e1-3daa03771fb4)
 
 ## Features
 
-- **Translucent Sphere**: A 3D sphere with semi-transparent material that allows viewing both the interior and exterior
-- **Scale Markers**: Latitude and longitude lines displayed on the sphere surface for spatial reference
-- **Directional Light Visualization**: A line connecting the center of the sphere to the surface, representing the light direction
-- **Glowing Dot**: A glowing particle at the point where the light direction intersects the sphere surface
-- **Animated Trail**: The light direction moves along a figure-8 path (lemniscate), leaving a trail that gradually fades over time
-- **Demo Data**: Pre-configured periodic animation showing smooth light direction changes
-- **Play/Pause Control**: Interactive control to pause and resume the animation
-
-## Technologies
-
-- **React**: UI framework
-- **TypeScript**: Type-safe development
-- **WebGPU**: Modern GPU API for high-performance 3D graphics
-- **Vite**: Fast build tool and development server
+- **Translucent sphere** keeps the fading trail visible inside and out.
+- **Scale markers** (latitude/longitude arcs) anchor the viewer on the sphere.
+- **Procedural lemniscate** data built on the fly with spherical linear interpolation.
+- **Glowing head + ribbon trail** emphasize the current direction and its history.
+- **Play/Pause control** without reloading the page.
 
 ## Requirements
 
-WebGPU is required to run this application. It is currently supported in:
+- Node.js 18+ (for building with `tsx`/esbuild).
+- A browser with WebGPU enabled (Chrome/Edge 113+, Safari 18+ Technology Preview, Firefox Nightly with `dom.webgpu.enabled`).
 
-- **Chrome 113+** (stable)
-- **Edge 113+** (stable)
-- **Safari 18+** (experimental, may need to be enabled in settings)
-- **Firefox Nightly** (experimental, behind a flag)
+Safari WebGPU flag: `Settings -> Advanced -> Feature Flags -> WebGPU`.
 
-### Enabling WebGPU
-
-- **Chrome/Edge**: WebGPU is enabled by default in version 113 and later
-- **Safari**: Go to Safari > Settings > Advanced > Feature Flags and enable WebGPU
-- **Firefox**: Navigate to `about:config` and set `dom.webgpu.enabled` to `true`
-
-## Installation
+## Getting Started
 
 ```bash
+git clone https://github.com/astrologerphi/directional-light-angle-sphere.git
+cd directional-light-angle-sphere
 npm install
-```
-
-## Development
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-The application will be available at `http://localhost:5173/`
-
-## Build
-
-Build for production:
-
-```bash
 npm run build
+npx serve dist   # or use any static file server
 ```
 
-The built files will be in the `dist/` directory.
-
-## Preview Production Build
-
-Preview the production build:
-
-```bash
-npm run preview
-```
+Then open the printed URL (defaults to `http://localhost:3000`). You can also open `dist/index.html` directly if your browser allows local file access to WebGPU.
 
 ## Project Structure
 
 ```
 src/
-├── components/
-│   ├── WebGPUVisualization.tsx    # Main WebGPU rendering component
-│   └── WebGPUVisualization.css    # Component styles
-├── utils/
-│   ├── demoData.ts                # Demo animation data generator
-│   ├── geometry.ts                # 3D geometry utilities (sphere, scale lines)
-│   └── shaders.ts                 # WebGPU shader code (WGSL)
-├── App.tsx                        # Main application component
-├── App.css                        # Application styles
-├── main.tsx                       # Application entry point
-└── index.css                      # Global styles
+	index.html               # Source HTML template
+	main.ts                  # Entry point that wires DOM + WebGPU controller
+	styles/main.css          # Layout and typography
+	webgpu/
+		demo-data.ts           # Lemniscate samples + SLERP helper
+		geometry.ts            # Sphere mesh, scale rings, matrix math
+		shaders.ts             # WGSL shader sources
+		types.ts               # Shared vector + light interfaces
+		visualization.ts       # Core WebGPU pipelines + render loop
+scripts/
+	build.ts                 # tsx-driven build script (esbuild + static copy)
+dist/                      # Generated output (ignored by git)
 ```
+
+## Build Pipeline
+
+- **TypeScript** provides type safety for the rendering pipeline and DOM logic.
+- **tsx** executes `scripts/build.ts`, which bundles `src/main.ts` with esbuild and copies the HTML/CSS into `dist/`.
+- **esbuild** outputs a single ESM bundle (`dist/main.js`) alongside the original static assets.
+
+### NPM Scripts
+
+| Command          | Description                                   |
+|------------------|-----------------------------------------------|
+| `npm run build`  | Cleans `dist/`, bundles TypeScript, copies UI. |
+| `npm run check`  | Runs `tsc --noEmit` for type checking.         |
 
 ## How It Works
 
-1. **Sphere Geometry**: Generated programmatically with vertices, normals, and indices for triangle rendering
-2. **Scale Lines**: Latitude and longitude lines created as line strips for spatial reference
-3. **Light Direction**: Interpolated smoothly between predefined points following a figure-8 pattern
-4. **Trail Effect**: Stores recent light positions and renders them with age-based opacity fading
-5. **Glowing Dot**: Billboard quad rendered at the light direction point with radial gradient shader
-6. **Animation Loop**: Uses `requestAnimationFrame` for smooth 60fps rendering
-
-## Demo Data
-
-The application uses a procedurally generated figure-8 pattern (lemniscate) on the sphere surface. The light direction smoothly interpolates between 200 points over a 20-second cycle using spherical linear interpolation (slerp) for natural motion.
+1. `main.ts` verifies WebGPU support, wires the play/pause control, and boots the visualization.
+2. `visualization.ts` creates geometry buffers, pipelines, and per-frame uniforms, then animates a light vector along the generated lemniscate.
+3. The glowing head and ribbon trail are updated every frame by streaming fresh vertex data to GPU buffers.
+4. Static assets (HTML/CSS) remain framework-free; everything else is bundled through the TypeScript build.
 
 ## License
 
