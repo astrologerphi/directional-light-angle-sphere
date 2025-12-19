@@ -5,7 +5,7 @@ import {
     createViewMatrix,
     multiplyMatrices,
 } from './geometry';
-import { generateDemoData, interpolateDirection } from './demo-data';
+import { generateDemoData, interpolateDirection } from './direction-data';
 import {
     dotFragmentShader,
     dotVertexShader,
@@ -18,9 +18,9 @@ import {
     trailVertexShader,
 } from '../shaders/_index';
 
-const dotSize = 0.08;
-const maxTrailPoints = 120;
-const trailFadeTime = 3200;
+const dotSize = 0.1;
+const maxTrailPoints = 3600;
+const trailFadeTime = 6400;
 
 export interface VisualizationController {
     pause(): void;
@@ -50,6 +50,7 @@ export async function initWebGPUVisualization(
 
     const presentationFormat = navigator.gpu.getPreferredCanvasFormat();
     const demoData = generateDemoData();
+    console.log(demoData);
     const cycleDuration = demoData[demoData.length - 1]?.time ?? 0;
     if (cycleDuration <= 0) {
         throw new Error('Demo data is empty.');
@@ -384,7 +385,8 @@ export async function initWebGPUVisualization(
 
         const aspect = canvas.width / canvas.height;
         const projectionMatrix = createProjectionMatrix(Math.PI / 4, aspect, 0.1, 100);
-        const viewMatrix = createViewMatrix([0, 0, 3.5], [0, 0, 0], [0, 1, 0]);
+        // view from top looking down
+        const viewMatrix = createViewMatrix([0, 3, 0], [0, 0, 0], [0, 0, 1]);
         const mvpMatrix = new Float32Array(16);
         multiplyMatrices(mvpMatrix, projectionMatrix, viewMatrix);
 

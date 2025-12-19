@@ -19,3 +19,18 @@ interface TrailPoint {
     position: Vec3;
     timestamp: number;
 }
+
+// prettier-ignore
+interface RadDirection {
+    vertical: number;   // -1/2 * pi <= vertical < 0
+    horizontal: number; // -3/4 * pi < horizontal < 1/4 * pi
+}
+
+interface RadDirectionsWithTime {
+    [time: number]: RadDirection; // 0 <= time < 24
+}
+
+interface RadPoint {
+    timestamp: number; // 0 <= timestamp < 24
+    direction: RadDirection;
+}
