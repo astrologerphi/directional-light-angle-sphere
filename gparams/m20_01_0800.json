@@ -1,0 +1,253 @@
+{
+  "magic": "filt",
+  "game": 5,
+  "gameName": "Sekiro",
+  "unk0D": true,
+  "unk14": 0,
+  "unk50": 24,
+  "groups": [
+    {
+      "name1": "LightSet ParamEditor",
+      "name2": "LightSet",
+      "params": []
+    },
+    {
+      "name1": "SSAO Editor",
+      "name2": "SSAO ",
+      "params": []
+    },
+    {
+      "name1": "Setting Info[Yebis]",
+      "name2": "Setting Info",
+      "params": []
+    },
+    {
+      "name1": "Tone Map[Yebis]",
+      "name2": "Tone Map",
+      "params": []
+    },
+    {
+      "name1": "Bloom[Yebis]",
+      "name2": "Bloom",
+      "params": []
+    },
+    {
+      "name1": "LightShaft[Yebis]",
+      "name2": "LightShaft",
+      "params": []
+    },
+    {
+      "name1": "Anti-Alias-Editor",
+      "name2": "Anti-Alias",
+      "params": []
+    },
+    {
+      "name1": "MotionBlur-Editor[Yebis]",
+      "name2": "MotionBlur",
+      "params": []
+    },
+    {
+      "name1": "FurBlur-Editor",
+      "name2": "FurBlur",
+      "params": []
+    },
+    {
+      "name1": "FeedBackBlur-Editor[Yebis]",
+      "name2": "FeedBackBlur",
+      "params": []
+    },
+    {
+      "name1": "ColorGrading[Yebis]",
+      "name2": "ColorGrading",
+      "params": []
+    },
+    {
+      "name1": "ShadowParam ParamEditor",
+      "name2": "ShadowParam",
+      "params": []
+    },
+    {
+      "name1": "AboveShadow ParamEditor",
+      "name2": "AboveShadow",
+      "params": []
+    },
+    {
+      "name1": "WaterInteraction-Editor",
+      "name2": "WaterInteraction Simulation",
+      "params": []
+    },
+    {
+      "name1": "AOFields - Editor",
+      "name2": "AOFields",
+      "params": []
+    },
+    {
+      "name1": "AOFields Model - Editor",
+      "name2": "AOFields Model",
+      "params": []
+    },
+    {
+      "name1": "SeaWave:Editor",
+      "name2": "SeaWave ",
+      "params": []
+    },
+    {
+      "name1": "Glow Filter-Editor",
+      "name2": "Glow Filter ",
+      "params": []
+    },
+    {
+      "name1": "[GS]Lens Simulation",
+      "name2": "Lens Simulation",
+      "params": []
+    },
+    {
+      "name1": "Cloud Shadow:Editor",
+      "name2": "Cloud Shadow ",
+      "params": []
+    },
+    {
+      "name1": "Wet ParamEditor",
+      "name2": "Wet",
+      "params": []
+    },
+    {
+      "name1": "SSR ParamEditor",
+      "name2": "SSR",
+      "params": []
+    },
+    {
+      "name1": "VolumetricFog ParamEditor",
+      "name2": "VolumetricFog",
+      "params": []
+    },
+    {
+      "name1": "FogVolume ParamEditor",
+      "name2": "FogVolume",
+      "params": []
+    },
+    {
+      "name1": "EnvironmentConfig ParamEditor",
+      "name2": "EnvironmentConfig",
+      "params": [
+        {
+          "name1": "EnvironmentConfig EnvMapColorConvert Hue",
+          "name2": "Hue",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "EnvironmentConfig EnvMapColorConvert Saturate",
+          "name2": "Saturate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "EnvironmentConfig EnvMapColorConvert Shift",
+          "name2": "Shift",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "EnvironmentConfig EnvMapColorConvert Scale",
+          "name2": "Scale",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.784314,
+                "y": 0.784314,
+                "z": 0.784314,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.313725,
+                "y": 0.313725,
+                "z": 0.313725,
+                "w": 1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.047059,
+                "y": 0.047059,
+                "z": 0.062745,
+                "w": 1
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.047059,
+                "y": 0.047059,
+                "z": 0.062745,
+                "w": 1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.047059,
+                "y": 0.047059,
+                "z": 0.062745,
+                "w": 1
+              },
+              "unkFloat": 22.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "RayTracing ParamEditor",
+      "name2": "RayTracing",
+      "params": []
+    }
+  ]
+}

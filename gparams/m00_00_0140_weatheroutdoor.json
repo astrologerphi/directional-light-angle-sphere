@@ -1,0 +1,2466 @@
+{
+  "magic": "filt",
+  "game": 5,
+  "gameName": "Sekiro",
+  "unk0D": true,
+  "unk14": 0,
+  "unk50": 24,
+  "groups": [
+    {
+      "name1": "LightSet ParamEditor",
+      "name2": "LightSet",
+      "params": []
+    },
+    {
+      "name1": "SSAO Editor",
+      "name2": "SSAO ",
+      "params": []
+    },
+    {
+      "name1": "Setting Info[Yebis]",
+      "name2": "Setting Info",
+      "params": []
+    },
+    {
+      "name1": "Tone Map[Yebis]",
+      "name2": "Tone Map",
+      "params": [
+        {
+          "name1": "GS Presents - ToneMap-Exposure",
+          "name2": "Exposure",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 3.9,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 3.9,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 3.9,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 3.9,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 3.71,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 3.6,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 3.6,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ToneMapMode",
+          "name2": "ToneMapMode",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-Contrast",
+          "name2": "FilmicContrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ReinhardContrast",
+          "name2": "ReinhardContrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.55,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1.55,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1.55,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1.55,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1.5,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 1.55,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 1.55,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ReinhardWhiteBalance",
+          "name2": "ReinhardWhiteBalance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-Enable AutoExposure",
+          "name2": "Enable AutoExposure",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure LightAdapt Speed",
+          "name2": "AutoExposure LightAdapt Speed",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.25,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure DarkAdapt Speed",
+          "name2": "AutoExposure DarkAdapt Speed",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.25,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Middle Gray",
+          "name2": "AutoExposure Middle Gray",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": -7,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Center Weight",
+          "name2": "AutoExposure Center Weight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 7,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Adaption Max",
+          "name2": "AutoExposure Adaption Max",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Adaption Min",
+          "name2": "AutoExposure Adaption Min",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": -1.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-FreezeAdaptionFade",
+          "name2": "FreezeAdaptionFade",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Chromatic Aberration Enable",
+          "name2": "Enable Chromatic Aberration",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneLateralDispersion[0]",
+          "name2": "ToneLateralDispersion[0]",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.0014,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneLateralDispersion[1]",
+          "name2": "ToneLateralDispersion[1]",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.0001,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Power",
+          "name2": "Power",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.435,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Range",
+          "name2": "Range",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.3,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Shape",
+          "name2": "Shape",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Fov Dependence",
+          "name2": "Fov Dependence",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorH",
+          "name2": "ColorH",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorS",
+          "name2": "ColorS",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Tone Map Color Grading ColorShift",
+          "name2": "ColorShift",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Tone Map Color Grading ColorScale",
+          "name2": "ColorScale",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorV",
+          "name2": "ColorV",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Contrast",
+          "name2": "Contrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "Bloom[Yebis]",
+      "name2": "Bloom",
+      "params": []
+    },
+    {
+      "name1": "LightShaft[Yebis]",
+      "name2": "LightShaft",
+      "params": []
+    },
+    {
+      "name1": "Anti-Alias-Editor",
+      "name2": "Anti-Alias",
+      "params": []
+    },
+    {
+      "name1": "MotionBlur-Editor[Yebis]",
+      "name2": "MotionBlur",
+      "params": []
+    },
+    {
+      "name1": "FurBlur-Editor",
+      "name2": "FurBlur",
+      "params": []
+    },
+    {
+      "name1": "FeedBackBlur-Editor[Yebis]",
+      "name2": "FeedBackBlur",
+      "params": []
+    },
+    {
+      "name1": "ColorGrading[Yebis]",
+      "name2": "ColorGrading",
+      "params": []
+    },
+    {
+      "name1": "ShadowParam ParamEditor",
+      "name2": "ShadowParam",
+      "params": []
+    },
+    {
+      "name1": "WaterInteraction-Editor",
+      "name2": "WaterInteraction Simulation",
+      "params": []
+    },
+    {
+      "name1": "AOFields - Editor",
+      "name2": "AOFields",
+      "params": []
+    },
+    {
+      "name1": "AOFields Model - Editor",
+      "name2": "AOFields Model",
+      "params": []
+    },
+    {
+      "name1": "SeaWave:Editor",
+      "name2": "SeaWave ",
+      "params": []
+    },
+    {
+      "name1": "Glow Filter-Editor",
+      "name2": "Glow Filter ",
+      "params": []
+    },
+    {
+      "name1": "[GS]Lens Simulation",
+      "name2": "Lens Simulation",
+      "params": [
+        {
+          "name1": "[GS]Lens Simulation Param  Enable",
+          "name2": "Enable",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearEnd",
+          "name2": "NearEnd",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearStart",
+          "name2": "NearStart",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FarStart",
+          "name2": "FarStart",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 3000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FarEnd",
+          "name2": "FarEnd",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 4000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FocusDist",
+          "name2": "FocusDist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 100,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param UseCameraFocus",
+          "name2": "UseCameraFocus",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param SkyMaskRate",
+          "name2": "SkyMaskRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param Lens F",
+          "name2": "Lens F",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 5.6,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param Av (絞り値)",
+          "name2": "Av (絞り値)",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FilmSize(mm)",
+          "name2": "FilmSize(mm)",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.024,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param LinearCoCFactorNear",
+          "name2": "LinearCoCFactorNear",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param LinearCoCFactorFar",
+          "name2": "LinearCoCFactorFar",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.08,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param ApertureShape",
+          "name2": "ApertureShape",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param DiaphragmRotate",
+          "name2": "DiaphragmRotate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCBlurCountPreMask",
+          "name2": "CoCBlurCountPreMask",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCBlurCount(1)",
+          "name2": "CoCBlurCount(1)",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCBlurCount(2)",
+          "name2": "CoCBlurCount(2)",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Lens Simulation Param MaxBlurLevel",
+          "name2": "MaxBlurLevel",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCMode",
+          "name2": "CoCMode",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearCoCMode Linear",
+          "name2": "NearCoCMode Linear",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FarCoCMode Linear",
+          "name2": "FarCoCMode Linear",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param HiResolutionBlur",
+          "name2": "HiResolutionBlur",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearFarSeparatedBlur",
+          "name2": "NearFarSeparatedBlur",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param PreTempAA",
+          "name2": "PreTempAA",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param TemporalFeedbackWeight",
+          "name2": "TemporalFeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.9,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Lens Simulation Param AffectedByTransparentDepth",
+          "name2": "AffectedByTransparentDepth",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "Cloud Shadow:Editor",
+      "name2": "Cloud Shadow ",
+      "params": []
+    },
+    {
+      "name1": "Wet ParamEditor",
+      "name2": "Wet",
+      "params": []
+    },
+    {
+      "name1": "SSR ParamEditor",
+      "name2": "SSR",
+      "params": []
+    },
+    {
+      "name1": "VolumetricFog ParamEditor",
+      "name2": "VolumetricFog",
+      "params": [
+        {
+          "name1": "VolumetricFog Enable",
+          "name2": "Enable",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeWidth",
+          "name2": "VolumeWidth",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 96,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeDepth",
+          "name2": "VolumeDepth",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 24,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog GameScale",
+          "name2": "GameScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog NearDepth",
+          "name2": "NearDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FarDepth",
+          "name2": "FarDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog NearOffset",
+          "name2": "NearOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogEndDepth",
+          "name2": "FogEndDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DrawTiming",
+          "name2": "DrawTiming",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog EnableAnalyticalFog",
+          "name2": "EnableAnalyticalFog",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeSliceSampleOffset",
+          "name2": "VolumeSliceSampleOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog CullingBySceneDepth",
+          "name2": "CullingBySceneDepth",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog CancelInScatteringRateFromSSR",
+          "name2": "CancelInScatteringRateFromSSR",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global FixedDensity",
+          "name2": "FixedDensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global ScatteringG",
+          "name2": "ScatteringG",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global LocalLightScale",
+          "name2": "LocalLightScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global LocalLightDistScale",
+          "name2": "LocalLightDistScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogDistribution",
+          "name2": "HeightFogDistribution",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.025,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogOffset",
+          "name2": "HeightFogOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogReferenceOffset",
+          "name2": "HeightFogReferenceOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogReferenceModeRate",
+          "name2": "HeightFogReferenceModeRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogDensity Scale",
+          "name2": "HeightFogDensity Scale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.008,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global AbsorptionScale",
+          "name2": "AbsorptionScale",
+          "type": 13,
+          "typeName": "Float3",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight SkyColor",
+          "name2": "SkyColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.235294,
+                "y": 0.333333,
+                "z": 0.352941,
+                "w": 0.18
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.235294,
+                "y": 0.333333,
+                "z": 0.352941,
+                "w": 0.15
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.235294,
+                "y": 0.392157,
+                "z": 0.431373,
+                "w": 0.15
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.392157,
+                "y": 0.392157,
+                "z": 0.392157,
+                "w": 0.15
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.313725,
+                "y": 0.352941,
+                "z": 0.431373,
+                "w": 0.06
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.313725,
+                "y": 0.352941,
+                "z": 0.431373,
+                "w": 0.1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.313725,
+                "y": 0.352941,
+                "z": 0.431373,
+                "w": 0.1
+              },
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight HeightAtten",
+          "name2": "HeightAtten",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight StartDist",
+          "name2": "StartDist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 6,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight LightBankId",
+          "name2": "LightBankId",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 160000000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight LightId",
+          "name2": "LightId",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight DirectColor",
+          "name2": "DirectColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.823529,
+                "y": 1,
+                "z": 1,
+                "w": 0.2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.823529,
+                "y": 1,
+                "z": 1,
+                "w": 0.2
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.823529,
+                "y": 1,
+                "z": 1,
+                "w": 0.2
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0.1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.824692,
+                "y": 0.941176,
+                "z": 0.960784,
+                "w": 0
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.824692,
+                "y": 0.941176,
+                "z": 0.960784,
+                "w": 0
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.824692,
+                "y": 0.941176,
+                "z": 0.960784,
+                "w": 0.15
+              },
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight OppositeColor",
+          "name2": "OppositeColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.1778,
+                "y": 0.273514,
+                "z": 0.27451,
+                "w": 0.05
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.176471,
+                "y": 0.27451,
+                "z": 0.27451,
+                "w": 0.05
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.176471,
+                "y": 0.27451,
+                "z": 0.27451,
+                "w": 0.05
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.27451,
+                "y": 0.27451,
+                "z": 0.27451,
+                "w": 0.05
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.333333,
+                "y": 0.372549,
+                "z": 0.392157,
+                "w": 0
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.333333,
+                "y": 0.372549,
+                "z": 0.392157,
+                "w": 0
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.333333,
+                "y": 0.372549,
+                "z": 0.392157,
+                "w": 0.05
+              },
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight HeightAtten",
+          "name2": "HeightAtten",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight StartDist",
+          "name2": "StartDist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 6,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight ShadowSampleCount",
+          "name2": "ShadowSampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight ShadowDither",
+          "name2": "ShadowDither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight AngleClip",
+          "name2": "AngleClip",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight EnableReproj",
+          "name2": "EnableReproj",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight JitterCount",
+          "name2": "JitterCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight JitterXYSize",
+          "name2": "JitterXYSize",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight FeedbackWeight",
+          "name2": "FeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingSampleCount",
+          "name2": "InjectingSampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 16,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingDither",
+          "name2": "InjectingDither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingReprojEnabled",
+          "name2": "InjectingReprojEnabled",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingFeedbackWeight",
+          "name2": "InjectingFeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Config SampleCount",
+          "name2": "SampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Config Dither",
+          "name2": "Dither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "FogVolume ParamEditor",
+      "name2": "FogVolume",
+      "params": [
+        {
+          "name1": "FogVolume DrawArea NearFadeMinDistance",
+          "name2": "NearFadeMinDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 16,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea NearFadeMaxDistance",
+          "name2": "NearFadeMaxDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 30,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 30,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 90,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea EdgeFadeDistance",
+          "name2": "EdgeFadeDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea EdgeFadeExponent",
+          "name2": "EdgeFadeExponent",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 2.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0.25,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea HeightFallOff",
+          "name2": "HeightFallOff",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea FadeDistanceForHeightMap",
+          "name2": "FadeDistanceForHeightMap",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea MaxInjectingDepth",
+          "name2": "MaxInjectingDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 2000,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 2000,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 2000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching MaxSampleCount",
+          "name2": "MaxSampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 140,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 16,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 24,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching SteppingDistance",
+          "name2": "SteppingDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching SuspendedTransmittance",
+          "name2": "SuspendedTransmittance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0.01,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching LightProcessingInterval",
+          "name2": "LightProcessingInterval",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 140,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching LightProcessingIntervalThreshold",
+          "name2": "LightProcessingIntervalThreshold",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0.75,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light Overwrite",
+          "name2": "Overwrite",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 140,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light DirectionalLightAngle",
+          "name2": "DirectionalLightAngle",
+          "type": 12,
+          "typeName": "Float2",
+          "values": [
+            {
+              "id": 140,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light DirectionalLightColor",
+          "name2": "DirectionalLightColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 140,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light DirectionalLightOppositeColor",
+          "name2": "DirectionalLightOppositeColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 140,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light AmbientColor",
+          "name2": "AmbientColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 140,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light ShadowingIntensity",
+          "name2": "ShadowingIntensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light AttenuationIntensity",
+          "name2": "AttenuationIntensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light AttenuationOffset",
+          "name2": "AttenuationOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 1.25,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light OctaveNumPerlinNoise",
+          "name2": "OctaveNumOfPerlinNoise",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 140,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Density Intensity",
+          "name2": "Intensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0.02,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0.002,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0.045,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Frequency",
+          "name2": "Frequency",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0.005,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0.006,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0.022,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Lacunarity",
+          "name2": "Lacunarity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 2.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 2.8333,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 3.8333,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Gain",
+          "name2": "Gain",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0.23,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Offset",
+          "name2": "Offset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 0.15,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 0.4,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll Speed-x",
+          "name2": "Speed.x",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 1.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll Speed-y",
+          "name2": "Speed.y",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": -0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": -0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": -0.075,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll Speed-z",
+          "name2": "Speed.z",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": -1,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": -1,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": -0.4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll DetailScale",
+          "name2": "DetailScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 140,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 141,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 142,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "EnvironmentConfig ParamEditor",
+      "name2": "EnvironmentConfig",
+      "params": []
+    }
+  ]
+}

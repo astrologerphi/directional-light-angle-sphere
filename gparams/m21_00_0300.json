@@ -1,0 +1,8308 @@
+{
+  "magic": "filt",
+  "game": 5,
+  "gameName": "Sekiro",
+  "unk0D": true,
+  "unk14": 0,
+  "unk50": 24,
+  "groups": [
+    {
+      "name1": "LightSet ParamEditor",
+      "name2": "LightSet",
+      "params": []
+    },
+    {
+      "name1": "SSAO Editor",
+      "name2": "SSAO ",
+      "params": []
+    },
+    {
+      "name1": "Setting Info[Yebis]",
+      "name2": "Setting Info",
+      "params": []
+    },
+    {
+      "name1": "Tone Map[Yebis]",
+      "name2": "Tone Map",
+      "params": []
+    },
+    {
+      "name1": "Bloom[Yebis]",
+      "name2": "Bloom",
+      "params": []
+    },
+    {
+      "name1": "LightShaft[Yebis]",
+      "name2": "LightShaft",
+      "params": []
+    },
+    {
+      "name1": "Anti-Alias-Editor",
+      "name2": "Anti-Alias",
+      "params": []
+    },
+    {
+      "name1": "MotionBlur-Editor[Yebis]",
+      "name2": "MotionBlur",
+      "params": []
+    },
+    {
+      "name1": "FurBlur-Editor",
+      "name2": "FurBlur",
+      "params": []
+    },
+    {
+      "name1": "FeedBackBlur-Editor[Yebis]",
+      "name2": "FeedBackBlur",
+      "params": []
+    },
+    {
+      "name1": "ColorGrading[Yebis]",
+      "name2": "ColorGrading",
+      "params": []
+    },
+    {
+      "name1": "ShadowParam ParamEditor",
+      "name2": "ShadowParam",
+      "params": []
+    },
+    {
+      "name1": "AboveShadow ParamEditor",
+      "name2": "AboveShadow",
+      "params": []
+    },
+    {
+      "name1": "WaterInteraction-Editor",
+      "name2": "WaterInteraction Simulation",
+      "params": []
+    },
+    {
+      "name1": "AOFields - Editor",
+      "name2": "AOFields",
+      "params": []
+    },
+    {
+      "name1": "AOFields Model - Editor",
+      "name2": "AOFields Model",
+      "params": []
+    },
+    {
+      "name1": "SeaWave:Editor",
+      "name2": "SeaWave ",
+      "params": []
+    },
+    {
+      "name1": "Glow Filter-Editor",
+      "name2": "Glow Filter ",
+      "params": []
+    },
+    {
+      "name1": "[GS]Lens Simulation",
+      "name2": "Lens Simulation",
+      "params": []
+    },
+    {
+      "name1": "Cloud Shadow:Editor",
+      "name2": "Cloud Shadow ",
+      "params": []
+    },
+    {
+      "name1": "Wet ParamEditor",
+      "name2": "Wet",
+      "params": []
+    },
+    {
+      "name1": "SSR ParamEditor",
+      "name2": "SSR",
+      "params": []
+    },
+    {
+      "name1": "VolumetricFog ParamEditor",
+      "name2": "VolumetricFog",
+      "params": [
+        {
+          "name1": "VolumetricFog Enable",
+          "name2": "Enable",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeWidth",
+          "name2": "VolumeWidth",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 96,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeDepth",
+          "name2": "VolumeDepth",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 24,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog GameScale",
+          "name2": "GameScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog NearDepth",
+          "name2": "NearDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FarDepth",
+          "name2": "FarDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 300,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog NearOffset",
+          "name2": "NearOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogEndDepth",
+          "name2": "FogEndDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 300,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DrawTiming",
+          "name2": "DrawTiming",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog EnableAnalyticalFog",
+          "name2": "EnableAnalyticalFog",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeSliceSampleOffset",
+          "name2": "VolumeSliceSampleOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog CullingBySceneDepth",
+          "name2": "[Deprecated]CullingBySceneDepth",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog CancelInScatteringRateFromSSR",
+          "name2": "CancelInScatteringRateFromSSR",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global FixedDensity",
+          "name2": "FixedDensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1E-05,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global ScatteringG",
+          "name2": "ScatteringG",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global LocalLightScale",
+          "name2": "LocalLightScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global LocalLightDistScale",
+          "name2": "LocalLightDistScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogDistribution",
+          "name2": "HeightFogDistribution",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.06,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.06,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.06,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0.06,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": 0.04,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 0.04,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 0.04,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogOffset",
+          "name2": "HeightFogOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogReferenceOffset",
+          "name2": "HeightFogReferenceOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogReferenceModeRate",
+          "name2": "HeightFogReferenceModeRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogDensity Scale",
+          "name2": "HeightFogDensity Scale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.003,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.002,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.002,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0.002,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": 0.015,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 0.015,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 0.015,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global AbsorptionScale",
+          "name2": "AbsorptionScale",
+          "type": 13,
+          "typeName": "Float3",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight SkyColor",
+          "name2": "SkyColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.490196,
+                "y": 0.539107,
+                "z": 0.54902,
+                "w": 0.05
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.875,
+                "y": 0.913119,
+                "z": 1,
+                "w": 0.1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.87451,
+                "y": 0.913725,
+                "z": 1,
+                "w": 0.1
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.27451,
+                "y": 0.176471,
+                "z": 0.14902,
+                "w": 0.2
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.082353,
+                "y": 0.121569,
+                "z": 0.168627,
+                "w": 0.5
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.078343,
+                "y": 0.117647,
+                "z": 0.14902,
+                "w": 0.5
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.078431,
+                "y": 0.113725,
+                "z": 0.176471,
+                "w": 0.7
+              },
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight HeightAtten",
+          "name2": "HeightAtten",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight StartDist",
+          "name2": "StartDist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 3,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight LightBankId",
+          "name2": "LightBankId",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 121000000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight LightId",
+          "name2": "LightId",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight DirectColor",
+          "name2": "DirectColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.901961,
+                "y": 0.980392,
+                "z": 0.843137,
+                "w": 0.3
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.87,
+                "y": 0.932355,
+                "z": 1,
+                "w": 0.05
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.870588,
+                "y": 0.933333,
+                "z": 1,
+                "w": 0.05
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.894553,
+                "y": 0.617963,
+                "z": 0.478586,
+                "w": 0.3
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.705882,
+                "y": 0.803922,
+                "z": 0.784314,
+                "w": 0.066
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.705882,
+                "y": 0.803922,
+                "z": 0.784314,
+                "w": 0.066
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.705882,
+                "y": 0.803922,
+                "z": 0.784314,
+                "w": 0.066
+              },
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight OppositeColor",
+          "name2": "OppositeColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 0.835,
+                "z": 0.835,
+                "w": 0.05
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0.05
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0.05
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0.1
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.705882,
+                "y": 0.803922,
+                "z": 0.784314,
+                "w": 0.05
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.705882,
+                "y": 0.803922,
+                "z": 0.784314,
+                "w": 0.05
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.705882,
+                "y": 0.803922,
+                "z": 0.784314,
+                "w": 0.05
+              },
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight HeightAtten",
+          "name2": "HeightAtten",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight StartDist",
+          "name2": "StartDist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 3,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight ShadowSampleCount",
+          "name2": "ShadowSampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight ShadowDither",
+          "name2": "ShadowDither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight AngleClip",
+          "name2": "AngleClip",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight EnableReproj",
+          "name2": "EnableReproj",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight JitterCount",
+          "name2": "JitterCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight JitterXYSize",
+          "name2": "JitterXYSize",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight FeedbackWeight",
+          "name2": "FeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingSampleCount",
+          "name2": "InjectingSampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 16,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 16,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 16,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 16,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": 16,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 16,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 16,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingDither",
+          "name2": "InjectingDither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingReprojEnabled",
+          "name2": "InjectingReprojEnabled",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingFeedbackWeight",
+          "name2": "InjectingFeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Config SampleCount",
+          "name2": "SampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Config Dither",
+          "name2": "Dither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "FogVolume ParamEditor",
+      "name2": "FogVolume",
+      "params": [
+        {
+          "name1": "FogVolume DrawArea NearFadeMinDistance",
+          "name2": "NearFadeMinDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 50,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 20,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 12,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 500,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea NearFadeMaxDistance",
+          "name2": "NearFadeMaxDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 100,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 500,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 35,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 50,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 50,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 100,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 60,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 50,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 110,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 35,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 2000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea EdgeFadeDistance",
+          "name2": "EdgeFadeDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 75,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 90,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 30,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 150,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 40,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 30,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 50,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 50,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 50,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 65,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea EdgeFadeExponent",
+          "name2": "EdgeFadeExponent",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea HeightFallOff",
+          "name2": "HeightFallOff",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 1.11,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 3.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": -2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 4.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": -1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 2.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 3.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": -2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": -1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea FadeDistanceForHeightMap",
+          "name2": "FadeDistanceForHeightMap",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 30,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 60,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea MaxInjectingDepth",
+          "name2": "MaxInjectingDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 20000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching MaxSampleCount",
+          "name2": "MaxSampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 2100,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 38,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 38,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching SteppingDistance",
+          "name2": "SteppingDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching SuspendedTransmittance",
+          "name2": "SuspendedTransmittance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0.01,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching LightProcessingInterval",
+          "name2": "LightProcessingInterval",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 2100,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching LightProcessingIntervalThreshold",
+          "name2": "LightProcessingIntervalThreshold",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0.75,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light Overwrite",
+          "name2": "Overwrite",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 2100,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": true,
+              "unkFloat": 4
+            },
+            {
+              "id": 2135,
+              "value": true,
+              "unkFloat": 8
+            },
+            {
+              "id": 2135,
+              "value": true,
+              "unkFloat": 12
+            },
+            {
+              "id": 2135,
+              "value": true,
+              "unkFloat": 15
+            },
+            {
+              "id": 2135,
+              "value": true,
+              "unkFloat": 21
+            },
+            {
+              "id": 2135,
+              "value": true,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2137,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": true,
+              "unkFloat": 4
+            },
+            {
+              "id": 2137,
+              "value": true,
+              "unkFloat": 8
+            },
+            {
+              "id": 2137,
+              "value": true,
+              "unkFloat": 12
+            },
+            {
+              "id": 2137,
+              "value": true,
+              "unkFloat": 15
+            },
+            {
+              "id": 2137,
+              "value": true,
+              "unkFloat": 21
+            },
+            {
+              "id": 2137,
+              "value": true,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2138,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": true,
+              "unkFloat": 4
+            },
+            {
+              "id": 2138,
+              "value": true,
+              "unkFloat": 8
+            },
+            {
+              "id": 2138,
+              "value": true,
+              "unkFloat": 12
+            },
+            {
+              "id": 2138,
+              "value": true,
+              "unkFloat": 15
+            },
+            {
+              "id": 2138,
+              "value": true,
+              "unkFloat": 21
+            },
+            {
+              "id": 2138,
+              "value": true,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2139,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": true,
+              "unkFloat": 4
+            },
+            {
+              "id": 2139,
+              "value": true,
+              "unkFloat": 8
+            },
+            {
+              "id": 2139,
+              "value": true,
+              "unkFloat": 12
+            },
+            {
+              "id": 2139,
+              "value": true,
+              "unkFloat": 15
+            },
+            {
+              "id": 2139,
+              "value": true,
+              "unkFloat": 21
+            },
+            {
+              "id": 2139,
+              "value": true,
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light DirectionalLightAngle",
+          "name2": "DirectionalLightAngle",
+          "type": 12,
+          "typeName": "Float2",
+          "values": [
+            {
+              "id": 2100,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light DirectionalLightColor",
+          "name2": "DirectionalLightColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 2100,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 4
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light DirectionalLightOppositeColor",
+          "name2": "DirectionalLightOppositeColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 2100,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 4
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light AmbientColor",
+          "name2": "AmbientColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 2100,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0.172,
+                "y": 0.181053,
+                "z": 0.172,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0.2685,
+                "y": 0.2811,
+                "z": 0.3,
+                "w": 1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0.266313,
+                "y": 0.276456,
+                "z": 0.291053,
+                "w": 1
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0.180392,
+                "y": 0.137255,
+                "z": 0.12549,
+                "w": 1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0.094118,
+                "y": 0.121569,
+                "z": 0.141176,
+                "w": 1
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0.098039,
+                "y": 0.12549,
+                "z": 0.133333,
+                "w": 1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2135,
+              "value": {
+                "x": 0.098184,
+                "y": 0.124618,
+                "z": 0.151053,
+                "w": 1
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0.161645,
+                "y": 0.171053,
+                "z": 0.161645,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0.248732,
+                "y": 0.265077,
+                "z": 0.281053,
+                "w": 1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0.2116,
+                "y": 0.218263,
+                "z": 0.23,
+                "w": 1
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0.181053,
+                "y": 0.139047,
+                "z": 0.125832,
+                "w": 1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0.094118,
+                "y": 0.121569,
+                "z": 0.141176,
+                "w": 1
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0.098039,
+                "y": 0.12549,
+                "z": 0.133333,
+                "w": 1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2137,
+              "value": {
+                "x": 0.094118,
+                "y": 0.117647,
+                "z": 0.141176,
+                "w": 1
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0.1536,
+                "y": 0.16,
+                "z": 0.158568,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0.219608,
+                "y": 0.227451,
+                "z": 0.239216,
+                "w": 1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0.2275,
+                "y": 0.235,
+                "z": 0.25,
+                "w": 1
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0.21,
+                "y": 0.168807,
+                "z": 0.14805,
+                "w": 1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0.095916,
+                "y": 0.121569,
+                "z": 0.141053,
+                "w": 1
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0.098039,
+                "y": 0.12549,
+                "z": 0.133333,
+                "w": 1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2138,
+              "value": {
+                "x": 0.119408,
+                "y": 0.144942,
+                "z": 0.191053,
+                "w": 1
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": 0.139965,
+                "y": 0.1505,
+                "z": 0.134697,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": 0.105921,
+                "y": 0.111974,
+                "z": 0.121053,
+                "w": 1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": 0.227451,
+                "y": 0.235294,
+                "z": 0.25098,
+                "w": 1
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": 0.211765,
+                "y": 0.168627,
+                "z": 0.14902,
+                "w": 1
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": 0.094118,
+                "y": 0.121569,
+                "z": 0.141176,
+                "w": 1
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": 0.098039,
+                "y": 0.12549,
+                "z": 0.133333,
+                "w": 1
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 2139,
+              "value": {
+                "x": 0.105882,
+                "y": 0.12549,
+                "z": 0.160784,
+                "w": 1
+              },
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light ShadowingIntensity",
+          "name2": "ShadowingIntensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0.4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light AttenuationIntensity",
+          "name2": "AttenuationIntensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light AttenuationOffset",
+          "name2": "AttenuationOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 1.25,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light OctaveNumPerlinNoise",
+          "name2": "OctaveNumOfPerlinNoise",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 2100,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 3,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Density Intensity",
+          "name2": "Intensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0.004,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0.8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 2.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0.8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0.15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0.6,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0.004,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0.02,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0.04,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0.075,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0.005,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0.02,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0.0015,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0.0015,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Frequency",
+          "name2": "Frequency",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0.005,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0.005,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0.02,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0.02,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0.0075,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0.02,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0.0075,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0.15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0.0075,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0.015,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0.015,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0.015,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0.015,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0.015,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0.0025,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0.0015,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0.004,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Lacunarity",
+          "name2": "Lacunarity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 3.7333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 3.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 3.3333,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 3.7,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 2.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 2.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Gain",
+          "name2": "Gain",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0.7,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Offset",
+          "name2": "Offset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0.015,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 0.6,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll Speed-x",
+          "name2": "Speed.x",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 2.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 2.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll Speed-y",
+          "name2": "Speed.y",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": -1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": -1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": -0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll Speed-z",
+          "name2": "Speed.z",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": -1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": -1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": -0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll DetailScale",
+          "name2": "DetailScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2100,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2101,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2102,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2103,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2104,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2105,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2106,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2107,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2108,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2109,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2110,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2112,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2114,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2116,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2117,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2118,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2119,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2120,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2121,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2122,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2123,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2124,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2125,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2126,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2127,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2128,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2129,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2130,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2131,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2132,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2133,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2134,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2135,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2137,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2138,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2139,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "EnvironmentConfig ParamEditor",
+      "name2": "EnvironmentConfig",
+      "params": []
+    },
+    {
+      "name1": "RayTracing ParamEditor",
+      "name2": "RayTracing",
+      "params": []
+    }
+  ]
+}

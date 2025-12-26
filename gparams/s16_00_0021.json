@@ -1,0 +1,576 @@
+{
+  "magic": "filt",
+  "game": 5,
+  "gameName": "Sekiro",
+  "unk0D": true,
+  "unk14": 0,
+  "unk50": 24,
+  "groups": [
+    {
+      "name1": "LightSet ParamEditor",
+      "name2": "LightSet",
+      "params": []
+    },
+    {
+      "name1": "FogParamEditor",
+      "name2": "Fog",
+      "params": []
+    },
+    {
+      "name1": "SSAO Editor",
+      "name2": "SSAO ",
+      "params": []
+    },
+    {
+      "name1": "Setting Info[Yebis]",
+      "name2": "Setting Info",
+      "params": []
+    },
+    {
+      "name1": "Tone Map[Yebis]",
+      "name2": "Tone Map",
+      "params": []
+    },
+    {
+      "name1": "Bloom[Yebis]",
+      "name2": "Bloom",
+      "params": []
+    },
+    {
+      "name1": "LightShaft[Yebis]",
+      "name2": "LightShaft",
+      "params": []
+    },
+    {
+      "name1": "Anti-Alias-Editor",
+      "name2": "Anti-Alias",
+      "params": []
+    },
+    {
+      "name1": "MotionBlur-Editor[Yebis]",
+      "name2": "MotionBlur",
+      "params": []
+    },
+    {
+      "name1": "FurBlur-Editor",
+      "name2": "FurBlur",
+      "params": []
+    },
+    {
+      "name1": "FeedBackBlur-Editor[Yebis]",
+      "name2": "FeedBackBlur",
+      "params": []
+    },
+    {
+      "name1": "ColorGrading[Yebis]",
+      "name2": "ColorGrading",
+      "params": []
+    },
+    {
+      "name1": "ShadowParam ParamEditor",
+      "name2": "ShadowParam",
+      "params": []
+    },
+    {
+      "name1": "WaterInteraction-Editor",
+      "name2": "WaterInteraction Simulation",
+      "params": []
+    },
+    {
+      "name1": "AOFields - Editor",
+      "name2": "AOFields",
+      "params": []
+    },
+    {
+      "name1": "AOFields Model - Editor",
+      "name2": "AOFields Model",
+      "params": []
+    },
+    {
+      "name1": "SeaWave:Editor",
+      "name2": "SeaWave ",
+      "params": []
+    },
+    {
+      "name1": "Glow Filter-Editor",
+      "name2": "Glow Filter ",
+      "params": []
+    },
+    {
+      "name1": "[GS]Lens Simulation",
+      "name2": "Lens Simulation",
+      "params": [
+        {
+          "name1": "[GS]Lens Simulation Param  Enable",
+          "name2": "Enable",
+          "type": 5,
+          "typeName": "BoolA",
+          "values": [
+            {
+              "id": 50,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearEnd",
+          "name2": "NearEnd",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearStart",
+          "name2": "NearStart",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 10,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FarStart",
+          "name2": "FarStart",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 100,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 100,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FarEnd",
+          "name2": "FarEnd",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 200,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 200,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FocusDist",
+          "name2": "FocusDist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 100,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 100,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param UseCameraFocus",
+          "name2": "UseCameraFocus",
+          "type": 5,
+          "typeName": "BoolA",
+          "values": [
+            {
+              "id": 50,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param SkyMaskRate",
+          "name2": "SkyMaskRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param Lens F",
+          "name2": "Lens F",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 12,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param Av (絞り値)",
+          "name2": "Av (絞り値)",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FilmSize(mm)",
+          "name2": "FilmSize(mm)",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 0.035,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 0.035,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param LinearCoCFactorNear",
+          "name2": "LinearCoCFactorNear",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param LinearCoCFactorFar",
+          "name2": "LinearCoCFactorFar",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param ApertureShape",
+          "name2": "ApertureShape",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 50,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param DiaphragmRotate",
+          "name2": "DiaphragmRotate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCBlurCountPreMask",
+          "name2": "CoCBlurCountPreMask",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 50,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCBlurCount(1)",
+          "name2": "CoCBlurCount(1)",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 50,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCBlurCount(2)",
+          "name2": "CoCBlurCount(2)",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 50,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCMode",
+          "name2": "CoCMode",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 50,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearCoCMode Linear",
+          "name2": "NearCoCMode Linear",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 50,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FarCoCMode Linear",
+          "name2": "FarCoCMode Linear",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 50,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param HiResolutionBlur",
+          "name2": "HiResolutionBlur",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 50,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearFarSeparatedBlur",
+          "name2": "NearFarSeparatedBlur",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 50,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param PreTempAA",
+          "name2": "PreTempAA",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 50,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param TemporalFeedbackWeight",
+          "name2": "TemporalFeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 50,
+              "value": 0.9,
+              "unkFloat": 0
+            },
+            {
+              "id": 150,
+              "value": 0.9,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "Cloud Shadow:Editor",
+      "name2": "Cloud Shadow ",
+      "params": []
+    },
+    {
+      "name1": "Wet ParamEditor",
+      "name2": "Wet",
+      "params": []
+    },
+    {
+      "name1": "SSR ParamEditor",
+      "name2": "SSR",
+      "params": []
+    },
+    {
+      "name1": "VolumetricFog ParamEditor",
+      "name2": "VolumetricFog",
+      "params": []
+    }
+  ]
+}

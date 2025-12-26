@@ -1,0 +1,183 @@
+{
+  "magic": "filt",
+  "game": 5,
+  "gameName": "Sekiro",
+  "unk0D": true,
+  "unk14": 0,
+  "unk50": 24,
+  "groups": [
+    {
+      "name1": "LightSet ParamEditor",
+      "name2": "LightSet",
+      "params": []
+    },
+    {
+      "name1": "SSAO Editor",
+      "name2": "SSAO ",
+      "params": []
+    },
+    {
+      "name1": "Setting Info[Yebis]",
+      "name2": "Setting Info",
+      "params": []
+    },
+    {
+      "name1": "Tone Map[Yebis]",
+      "name2": "Tone Map",
+      "params": []
+    },
+    {
+      "name1": "Bloom[Yebis]",
+      "name2": "Bloom",
+      "params": []
+    },
+    {
+      "name1": "LightShaft[Yebis]",
+      "name2": "LightShaft",
+      "params": []
+    },
+    {
+      "name1": "Anti-Alias-Editor",
+      "name2": "Anti-Alias",
+      "params": []
+    },
+    {
+      "name1": "MotionBlur-Editor[Yebis]",
+      "name2": "MotionBlur",
+      "params": []
+    },
+    {
+      "name1": "FurBlur-Editor",
+      "name2": "FurBlur",
+      "params": []
+    },
+    {
+      "name1": "FeedBackBlur-Editor[Yebis]",
+      "name2": "FeedBackBlur",
+      "params": []
+    },
+    {
+      "name1": "ColorGrading[Yebis]",
+      "name2": "ColorGrading",
+      "params": []
+    },
+    {
+      "name1": "ShadowParam ParamEditor",
+      "name2": "ShadowParam",
+      "params": []
+    },
+    {
+      "name1": "WaterInteraction-Editor",
+      "name2": "WaterInteraction Simulation",
+      "params": []
+    },
+    {
+      "name1": "AOFields - Editor",
+      "name2": "AOFields",
+      "params": []
+    },
+    {
+      "name1": "AOFields Model - Editor",
+      "name2": "AOFields Model",
+      "params": []
+    },
+    {
+      "name1": "SeaWave:Editor",
+      "name2": "SeaWave ",
+      "params": []
+    },
+    {
+      "name1": "Glow Filter-Editor",
+      "name2": "Glow Filter ",
+      "params": []
+    },
+    {
+      "name1": "[GS]Lens Simulation",
+      "name2": "Lens Simulation",
+      "params": []
+    },
+    {
+      "name1": "Cloud Shadow:Editor",
+      "name2": "Cloud Shadow ",
+      "params": []
+    },
+    {
+      "name1": "Wet ParamEditor",
+      "name2": "Wet",
+      "params": [
+        {
+          "name1": "Wet-OverrideAlbedo",
+          "name2": "OverrideAlbedo",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Wet-OverrideShininess",
+          "name2": "OverrideShininess",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Wet-AlbedoRate",
+          "name2": "AlbedoRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.3,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Wet-ShininessRate",
+          "name2": "ShininessRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "SSR ParamEditor",
+      "name2": "SSR",
+      "params": []
+    },
+    {
+      "name1": "VolumetricFog ParamEditor",
+      "name2": "VolumetricFog",
+      "params": []
+    },
+    {
+      "name1": "FogVolume ParamEditor",
+      "name2": "FogVolume",
+      "params": []
+    }
+  ]
+}

@@ -1,0 +1,3015 @@
+{
+  "magic": "filt",
+  "game": 5,
+  "gameName": "Sekiro",
+  "unk0D": true,
+  "unk14": 0,
+  "unk50": 24,
+  "groups": [
+    {
+      "name1": "LightSet ParamEditor",
+      "name2": "LightSet",
+      "params": []
+    },
+    {
+      "name1": "SSAO Editor",
+      "name2": "SSAO ",
+      "params": []
+    },
+    {
+      "name1": "Setting Info[Yebis]",
+      "name2": "Setting Info",
+      "params": []
+    },
+    {
+      "name1": "Tone Map[Yebis]",
+      "name2": "Tone Map",
+      "params": [
+        {
+          "name1": "GS Presents - ToneMap-Exposure",
+          "name2": "Exposure",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.75,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ToneMapMode",
+          "name2": "ToneMapMode",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-Contrast",
+          "name2": "FilmicContrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ReinhardContrast",
+          "name2": "ReinhardContrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ReinhardWhiteBalance",
+          "name2": "ReinhardWhiteBalance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-Enable AutoExposure",
+          "name2": "Enable AutoExposure",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure LightAdapt Speed",
+          "name2": "AutoExposure LightAdapt Speed",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure DarkAdapt Speed",
+          "name2": "AutoExposure DarkAdapt Speed",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Middle Gray",
+          "name2": "AutoExposure Middle Gray",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": -2.108,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Center Weight",
+          "name2": "AutoExposure Center Weight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Adaption Max",
+          "name2": "AutoExposure Adaption Max",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Adaption Min",
+          "name2": "AutoExposure Adaption Min",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": -6,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-FreezeAdaptionFade",
+          "name2": "FreezeAdaptionFade",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Chromatic Aberration Enable",
+          "name2": "Enable Chromatic Aberration",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneLateralDispersion[0]",
+          "name2": "ToneLateralDispersion[0]",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.001,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneLateralDispersion[1]",
+          "name2": "ToneLateralDispersion[1]",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.0005,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Power",
+          "name2": "Power",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.55,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Range",
+          "name2": "Range",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Shape",
+          "name2": "Shape",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Fov Dependence",
+          "name2": "Fov Dependence",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorH",
+          "name2": "ColorH",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorS",
+          "name2": "ColorS",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Tone Map Color Grading ColorShift",
+          "name2": "ColorShift",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Tone Map Color Grading ColorScale",
+          "name2": "ColorScale",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorV",
+          "name2": "ColorV",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Contrast",
+          "name2": "Contrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "Bloom[Yebis]",
+      "name2": "Bloom",
+      "params": []
+    },
+    {
+      "name1": "LightShaft[Yebis]",
+      "name2": "LightShaft",
+      "params": []
+    },
+    {
+      "name1": "Anti-Alias-Editor",
+      "name2": "Anti-Alias",
+      "params": []
+    },
+    {
+      "name1": "MotionBlur-Editor[Yebis]",
+      "name2": "MotionBlur",
+      "params": []
+    },
+    {
+      "name1": "FurBlur-Editor",
+      "name2": "FurBlur",
+      "params": []
+    },
+    {
+      "name1": "FeedBackBlur-Editor[Yebis]",
+      "name2": "FeedBackBlur",
+      "params": []
+    },
+    {
+      "name1": "ColorGrading[Yebis]",
+      "name2": "ColorGrading",
+      "params": []
+    },
+    {
+      "name1": "ShadowParam ParamEditor",
+      "name2": "ShadowParam",
+      "params": []
+    },
+    {
+      "name1": "AboveShadow ParamEditor",
+      "name2": "AboveShadow",
+      "params": []
+    },
+    {
+      "name1": "WaterInteraction-Editor",
+      "name2": "WaterInteraction Simulation",
+      "params": []
+    },
+    {
+      "name1": "AOFields - Editor",
+      "name2": "AOFields",
+      "params": []
+    },
+    {
+      "name1": "AOFields Model - Editor",
+      "name2": "AOFields Model",
+      "params": []
+    },
+    {
+      "name1": "SeaWave:Editor",
+      "name2": "SeaWave ",
+      "params": []
+    },
+    {
+      "name1": "Glow Filter-Editor",
+      "name2": "Glow Filter ",
+      "params": []
+    },
+    {
+      "name1": "[GS]Lens Simulation",
+      "name2": "Lens Simulation",
+      "params": []
+    },
+    {
+      "name1": "Cloud Shadow:Editor",
+      "name2": "Cloud Shadow ",
+      "params": []
+    },
+    {
+      "name1": "Wet ParamEditor",
+      "name2": "Wet",
+      "params": []
+    },
+    {
+      "name1": "SSR ParamEditor",
+      "name2": "SSR",
+      "params": []
+    },
+    {
+      "name1": "VolumetricFog ParamEditor",
+      "name2": "VolumetricFog",
+      "params": [
+        {
+          "name1": "VolumetricFog Enable",
+          "name2": "Enable",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeWidth",
+          "name2": "VolumeWidth",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 96,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeDepth",
+          "name2": "VolumeDepth",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 28,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog GameScale",
+          "name2": "GameScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog NearDepth",
+          "name2": "NearDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.01,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FarDepth",
+          "name2": "FarDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 850,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog NearOffset",
+          "name2": "NearOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogEndDepth",
+          "name2": "FogEndDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1200,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DrawTiming",
+          "name2": "DrawTiming",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog EnableAnalyticalFog",
+          "name2": "EnableAnalyticalFog",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeSliceSampleOffset",
+          "name2": "VolumeSliceSampleOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog CullingBySceneDepth",
+          "name2": "[Deprecated]CullingBySceneDepth",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog CancelInScatteringRateFromSSR",
+          "name2": "CancelInScatteringRateFromSSR",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global FixedDensity",
+          "name2": "FixedDensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global ScatteringG",
+          "name2": "ScatteringG",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global LocalLightScale",
+          "name2": "LocalLightScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global LocalLightDistScale",
+          "name2": "LocalLightDistScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogDistribution",
+          "name2": "HeightFogDistribution",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.02,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogOffset",
+          "name2": "HeightFogOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogReferenceOffset",
+          "name2": "HeightFogReferenceOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogReferenceModeRate",
+          "name2": "HeightFogReferenceModeRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogDensity Scale",
+          "name2": "HeightFogDensity Scale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.0001,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global AbsorptionScale",
+          "name2": "AbsorptionScale",
+          "type": 13,
+          "typeName": "Float3",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight SkyColor",
+          "name2": "SkyColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.835294,
+                "y": 0.8,
+                "z": 1,
+                "w": 0.03
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight HeightAtten",
+          "name2": "HeightAtten",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight StartDist",
+          "name2": "StartDist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight LightBankId",
+          "name2": "LightBankId",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 122000000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight LightId",
+          "name2": "LightId",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight DirectColor",
+          "name2": "DirectColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.721569,
+                "y": 0.780392,
+                "z": 0.898039,
+                "w": 0.1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight OppositeColor",
+          "name2": "OppositeColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.835294,
+                "y": 0.8,
+                "z": 1,
+                "w": 0.1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight HeightAtten",
+          "name2": "HeightAtten",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight StartDist",
+          "name2": "StartDist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 320,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight ShadowSampleCount",
+          "name2": "ShadowSampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight ShadowDither",
+          "name2": "ShadowDither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight AngleClip",
+          "name2": "AngleClip",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight EnableReproj",
+          "name2": "EnableReproj",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight JitterCount",
+          "name2": "JitterCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight JitterXYSize",
+          "name2": "JitterXYSize",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight FeedbackWeight",
+          "name2": "FeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingSampleCount",
+          "name2": "InjectingSampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 16,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingDither",
+          "name2": "InjectingDither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingReprojEnabled",
+          "name2": "InjectingReprojEnabled",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingFeedbackWeight",
+          "name2": "InjectingFeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Config SampleCount",
+          "name2": "SampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Config Dither",
+          "name2": "Dither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "FogVolume ParamEditor",
+      "name2": "FogVolume",
+      "params": [
+        {
+          "name1": "FogVolume DrawArea NearFadeMinDistance",
+          "name2": "NearFadeMinDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea NearFadeMaxDistance",
+          "name2": "NearFadeMaxDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 300,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 500,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 50,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 200,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 20,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea EdgeFadeDistance",
+          "name2": "EdgeFadeDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 40,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 20,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 30,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0.25,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea EdgeFadeExponent",
+          "name2": "EdgeFadeExponent",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea HeightFallOff",
+          "name2": "HeightFallOff",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 3.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 3.75,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 8.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea FadeDistanceForHeightMap",
+          "name2": "FadeDistanceForHeightMap",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 40,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 50,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume DrawArea MaxInjectingDepth",
+          "name2": "MaxInjectingDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 20000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 2000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 2000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 2000,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 2000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching MaxSampleCount",
+          "name2": "MaxSampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 2200,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 16,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 12,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 16,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 12,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 16,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching SteppingDistance",
+          "name2": "SteppingDistance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching SuspendedTransmittance",
+          "name2": "SuspendedTransmittance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0.01,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching LightProcessingInterval",
+          "name2": "LightProcessingInterval",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 2200,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume RayMarching LightProcessingIntervalThreshold",
+          "name2": "LightProcessingIntervalThreshold",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0.75,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0.75,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0.75,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0.75,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0.75,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0.75,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0.75,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0.75,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0.75,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0.72,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light Overwrite",
+          "name2": "Overwrite",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 2200,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light DirectionalLightAngle",
+          "name2": "DirectionalLightAngle",
+          "type": 12,
+          "typeName": "Float2",
+          "values": [
+            {
+              "id": 2200,
+              "value": {
+                "x": -0.785398,
+                "y": 1.570796
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": {
+                "x": -1.186824,
+                "y": 2.268928
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": {
+                "x": -1.186824,
+                "y": 2.268928
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": {
+                "x": -1.186824,
+                "y": 2.268928
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": {
+                "x": -1.186824,
+                "y": 2.268928
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": {
+                "x": -1.186824,
+                "y": 2.268928
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": {
+                "x": -1.186824,
+                "y": 2.268928
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": {
+                "x": -1.186824,
+                "y": 2.268928
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": {
+                "x": -1.186824,
+                "y": 2.268928
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": {
+                "x": -1.186824,
+                "y": 2.268928
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light DirectionalLightColor",
+          "name2": "DirectionalLightColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 2200,
+              "value": {
+                "x": 0.13,
+                "y": 0.0806,
+                "z": 0.128964,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": {
+                "x": 0.187473,
+                "y": 0.1836,
+                "z": 0.24,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": {
+                "x": 0.93,
+                "y": 0.773955,
+                "z": 0.37665,
+                "w": 0.48
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": {
+                "x": 0.93,
+                "y": 0.773955,
+                "z": 0.37665,
+                "w": 0.48
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": {
+                "x": 0.93,
+                "y": 0.773955,
+                "z": 0.37665,
+                "w": 0.48
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": {
+                "x": 0.93,
+                "y": 0.773955,
+                "z": 0.37665,
+                "w": 0.48
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": {
+                "x": 0.157018,
+                "y": 0.1488,
+                "z": 0.16,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": {
+                "x": 0.187473,
+                "y": 0.1836,
+                "z": 0.24,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": {
+                "x": 0.187473,
+                "y": 0.1836,
+                "z": 0.24,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": {
+                "x": 0.17192,
+                "y": 0.149126,
+                "z": 0.481053,
+                "w": 1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light DirectionalLightOppositeColor",
+          "name2": "DirectionalLightOppositeColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 2200,
+              "value": {
+                "x": 0.083403,
+                "y": 0.07645,
+                "z": 0.11,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": {
+                "x": 0.166217,
+                "y": 0.11305,
+                "z": 0.19,
+                "w": 2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": {
+                "x": 0.67,
+                "y": 0.67,
+                "z": 0.67,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": {
+                "x": 0.67,
+                "y": 0.67,
+                "z": 0.67,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": {
+                "x": 0.67,
+                "y": 0.67,
+                "z": 0.67,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": {
+                "x": 0.67,
+                "y": 0.67,
+                "z": 0.67,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": {
+                "x": 0.095465,
+                "y": 0.093047,
+                "z": 0.131053,
+                "w": 3
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": {
+                "x": 0.166217,
+                "y": 0.11305,
+                "z": 0.19,
+                "w": 2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": {
+                "x": 0.166217,
+                "y": 0.11305,
+                "z": 0.19,
+                "w": 2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": {
+                "x": 0.166217,
+                "y": 0.11305,
+                "z": 0.19,
+                "w": 2
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light AmbientColor",
+          "name2": "AmbientColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 2200,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": {
+                "x": 0.133975,
+                "y": 0.1253,
+                "z": 0.14,
+                "w": 0.5
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": {
+                "x": 0.098053,
+                "y": 0.104235,
+                "z": 0.121053,
+                "w": 0.5
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": {
+                "x": 0.133975,
+                "y": 0.1253,
+                "z": 0.14,
+                "w": 0.5
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": {
+                "x": 0.133975,
+                "y": 0.1253,
+                "z": 0.14,
+                "w": 0.5
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": {
+                "x": 0.133975,
+                "y": 0.1253,
+                "z": 0.14,
+                "w": 0.5
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light ShadowingIntensity",
+          "name2": "ShadowingIntensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light AttenuationIntensity",
+          "name2": "AttenuationIntensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light AttenuationOffset",
+          "name2": "AttenuationOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 1.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Light OctaveNumPerlinNoise",
+          "name2": "OctaveNumOfPerlinNoise",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 2200,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Density Intensity",
+          "name2": "Intensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0.0025,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0.4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0.02,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0.03,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Frequency",
+          "name2": "Frequency",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0.0075,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0.009,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0.005,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0.0075,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0.01,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0.05,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Lacunarity",
+          "name2": "Lacunarity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 3.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Gain",
+          "name2": "Gain",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0.35,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0.4,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0.35,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume PerlinNoise Offset",
+          "name2": "Offset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0.15,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0.35,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": -0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll Speed-x",
+          "name2": "Speed.x",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 1.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0.8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll Speed-y",
+          "name2": "Speed.y",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0.8,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": -1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll Speed-z",
+          "name2": "Speed.z",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 0.6,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 0.6,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": -2,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": -1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": -0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "FogVolume Scroll DetailScale",
+          "name2": "DetailScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 2200,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2205,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2206,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2210,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2211,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2212,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2215,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2220,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 2221,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 2222,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "EnvironmentConfig ParamEditor",
+      "name2": "EnvironmentConfig",
+      "params": []
+    },
+    {
+      "name1": "RayTracing ParamEditor",
+      "name2": "RayTracing",
+      "params": []
+    }
+  ]
+}

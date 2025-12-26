@@ -1,0 +1,7185 @@
+{
+  "magic": "filt",
+  "game": 5,
+  "gameName": "Sekiro",
+  "unk0D": true,
+  "unk14": 0,
+  "unk50": 24,
+  "groups": [
+    {
+      "name1": "LightSet ParamEditor",
+      "name2": "LightSet",
+      "params": [
+        {
+          "name1": "Directional Light Angle0",
+          "name2": "Angle",
+          "type": 12,
+          "typeName": "Float2",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": -0.174533,
+                "y": 0.872665
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": -0.872665,
+                "y": 0.872665
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": -0.122173,
+                "y": -2.199115
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": -0.383972,
+                "y": -2.164208
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": -0.261799,
+                "y": 0.959931
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.087266,
+                "y": 0.523599
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.785398,
+                "y": 0.785398
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.174533,
+                "y": -2.199115
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.785398,
+                "y": 1.745329
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.349066,
+                "y": 0.872665
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.785398,
+                "y": 0.785398
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.174533,
+                "y": -2.199115
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.785398,
+                "y": 1.745329
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": -0.261799,
+                "y": 0.959931
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": -0.261799,
+                "y": 0.959931
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light DiffColor0",
+          "name2": "DiffColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.818053,
+                "y": 0.818053,
+                "z": 0.818053,
+                "w": 0.6
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.745098,
+                "y": 0.901961,
+                "z": 1,
+                "w": 0.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 0.666667,
+                "z": 0.509804,
+                "w": 0.6
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.509804,
+                "y": 0.745098,
+                "z": 1,
+                "w": 0.15
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": 1,
+                "y": 0.686275,
+                "z": 0.627451,
+                "w": 2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 0.784314,
+                "z": 0.54902,
+                "w": 0.01
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 0.996667,
+                "z": 0.98,
+                "w": 0.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 0.745098,
+                "z": 0.54902,
+                "w": 1
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.6,
+                "y": 0.737255,
+                "z": 1,
+                "w": 0.05
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 1,
+                "y": 0.784314,
+                "z": 0.54902,
+                "w": 0.01
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 1,
+                "y": 0.996667,
+                "z": 0.98,
+                "w": 0.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 1,
+                "y": 0.745098,
+                "z": 0.54902,
+                "w": 1
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.6,
+                "y": 0.737255,
+                "z": 1,
+                "w": 0.05
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": 1,
+                "y": 0.686275,
+                "z": 0.627451,
+                "w": 2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": 1,
+                "y": 0.686275,
+                "z": 0.627451,
+                "w": 2
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light SpecColor0",
+          "name2": "SpecColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 0.647059,
+                "z": 0.568627,
+                "w": 0.6
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.784314,
+                "y": 0.901961,
+                "z": 1,
+                "w": 0.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 0.666667,
+                "z": 0.509804,
+                "w": 0.6
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.509804,
+                "y": 0.745098,
+                "z": 1,
+                "w": 0.15
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": 1,
+                "y": 0.647059,
+                "z": 0.568627,
+                "w": 2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 0.784314,
+                "z": 0.54902,
+                "w": 0.01
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 0.995833,
+                "z": 0.980392,
+                "w": 0.1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 0.745098,
+                "z": 0.54902,
+                "w": 0.5
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.686275,
+                "y": 0.788235,
+                "z": 1,
+                "w": 0.01
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 1,
+                "y": 0.784314,
+                "z": 0.54902,
+                "w": 0.01
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 1,
+                "y": 0.995833,
+                "z": 0.980392,
+                "w": 0.1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 1,
+                "y": 0.745098,
+                "z": 0.54902,
+                "w": 0.5
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.686275,
+                "y": 0.788235,
+                "z": 1,
+                "w": 0.01
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": 1,
+                "y": 0.647059,
+                "z": 0.568627,
+                "w": 2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": 1,
+                "y": 0.647059,
+                "z": 0.568627,
+                "w": 2
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light Sharpness0",
+          "name2": "Sharpness",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0.25,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": 0.25,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light SsaoWeight0",
+          "name2": "SsaoWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": 0.65,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": 0.65,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": 0.65,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light Angle1",
+          "name2": "Angle",
+          "type": 12,
+          "typeName": "Float2",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": -1.570796,
+                "y": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": -1.570796,
+                "y": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": -0.561697,
+                "y": 0.062832
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.174533,
+                "y": -2.617994
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -1.570796,
+                "y": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.261799,
+                "y": 1.134464
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.872665,
+                "y": -2.094395
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.174533,
+                "y": -2.617994
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -1.570796,
+                "y": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.261799,
+                "y": 1.134464
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.174533,
+                "y": 0.261799
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": -1.570796,
+                "y": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": -0.561697,
+                "y": 0.062832
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light DiffColor1",
+          "name2": "DiffColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.745098,
+                "y": 0.901961,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": 0.925,
+                "y": 0.949,
+                "z": 1,
+                "w": 0.3
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 1,
+                "w": 0.01
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.67451,
+                "y": 0.784314,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.607843,
+                "y": 0.705882,
+                "z": 1,
+                "w": 0.25
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.67451,
+                "y": 0.784314,
+                "z": 1,
+                "w": 0.05
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 0.843137,
+                "w": 0.01
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.67451,
+                "y": 0.784314,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.607843,
+                "y": 0.705882,
+                "z": 1,
+                "w": 0.25
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.67451,
+                "y": 0.784314,
+                "z": 1,
+                "w": 0.01
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 1,
+                "w": 0.5
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": 0.925,
+                "y": 0.949,
+                "z": 1,
+                "w": 0.3
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light SpecColor1",
+          "name2": "SpecColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.745098,
+                "y": 0.901961,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": 0.93,
+                "y": 0.9524,
+                "z": 1,
+                "w": 0.3
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 0.843137,
+                "w": 0.01
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.701961,
+                "y": 0.741176,
+                "z": 0.843137,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.666667,
+                "y": 0.741176,
+                "z": 0.843137,
+                "w": 0.01
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.666667,
+                "y": 0.741176,
+                "z": 0.843137,
+                "w": 0.05
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 0.843137,
+                "w": 0.01
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.701961,
+                "y": 0.741176,
+                "z": 0.843137,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.666667,
+                "y": 0.741176,
+                "z": 0.843137,
+                "w": 0.01
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.666667,
+                "y": 0.741176,
+                "z": 0.843137,
+                "w": 0.01
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": 0.93,
+                "y": 0.9524,
+                "z": 1,
+                "w": 0.3
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light Sharpness1",
+          "name2": "Sharpness",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.1,
+              "unkFloat": 4
+            },
+            {
+              "id": 100,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.3,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0.2,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": 0.1,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": 0.3,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": 0.2,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": 0.25,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light SsaoWeight1",
+          "name2": "SsaoWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 100,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.65,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": 0.65,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": 0,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light LocalLight Angle1",
+          "name2": "Angle",
+          "type": 12,
+          "typeName": "Float2",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": -0.632676,
+                "y": -0.84823
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": -1.168934,
+                "y": -3.141593
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.628319,
+                "y": -1.012291
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.628319,
+                "y": -1.012291
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.872665,
+                "y": -0.261799
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.628319,
+                "y": -1.012291
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.628319,
+                "y": -1.012291
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.628319,
+                "y": -1.012291
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.872665,
+                "y": -0.261799
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.628319,
+                "y": -1.012291
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": -0.632676,
+                "y": -0.84823
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": -1.168934,
+                "y": -3.141593
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light LocalLight DiffColor1",
+          "name2": "DiffColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.658824,
+                "y": 0.756863,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.760784,
+                "y": 0.815686,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.760784,
+                "y": 0.815686,
+                "z": 1,
+                "w": 0.15
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.760784,
+                "y": 0.815686,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.658824,
+                "y": 0.756863,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.760784,
+                "y": 0.815686,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.760784,
+                "y": 0.815686,
+                "z": 1,
+                "w": 0.15
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.760784,
+                "y": 0.815686,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 1,
+                "w": 0.2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light LocalLight SpecColor1",
+          "name2": "SpecColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.788235,
+                "y": 0.882353,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.784314,
+                "y": 0.843137,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.784314,
+                "y": 0.843137,
+                "z": 1,
+                "w": 0.1
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.784314,
+                "y": 0.843137,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.788235,
+                "y": 0.882353,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.784314,
+                "y": 0.843137,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.784314,
+                "y": 0.843137,
+                "z": 1,
+                "w": 0.1
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.784314,
+                "y": 0.843137,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 1,
+                "w": 0.2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional LocalLight Light Sharpness1",
+          "name2": "Sharpness",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.3,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": 0.3,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": 0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light SsaoWeight2",
+          "name2": "SsaoWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.65,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.65,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0.65,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": 0.65,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": 0.65,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": 0.65,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light LocalLight Angle2",
+          "name2": "Angle",
+          "type": 12,
+          "typeName": "Float2",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": -0.261799,
+                "y": 0.959931
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": -0.462076,
+                "y": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.436332,
+                "y": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.436332,
+                "y": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.436332,
+                "y": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": -0.436332,
+                "y": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.436332,
+                "y": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.436332,
+                "y": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.436332,
+                "y": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": -0.436332,
+                "y": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": -0.261799,
+                "y": 0.959931
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": -0.462076,
+                "y": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light LocalLight DiffColor2",
+          "name2": "DiffColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 0.686275,
+                "z": 0.627451,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0.2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.9,
+                "y": 0.931427,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.885321,
+                "y": 0.845,
+                "z": 1,
+                "w": 0.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.86,
+                "y": 0.892881,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.86,
+                "y": 0.912985,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.9,
+                "y": 0.931427,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.885321,
+                "y": 0.845,
+                "z": 1,
+                "w": 0.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.86,
+                "y": 0.892881,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.86,
+                "y": 0.912985,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": 1,
+                "y": 0.686275,
+                "z": 0.627451,
+                "w": 0.25
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0.2
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light LocalLight SpecColor2",
+          "name2": "SpecColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 0.686275,
+                "z": 0.627451,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": 1,
+                "y": 0.686275,
+                "z": 0.627451,
+                "w": 0.2
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.89,
+                "y": 0.89911,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.86,
+                "y": 0.922221,
+                "z": 1,
+                "w": 0.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.835,
+                "y": 0.878956,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.862745,
+                "y": 0.901961,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.89,
+                "y": 0.89911,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.86,
+                "y": 0.922221,
+                "z": 1,
+                "w": 0.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.835,
+                "y": 0.878956,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.862745,
+                "y": 0.901961,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": 1,
+                "y": 0.686275,
+                "z": 0.627451,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": 1,
+                "y": 0.686275,
+                "z": 0.627451,
+                "w": 0.2
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional LocalLight Light Sharpness2",
+          "name2": "Sharpness",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": 0.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.25,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.25,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0.25,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": 0.25,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": 0.25,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": 0.25,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": 0.25,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light SsaoWeight3",
+          "name2": "SsaoWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light Hemi Color Up",
+          "name2": "Hemi Color Up",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.776471,
+                "y": 0.776471,
+                "z": 0.776471,
+                "w": 0.1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.945098,
+                "y": 0.945098,
+                "z": 0.945098,
+                "w": 0.1
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.878431,
+                "y": 0.878431,
+                "z": 0.878431,
+                "w": 0.1
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.756863,
+                "y": 0.756863,
+                "z": 0.756863,
+                "w": 0.1
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": 0.627451,
+                "y": 0.666667,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 0.941935,
+                "z": 0.815686,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.815686,
+                "y": 0.854902,
+                "z": 1,
+                "w": 1.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.815686,
+                "y": 0.854902,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.815686,
+                "y": 0.854902,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 1,
+                "y": 0.941935,
+                "z": 0.815686,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.815686,
+                "y": 0.854902,
+                "z": 1,
+                "w": 1.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.815686,
+                "y": 0.854902,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.815686,
+                "y": 0.854902,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": 0.627451,
+                "y": 0.666667,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": 0.627451,
+                "y": 0.666667,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light Hemi Color Down",
+          "name2": "Hemi Color Down",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 100,
+              "value": {
+                "x": 0.627451,
+                "y": 0.666667,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.603922,
+                "y": 0.709804,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.603922,
+                "y": 0.709804,
+                "z": 1,
+                "w": 0.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.603922,
+                "y": 0.709804,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0.603922,
+                "y": 0.709804,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.603922,
+                "y": 0.709804,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.603922,
+                "y": 0.709804,
+                "z": 1,
+                "w": 0.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.603922,
+                "y": 0.709804,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": {
+                "x": 0.603922,
+                "y": 0.709804,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": {
+                "x": 0.627451,
+                "y": 0.666667,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": {
+                "x": 0.627451,
+                "y": 0.666667,
+                "z": 1,
+                "w": 1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional LightLight1 FollowedCamera",
+          "name2": "Light1 FollowedCamera",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": false,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": false,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": false,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Enable LocalLight1",
+          "name2": "Enable LocalLight1",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": true,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": true,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": true,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": true,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": true,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": true,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Directional Enable LocalLight2",
+          "name2": "Enable LocalLight2",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": false,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": false,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": false,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 1000,
+              "value": true,
+              "unkFloat": 4
+            },
+            {
+              "id": 1100,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": true,
+              "unkFloat": 4
+            }
+          ]
+        },
+        {
+          "name1": "Directional Light  LightMask Influence",
+          "name2": "LightMask Influence",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 100,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 951,
+              "value": 1,
+              "unkFloat": 16
+            },
+            {
+              "id": 1000,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 1100,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "SSAO Editor",
+      "name2": "SSAO ",
+      "params": []
+    },
+    {
+      "name1": "Setting Info[Yebis]",
+      "name2": "Setting Info",
+      "params": []
+    },
+    {
+      "name1": "Tone Map[Yebis]",
+      "name2": "Tone Map",
+      "params": [
+        {
+          "name1": "GS Presents - ToneMap-Exposure",
+          "name2": "Exposure",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.82,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.75,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 2.2,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1.4,
+              "unkFloat": 15
+            },
+            {
+              "id": 950,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 3.75,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 2,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 2.75,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ToneMapMode",
+          "name2": "ToneMapMode",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 15
+            },
+            {
+              "id": 950,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 8,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 8,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 8,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-Contrast",
+          "name2": "FilmicContrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 15
+            },
+            {
+              "id": 950,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.5,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.5,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0.5,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ReinhardContrast",
+          "name2": "ReinhardContrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1.5,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1.5,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1.5,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1.5,
+              "unkFloat": 15
+            },
+            {
+              "id": 950,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1.35,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1.25,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1.35,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ReinhardWhiteBalance",
+          "name2": "ReinhardWhiteBalance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 950,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1.3,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1.5,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1.7,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-Enable AutoExposure",
+          "name2": "Enable AutoExposure",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure LightAdapt Speed",
+          "name2": "AutoExposure LightAdapt Speed",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure DarkAdapt Speed",
+          "name2": "AutoExposure DarkAdapt Speed",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.5,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.5,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0.5,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Middle Gray",
+          "name2": "AutoExposure Middle Gray",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": -2,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": -2,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": -2,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": -2,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": -2,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Center Weight",
+          "name2": "AutoExposure Center Weight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 4,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 4,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 4,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Adaption Max",
+          "name2": "AutoExposure Adaption Max",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 8,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 8,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 8,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 8,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Adaption Min",
+          "name2": "AutoExposure Adaption Min",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": -8,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": -8,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": -8,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": -8,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": -8,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-FreezeAdaptionFade",
+          "name2": "FreezeAdaptionFade",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": true,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": true,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": true,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Chromatic Aberration Enable",
+          "name2": "Enable Chromatic Aberration",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneLateralDispersion[0]",
+          "name2": "ToneLateralDispersion[0]",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.0025,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.0025,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.0025,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0.0025,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 0.0025,
+              "unkFloat": 15
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneLateralDispersion[1]",
+          "name2": "ToneLateralDispersion[1]",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.003,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.003,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.003,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0.003,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 0.003,
+              "unkFloat": 15
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Power",
+          "name2": "Power",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 8
+            },
+            {
+              "id": 950,
+              "value": 0.35,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.35,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.35,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0.35,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Range",
+          "name2": "Range",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.6,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.6,
+              "unkFloat": 8
+            },
+            {
+              "id": 950,
+              "value": 1.2,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1.2,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1.2,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1.2,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Shape",
+          "name2": "Shape",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.3,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.3,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.3,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0.3,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Fov Dependence",
+          "name2": "Fov Dependence",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorH",
+          "name2": "ColorH",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorS",
+          "name2": "ColorS",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1.2,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.9,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "Tone Map Color Grading ColorShift",
+          "name2": "ColorShift",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "Tone Map Color Grading ColorScale",
+          "name2": "ColorScale",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorV",
+          "name2": "ColorV",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Contrast",
+          "name2": "Contrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "Bloom[Yebis]",
+      "name2": "Bloom",
+      "params": [
+        {
+          "name1": "Gs Presents【Bloom】 Enable",
+          "name2": "Enable",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "Gs Presents-GlareNumLevels",
+          "name2": "GlareNumLevels",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 6,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 6,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 6,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 6,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 6,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 6,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 6,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 5,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 7,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 5,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 7,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "Gs Presents-Glare Luminance",
+          "name2": "Glare Luminance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 0.9,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.9,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.9,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "Gs Presents-Glare Threshold",
+          "name2": "Glare Threshold",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.6,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.7,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.7,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0.6,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 0.6,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 0.6,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 0.6,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.15,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.125,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0.1,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "Gs Presents-GlareBloom Alpha",
+          "name2": "GlareBloom Alpha",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "Gs Presents-GlareBloom GaussianRadiusScale",
+          "name2": "GlareBloom GaussianRadiusScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "Gs Presents-GlareBloom Sturate Ctrl",
+          "name2": "GlareBloom Saturate Ctrl",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "Gs Presents-GlareBloom Smooth",
+          "name2": "GlareBloom Smooth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 0.8,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.8,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.8,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0.8,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "Gs Presents-GlareBloom FeedbackWeight",
+          "name2": "GlareBloom FeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 0.8,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.8,
+              "unkFloat": 4
+            },
+            {
+              "id": 950,
+              "value": 0.8,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 950,
+              "value": 0.8,
+              "unkFloat": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "LightShaft[Yebis]",
+      "name2": "LightShaft",
+      "params": [
+        {
+          "name1": "GS Presents - LightShaft Enable",
+          "name2": "Enable",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft Angle",
+          "name2": "Angle",
+          "type": 12,
+          "typeName": "Float2",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": -0.261799,
+                "y": 0.959931
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft EnableRefLight",
+          "name2": "EnableRefLight",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft LightBankId",
+          "name2": "LightBankId",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 160000000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft LightId",
+          "name2": "LightId",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft HighQualitySkyMask",
+          "name2": "HighQualitySkyMask",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft SkyMaskMode",
+          "name2": "SkyMaskMode",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft MaskDepthThreshold",
+          "name2": "MaskDepthThreshold",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft SkyMaskSizeAngle",
+          "name2": "SkyMaskSizeAngle",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.17453292,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft SkyMaskCenterPower",
+          "name2": "SkyMaskCenterPower",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Sky Multiply Color",
+          "name2": "Sky Multiply Color",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.509804,
+                "y": 0.666667,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 0.901961,
+                "z": 0.705882,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 0.980392,
+                "z": 0.921569,
+                "w": 0
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 0.882353,
+                "z": 0.803922,
+                "w": 0
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Sky Add Color",
+          "name2": "Sky Add Color",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.784314,
+                "y": 0.862745,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 0.784,
+                "z": 0.627451,
+                "w": 0
+              },
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 22.5
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft SkyColorSaturate",
+          "name2": "SkyColorSaturate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft SkyColorThreshold",
+          "name2": "SkyColorThreshold",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ExposureInfluenceRate AddColor",
+          "name2": "ExposureInfluenceRate AddColor",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Parallel mode begin ang",
+          "name2": "Parallel mode begin ang",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.6981317,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Parallel mode end ang",
+          "name2": "Parallel mode end ang",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.3962634,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Fade out begin ang",
+          "name2": "Fade out begin ang",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.5707964,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Fade out end ang",
+          "name2": "Fade out end ang",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 2.0943952,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ShaftBlurRange",
+          "name2": "ShaftBlurRange",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 3.9,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft ShaftBlurRange for Parallel",
+          "name2": "ShaftBlurRange for Parallel",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft ShaftBlurFallOff",
+          "name2": "ShaftBlurFallOff",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - LightShaft ShaftBlurCount",
+          "name2": "ShaftBlurCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "Anti-Alias-Editor",
+      "name2": "Anti-Alias",
+      "params": []
+    },
+    {
+      "name1": "MotionBlur-Editor[Yebis]",
+      "name2": "MotionBlur",
+      "params": []
+    },
+    {
+      "name1": "FurBlur-Editor",
+      "name2": "FurBlur",
+      "params": []
+    },
+    {
+      "name1": "FeedBackBlur-Editor[Yebis]",
+      "name2": "FeedBackBlur",
+      "params": []
+    },
+    {
+      "name1": "ColorGrading[Yebis]",
+      "name2": "ColorGrading",
+      "params": [
+        {
+          "name1": "Yebis-ColorGrading-Enable",
+          "name2": "Enable",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Yebis-LutSourceId",
+          "name2": "LutSourceId",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": -1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ColorGrading FadeTime",
+          "name2": "FadeTime",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "ShadowParam ParamEditor",
+      "name2": "ShadowParam",
+      "params": [
+        {
+          "name1": "hadowParam - Shadow: Angle0",
+          "name2": "Angle",
+          "type": 12,
+          "typeName": "Float2",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0,
+                "y": 0
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": {
+                "x": 0,
+                "y": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "shadowParam -   Shadow:  Shadow Light Id",
+          "name2": "Shadow  Light  Id",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Shadow: Near",
+          "name2": "Near",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Shadow: Cascade Dist 0->1",
+          "name2": "Cascade Dist 0->1",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 32,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 45,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Shadow: Cascade Dist 1->2",
+          "name2": "Cascade Dist 1->2",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 160,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 80,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Shadow: Cascade Dist 2->3",
+          "name2": "Cascade Dist 2->3",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 320,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 320,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Shadow: Far Fade Start",
+          "name2": "Far Fade Start",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 200,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 3000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Shadow: Far Fade Dist",
+          "name2": "Far Fade Dist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 10,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 10,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Shadow: Cascade Fade Range Scale",
+          "name2": "Cascade Fade Range Scale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.05,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.05,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Shadow: Shadow Map FilterMode",
+          "name2": "Shadow Map FilterMode",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Shadow: Depth Offset",
+          "name2": "Depth Offset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": -0.001,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": -0.001,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Volume Depth",
+          "name2": "Volume Depth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 2000,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 200,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Depth Bias",
+          "name2": "Depth Bias",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Slope Scaled Depth Bias",
+          "name2": "Slope Scaled Depth Bias",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 3,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 3,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 3,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 3,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 3,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 3,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 3,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Shadow Model Cull Flip",
+          "name2": "Shadow Model Cull Flip",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - AlignTexel",
+          "name2": "AlignTexel",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - DepthRate",
+          "name2": "DepthRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - DepthScale",
+          "name2": "DepthScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 15,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 15,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - KernelScale",
+          "name2": "KernelScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.5,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - DepthOffsetScale",
+          "name2": "DepthOffsetScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": -0.085,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": -0.085,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Blur Count",
+          "name2": "Blur Count",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Blur Radius",
+          "name2": "Blur Radius",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 2,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - TempAA Auto Jitter",
+          "name2": "TempAA Auto Jitter",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam Cascade Count",
+          "name2": "Cascade Count",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam - Shadow: Shadow Map Resolution",
+          "name2": "Shadow Map Resolution",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            },
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam Cascade0 Resolution",
+          "name2": "Cascade0 Resolution",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam Cascade1 Resolution",
+          "name2": "Cascade1 Resolution",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam Cascade2 Resolution",
+          "name2": "Cascade2 Resolution",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam Cascade3 Resolution",
+          "name2": "Cascade3 Resolution",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "ShadowParam CompartmentShadow Resolution",
+          "name2": "CompartmentShadow Resolution",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 8
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 12
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 15
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 21
+            },
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 22.5
+            },
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "WaterInteraction-Editor",
+      "name2": "WaterInteraction Simulation",
+      "params": []
+    },
+    {
+      "name1": "AOFields - Editor",
+      "name2": "AOFields",
+      "params": []
+    },
+    {
+      "name1": "AOFields Model - Editor",
+      "name2": "AOFields Model",
+      "params": []
+    },
+    {
+      "name1": "SeaWave:Editor",
+      "name2": "SeaWave ",
+      "params": []
+    },
+    {
+      "name1": "Glow Filter-Editor",
+      "name2": "Glow Filter ",
+      "params": []
+    },
+    {
+      "name1": "[GS]Lens Simulation",
+      "name2": "Lens Simulation",
+      "params": [
+        {
+          "name1": "[GS]Lens Simulation Param  Enable",
+          "name2": "Enable",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearEnd",
+          "name2": "NearEnd",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearStart",
+          "name2": "NearStart",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 10,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FarStart",
+          "name2": "FarStart",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 100,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FarEnd",
+          "name2": "FarEnd",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 200,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FocusDist",
+          "name2": "FocusDist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 100,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param UseCameraFocus",
+          "name2": "UseCameraFocus",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param SkyMaskRate",
+          "name2": "SkyMaskRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param Lens F",
+          "name2": "Lens F",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 20,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param Av (絞り値)",
+          "name2": "Av (絞り値)",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FilmSize(mm)",
+          "name2": "FilmSize(mm)",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 0.024,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param LinearCoCFactorNear",
+          "name2": "LinearCoCFactorNear",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param LinearCoCFactorFar",
+          "name2": "LinearCoCFactorFar",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param ApertureShape",
+          "name2": "ApertureShape",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param DiaphragmRotate",
+          "name2": "DiaphragmRotate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCBlurCountPreMask",
+          "name2": "CoCBlurCountPreMask",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 950,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCBlurCount(1)",
+          "name2": "CoCBlurCount(1)",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCBlurCount(2)",
+          "name2": "CoCBlurCount(2)",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 950,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Lens Simulation Param MaxBlurLevel",
+          "name2": "MaxBlurLevel",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 950,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param CoCMode",
+          "name2": "CoCMode",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 950,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearCoCMode Linear",
+          "name2": "NearCoCMode Linear",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param FarCoCMode Linear",
+          "name2": "FarCoCMode Linear",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param HiResolutionBlur",
+          "name2": "HiResolutionBlur",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param NearFarSeparatedBlur",
+          "name2": "NearFarSeparatedBlur",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param PreTempAA",
+          "name2": "PreTempAA",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "[GS]Lens Simulation Param TemporalFeedbackWeight",
+          "name2": "TemporalFeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 950,
+              "value": 0.9,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Lens Simulation Param AffectedByTransparentDepth",
+          "name2": "AffectedByTransparentDepth",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 950,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "Cloud Shadow:Editor",
+      "name2": "Cloud Shadow ",
+      "params": []
+    },
+    {
+      "name1": "Wet ParamEditor",
+      "name2": "Wet",
+      "params": [
+        {
+          "name1": "Wet-OverrideAlbedo",
+          "name2": "OverrideAlbedo",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Wet-OverrideShininess",
+          "name2": "OverrideShininess",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Wet-AlbedoRate",
+          "name2": "AlbedoRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Wet-ShininessRate",
+          "name2": "ShininessRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "SSR ParamEditor",
+      "name2": "SSR",
+      "params": [
+        {
+          "name1": "SSR Enable",
+          "name2": "Enable",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR TraverseMode",
+          "name2": "TraverseMode",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Shininess Reject Threshold",
+          "name2": "Shininess Reject Threshold",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.35,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Depth Reject Threshold",
+          "name2": "Depth Reject Threshold",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 5000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Fade To Viewer Start",
+          "name2": "Fade To Viewer Start",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.14,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Fresnel Reject Threshold",
+          "name2": "Fresnel Reject Threshold",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.26,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Ray Trace Step Scale Min",
+          "name2": "Ray Trace Step Scale Min",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Ray Trace Step Scale Max",
+          "name2": "Ray Trace Step Scale Max",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 10,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Display Mip Scale",
+          "name2": "Display Mip Scale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Display Mip Offset",
+          "name2": "Display Mip Offset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Depth Fade Range",
+          "name2": "Depth Fade Range",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 10,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Geom Crack Detect Factor",
+          "name2": "Geom Crack Detect Factor",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.02,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Tex Blur Sigma",
+          "name2": "Tex Blur Sigma",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "SSR Tex Blur Sigma for Mip",
+          "name2": "Tex Blur Sigma for Mip",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "VolumetricFog ParamEditor",
+      "name2": "VolumetricFog",
+      "params": [
+        {
+          "name1": "VolumetricFog Enable",
+          "name2": "Enable",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeWidth",
+          "name2": "VolumeWidth",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 96,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeDepth",
+          "name2": "VolumeDepth",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 24,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog GameScale",
+          "name2": "GameScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog NearDepth",
+          "name2": "NearDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FarDepth",
+          "name2": "FarDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 2000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog NearOffset",
+          "name2": "NearOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogEndDepth",
+          "name2": "FogEndDepth",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 2300,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DrawTiming",
+          "name2": "DrawTiming",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog EnableAnalyticalFog",
+          "name2": "EnableAnalyticalFog",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog VolumeSliceSampleOffset",
+          "name2": "VolumeSliceSampleOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog CullingBySceneDepth",
+          "name2": "CullingBySceneDepth",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog CancelInScatteringRateFromSSR",
+          "name2": "CancelInScatteringRateFromSSR",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global FixedDensity",
+          "name2": "FixedDensity",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1E-05,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global ScatteringG",
+          "name2": "ScatteringG",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global LocalLightScale",
+          "name2": "LocalLightScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global LocalLightDistScale",
+          "name2": "LocalLightDistScale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogDistribution",
+          "name2": "HeightFogDistribution",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.022,
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": 0.022,
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": 0.022,
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": 0.01,
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogOffset",
+          "name2": "HeightFogOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogReferenceOffset",
+          "name2": "HeightFogReferenceOffset",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogReferenceModeRate",
+          "name2": "HeightFogReferenceModeRate",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global HeightFogDensity Scale",
+          "name2": "HeightFogDensity Scale",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.0012,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Global AbsorptionScale",
+          "name2": "AbsorptionScale",
+          "type": 13,
+          "typeName": "Float3",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight SkyColor",
+          "name2": "SkyColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.344582,
+                "y": 0.411765,
+                "z": 0.470588,
+                "w": 0.3
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.345098,
+                "y": 0.411765,
+                "z": 0.470588,
+                "w": 0.3
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.392157,
+                "y": 0.411765,
+                "z": 0.454902,
+                "w": 0.3
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.226832,
+                "y": 0.297178,
+                "z": 0.378053,
+                "w": 0.3
+              },
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight HeightAtten",
+          "name2": "HeightAtten",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog SkyLight StartDist",
+          "name2": "StartDist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 3,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight LightBankId",
+          "name2": "LightBankId",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 160000000,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight LightId",
+          "name2": "LightId",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight DirectColor",
+          "name2": "DirectColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.909804,
+                "y": 0.882353,
+                "z": 1,
+                "w": 1.5
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.803922,
+                "y": 0.921569,
+                "z": 1,
+                "w": 1.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 0.760968,
+                "z": 0.61,
+                "w": 1.5
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.039216,
+                "y": 0.098039,
+                "z": 0.176471,
+                "w": 0
+              },
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight OppositeColor",
+          "name2": "OppositeColor",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 0.333333,
+                "y": 0.380456,
+                "z": 0.501961,
+                "w": 0.6
+              },
+              "unkFloat": 0
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.333333,
+                "y": 0.431373,
+                "z": 0.501961,
+                "w": 0.5
+              },
+              "unkFloat": 4
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.470588,
+                "y": 0.431373,
+                "z": 0.544553,
+                "w": 0.5
+              },
+              "unkFloat": 11.5
+            },
+            {
+              "id": 0,
+              "value": {
+                "x": 0.039216,
+                "y": 0.098039,
+                "z": 0.176471,
+                "w": 0
+              },
+              "unkFloat": 16
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight HeightAtten",
+          "name2": "HeightAtten",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight StartDist",
+          "name2": "StartDist",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 150,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight ShadowSampleCount",
+          "name2": "ShadowSampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight ShadowDither",
+          "name2": "ShadowDither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight AngleClip",
+          "name2": "AngleClip",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight EnableReproj",
+          "name2": "EnableReproj",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": true,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight JitterCount",
+          "name2": "JitterCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight JitterXYSize",
+          "name2": "JitterXYSize",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog DirLight FeedbackWeight",
+          "name2": "FeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingSampleCount",
+          "name2": "InjectingSampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 16,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingDither",
+          "name2": "InjectingDither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingReprojEnabled",
+          "name2": "InjectingReprojEnabled",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog FogVolume InjectingFeedbackWeight",
+          "name2": "InjectingFeedbackWeight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Config SampleCount",
+          "name2": "SampleCount",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "VolumetricFog Config Dither",
+          "name2": "Dither",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "FogVolume ParamEditor",
+      "name2": "FogVolume",
+      "params": []
+    },
+    {
+      "name1": "EnvironmentConfig ParamEditor",
+      "name2": "EnvironmentConfig",
+      "params": []
+    }
+  ]
+}

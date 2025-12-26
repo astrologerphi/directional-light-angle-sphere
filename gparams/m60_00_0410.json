@@ -1,0 +1,479 @@
+{
+  "magic": "filt",
+  "game": 5,
+  "gameName": "Sekiro",
+  "unk0D": true,
+  "unk14": 0,
+  "unk50": 24,
+  "groups": [
+    {
+      "name1": "LightSet ParamEditor",
+      "name2": "LightSet",
+      "params": []
+    },
+    {
+      "name1": "SSAO Editor",
+      "name2": "SSAO ",
+      "params": []
+    },
+    {
+      "name1": "Setting Info[Yebis]",
+      "name2": "Setting Info",
+      "params": []
+    },
+    {
+      "name1": "Tone Map[Yebis]",
+      "name2": "Tone Map",
+      "params": [
+        {
+          "name1": "GS Presents - ToneMap-Exposure",
+          "name2": "Exposure",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 4.35,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ToneMapMode",
+          "name2": "ToneMapMode",
+          "type": 3,
+          "typeName": "IntA",
+          "values": [
+            {
+              "id": 0,
+              "value": 8,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-Contrast",
+          "name2": "FilmicContrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ReinhardContrast",
+          "name2": "ReinhardContrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.3,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-ReinhardWhiteBalance",
+          "name2": "ReinhardWhiteBalance",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-Enable AutoExposure",
+          "name2": "Enable AutoExposure",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure LightAdapt Speed",
+          "name2": "AutoExposure LightAdapt Speed",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.25,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure DarkAdapt Speed",
+          "name2": "AutoExposure DarkAdapt Speed",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.25,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Middle Gray",
+          "name2": "AutoExposure Middle Gray",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": -7,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Center Weight",
+          "name2": "AutoExposure Center Weight",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 7,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Adaption Max",
+          "name2": "AutoExposure Adaption Max",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.4,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-AutoExposure Adaption Min",
+          "name2": "AutoExposure Adaption Min",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": -1.5,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneMap-FreezeAdaptionFade",
+          "name2": "FreezeAdaptionFade",
+          "type": 11,
+          "typeName": "BoolB",
+          "values": [
+            {
+              "id": 0,
+              "value": false,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Chromatic Aberration Enable",
+          "name2": "Enable Chromatic Aberration",
+          "type": 7,
+          "typeName": "IntB",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneLateralDispersion[0]",
+          "name2": "ToneLateralDispersion[0]",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.0014,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ToneLateralDispersion[1]",
+          "name2": "ToneLateralDispersion[1]",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.0002,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Power",
+          "name2": "Power",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.45,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Range",
+          "name2": "Range",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Shape",
+          "name2": "Shape",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0.2,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Vignetting Fov Dependence",
+          "name2": "Fov Dependence",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorH",
+          "name2": "ColorH",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 0,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorS",
+          "name2": "ColorS",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Tone Map Color Grading ColorShift",
+          "name2": "ColorShift",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "Tone Map Color Grading ColorScale",
+          "name2": "ColorScale",
+          "type": 14,
+          "typeName": "Float4",
+          "values": [
+            {
+              "id": 0,
+              "value": {
+                "x": 1,
+                "y": 1,
+                "z": 1,
+                "w": 0
+              },
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - ColorV",
+          "name2": "ColorV",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        },
+        {
+          "name1": "GS Presents - Contrast",
+          "name2": "Contrast",
+          "type": 9,
+          "typeName": "Float",
+          "values": [
+            {
+              "id": 0,
+              "value": 1,
+              "unkFloat": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name1": "Bloom[Yebis]",
+      "name2": "Bloom",
+      "params": []
+    },
+    {
+      "name1": "LightShaft[Yebis]",
+      "name2": "LightShaft",
+      "params": []
+    },
+    {
+      "name1": "Anti-Alias-Editor",
+      "name2": "Anti-Alias",
+      "params": []
+    },
+    {
+      "name1": "MotionBlur-Editor[Yebis]",
+      "name2": "MotionBlur",
+      "params": []
+    },
+    {
+      "name1": "FurBlur-Editor",
+      "name2": "FurBlur",
+      "params": []
+    },
+    {
+      "name1": "FeedBackBlur-Editor[Yebis]",
+      "name2": "FeedBackBlur",
+      "params": []
+    },
+    {
+      "name1": "ColorGrading[Yebis]",
+      "name2": "ColorGrading",
+      "params": []
+    },
+    {
+      "name1": "ShadowParam ParamEditor",
+      "name2": "ShadowParam",
+      "params": []
+    },
+    {
+      "name1": "WaterInteraction-Editor",
+      "name2": "WaterInteraction Simulation",
+      "params": []
+    },
+    {
+      "name1": "AOFields - Editor",
+      "name2": "AOFields",
+      "params": []
+    },
+    {
+      "name1": "AOFields Model - Editor",
+      "name2": "AOFields Model",
+      "params": []
+    },
+    {
+      "name1": "SeaWave:Editor",
+      "name2": "SeaWave ",
+      "params": []
+    },
+    {
+      "name1": "Glow Filter-Editor",
+      "name2": "Glow Filter ",
+      "params": []
+    },
+    {
+      "name1": "[GS]Lens Simulation",
+      "name2": "Lens Simulation",
+      "params": []
+    },
+    {
+      "name1": "Cloud Shadow:Editor",
+      "name2": "Cloud Shadow ",
+      "params": []
+    },
+    {
+      "name1": "Wet ParamEditor",
+      "name2": "Wet",
+      "params": []
+    },
+    {
+      "name1": "SSR ParamEditor",
+      "name2": "SSR",
+      "params": []
+    },
+    {
+      "name1": "VolumetricFog ParamEditor",
+      "name2": "VolumetricFog",
+      "params": []
+    },
+    {
+      "name1": "FogVolume ParamEditor",
+      "name2": "FogVolume",
+      "params": []
+    },
+    {
+      "name1": "EnvironmentConfig ParamEditor",
+      "name2": "EnvironmentConfig",
+      "params": []
+    }
+  ]
+}
