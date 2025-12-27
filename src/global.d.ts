@@ -22,9 +22,9 @@ interface TrailPoint {
 
 // prettier-ignore
 interface RadDirection {
-    vertical: number;   // -1/2 * pi <= vertical < 0
-    horizontal: number; // -3/4 * pi < horizontal < 1/4 * pi
-}
+        vertical: number;   // -1/2 * pi <= vertical < 0
+        horizontal: number; // -3/4 * pi < horizontal < 1/4 * pi
+    }
 
 interface RadDirectionsWithTime {
     [time: number]: RadDirection; // 0 <= time < 24
@@ -45,4 +45,8 @@ interface LightAnglePathCollection {
             };
         };
     };
+}
+
+interface Window {
+    lightAnglePaths: LightAnglePathCollection;
 }

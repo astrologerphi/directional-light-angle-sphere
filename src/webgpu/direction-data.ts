@@ -1,3 +1,5 @@
+import { lightAnglePaths } from '../data';
+
 function Rad2Point(direction: RadDirection): Vector3 {
     const x = Math.cos(direction.vertical) * -Math.sin(direction.horizontal);
     const z = Math.cos(direction.vertical) * Math.cos(direction.horizontal);
@@ -12,7 +14,7 @@ function geometricSpheralLerp(start: RadPoint, end: RadPoint): LightDirection[] 
     const dot = startVec.x * endVec.x + startVec.y * endVec.y + startVec.z * endVec.z;
     const theta = Math.acos(Math.max(-1, Math.min(1, dot)));
     const sinTheta = Math.sin(theta);
-    for (let t = 0; t <= 1; t += 0.01) {
+    for (let t = start.timestamp; t <= end.timestamp; t += 0.01) {
         let x, y, z;
         if (theta < 0.001) {
             x = startVec.x + (endVec.x - startVec.x) * t;
@@ -30,17 +32,41 @@ function geometricSpheralLerp(start: RadPoint, end: RadPoint): LightDirection[] 
             x: x / length,
             y: y / length,
             z: z / length,
-            time: start.timestamp + t * (end.timestamp - start.timestamp),
+            time: t,
         });
     }
     return result;
 }
 
 export function generateDemoData(): LightDirection[] {
-    return geometricSpheralLerp(
-        { timestamp: 0, direction: { vertical: -0.506, horizontal: 1.92 } },
-        { timestamp: 24, direction: { vertical: -0.349, horizontal: -1.92 } }
-    );
+    let data = lightAnglePaths['m10_00_0000'][0];
+    let keys = Object.keys(data)
+        .map(k => Number(k))
+        .sort((a, b) => a - b);
+    data[24] = data[0];
+    let res: LightDirection[] = [];
+    for (let i = 0; i < keys.length - 1; i++) {
+        let start: RadPoint = {
+            timestamp: keys[i],
+            direction: {
+                vertical: data[keys[i]].x,
+                horizontal: data[keys[i]].y,
+            },
+        };
+        let end: RadPoint = {
+            timestamp: keys[i + 1],
+            direction: {
+                vertical: data[keys[i + 1]].x,
+                horizontal: data[keys[i + 1]].y,
+            },
+        };
+        console.log(start, end);
+        let part = geometricSpheralLerp(start, end);
+        // console.log(part);
+        res = res.concat(part);
+    }
+    // console.log(res);
+    return res;
 }
 
 export function interpolateDirection(dir1: LightDirection, dir2: LightDirection, t: number): Vector3 {

@@ -1,3 +1,4 @@
+import { lightAnglePaths } from './data';
 import { initWebGPUVisualization, VisualizationController } from './webgpu/visualization';
 
 const canvas = document.getElementById('webgpuCanvas');
@@ -66,3 +67,5 @@ toggleButton.addEventListener('click', () => {
 window.addEventListener('beforeunload', () => {
     controller?.stop();
 });
+
+window.lightAnglePaths = lightAnglePaths;

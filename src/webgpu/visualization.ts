@@ -50,7 +50,6 @@ export async function initWebGPUVisualization(
 
     const presentationFormat = navigator.gpu.getPreferredCanvasFormat();
     const demoData = generateDemoData();
-    console.log(demoData);
     const cycleDuration = demoData[demoData.length - 1]?.time ?? 0;
     if (cycleDuration <= 0) {
         throw new Error('Demo data is empty.');
