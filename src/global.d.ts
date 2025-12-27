@@ -34,3 +34,15 @@ interface RadPoint {
     timestamp: number; // 0 <= timestamp < 24
     direction: RadDirection;
 }
+
+interface LightAnglePathCollection {
+    [name: string]: {
+        title: string;
+        [id: number]: {
+            [time: number]: {
+                x: number;
+                y: number;
+            };
+        };
+    };
+}
