@@ -21,6 +21,11 @@ import {
 const dotSize = 0.1;
 const maxTrailPoints = 3600;
 const trailFadeTime = 6400;
+const animationSpeed = 10; // Multiplier: 1 = real-time (24 sec = 24 hours), 4 = 4x faster
+
+// Uniform buffer sizes (must be aligned to 16 bytes)
+const trailUniformBufferSize = 80; // mat4x4 (64) + vec3 (12) + padding (4)
+const dotUniformBufferSize = 96; // mat4x4 (64) + vec3 + f32 (16) + vec3 + padding (16)
 
 export interface VisualizationController {
     pause(): void;
@@ -49,14 +54,21 @@ export async function initWebGPUVisualization(
     }
 
     const presentationFormat = navigator.gpu.getPreferredCanvasFormat();
-    const demoData = generateDemoData();
-    const cycleDuration = demoData[demoData.length - 1]?.time ?? 0;
+    const segments = generateDemoData();
+    if (segments.length === 0) {
+        throw new Error('No segment data found.');
+    }
+
+    // Use the first segment's cycle duration as reference (all should be 24 hours)
+    const cycleDuration = segments[0].directions[segments[0].directions.length - 1]?.time ?? 0;
     if (cycleDuration <= 0) {
         throw new Error('Demo data is empty.');
     }
 
-    const trailPoints: TrailPoint[] = [];
-    const sphere = createSphereGeometry(1, 48, 24);
+    // Create trail points array for each segment
+    const segmentTrails: SegmentTrail[] = segments.map(() => ({ points: [] }));
+
+    const sphere = createSphereGeometry(0.99, 48, 24);
     const scaleLines = createScaleLines(1.01);
 
     const sphereVertexBuffer = createStaticBuffer(device, sphere.vertices, GPUBufferUsage.VERTEX);
@@ -173,8 +185,18 @@ export async function initWebGPUVisualization(
         },
     });
 
+    const trailBindGroupLayout = device.createBindGroupLayout({
+        entries: [
+            {
+                binding: 0,
+                visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
+                buffer: { type: 'uniform' },
+            },
+        ],
+    });
+
     const trailPipeline = device.createRenderPipeline({
-        layout: pipelineLayout,
+        layout: device.createPipelineLayout({ bindGroupLayouts: [trailBindGroupLayout] }),
         vertex: {
             module: device.createShaderModule({ code: trailVertexShader }),
             entryPoint: 'main',
@@ -201,26 +223,15 @@ export async function initWebGPUVisualization(
         },
     });
 
-    const trailBuffer = device.createBuffer({
-        size: maxTrailPoints * 4 * Float32Array.BYTES_PER_ELEMENT,
-        usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST,
-    });
-
-    const lightLineBuffer = device.createBuffer({
-        size: 6 * Float32Array.BYTES_PER_ELEMENT,
-        usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST,
-    });
-
-    const dotQuadBuffer = createStaticBuffer(
-        device,
-        new Float32Array([-1, -1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0]),
-        GPUBufferUsage.VERTEX
-    );
-
-    const dotUniformBuffer = device.createBuffer({
-        size: 32 * Float32Array.BYTES_PER_ELEMENT,
-        usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
-    });
+    // Create per-segment resources
+    interface SegmentResources {
+        trailBuffer: GPUBuffer;
+        trailUniformBuffer: GPUBuffer;
+        trailBindGroup: GPUBindGroup;
+        lightLineBuffer: GPUBuffer;
+        dotUniformBuffer: GPUBuffer;
+        dotBindGroup: GPUBindGroup;
+    }
 
     const dotBindGroupLayout = device.createBindGroupLayout({
         entries: [
@@ -232,20 +243,59 @@ export async function initWebGPUVisualization(
         ],
     });
 
-    const dotBindGroup = device.createBindGroup({
-        layout: dotBindGroupLayout,
-        entries: [
-            {
-                binding: 0,
-                resource: { buffer: dotUniformBuffer },
-            },
-        ],
+    const dotPipelineLayout = device.createPipelineLayout({
+        bindGroupLayouts: [dotBindGroupLayout],
     });
 
+    const segmentResources: SegmentResources[] = segments.map(() => {
+        const trailBuffer = device.createBuffer({
+            size: maxTrailPoints * 4 * Float32Array.BYTES_PER_ELEMENT,
+            usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST,
+        });
+
+        const trailUniformBuffer = device.createBuffer({
+            size: trailUniformBufferSize,
+            usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+        });
+
+        const trailBindGroup = device.createBindGroup({
+            layout: trailBindGroupLayout,
+            entries: [{ binding: 0, resource: { buffer: trailUniformBuffer } }],
+        });
+
+        const lightLineBuffer = device.createBuffer({
+            size: 6 * Float32Array.BYTES_PER_ELEMENT,
+            usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST,
+        });
+
+        const dotUniformBuffer = device.createBuffer({
+            size: dotUniformBufferSize,
+            usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+        });
+
+        const dotBindGroup = device.createBindGroup({
+            layout: dotBindGroupLayout,
+            entries: [{ binding: 0, resource: { buffer: dotUniformBuffer } }],
+        });
+
+        return {
+            trailBuffer,
+            trailUniformBuffer,
+            trailBindGroup,
+            lightLineBuffer,
+            dotUniformBuffer,
+            dotBindGroup,
+        };
+    });
+
+    const dotQuadBuffer = createStaticBuffer(
+        device,
+        new Float32Array([-1, -1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0]),
+        GPUBufferUsage.VERTEX
+    );
+
     const dotPipeline = device.createRenderPipeline({
-        layout: device.createPipelineLayout({
-            bindGroupLayouts: [dotBindGroupLayout],
-        }),
+        layout: dotPipelineLayout,
         vertex: {
             module: device.createShaderModule({ code: dotVertexShader }),
             entryPoint: 'main',
@@ -363,24 +413,33 @@ export async function initWebGPUVisualization(
             return;
         }
 
-        const elapsedSeconds = ((now ?? performance.now()) - startTime) / 1000;
+        const elapsedSeconds = (((now ?? performance.now()) - startTime) / 1000) * animationSpeed;
         const cycleTime = cycleDuration === 0 ? 0 : elapsedSeconds % cycleDuration;
-
-        const { prev, next, t } = getCurrentKeyframes(demoData, cycleTime, cycleDuration);
-        const currentDirection = interpolateDirection(prev, next, t);
-
         const nowMs = performance.now();
-        trailPoints.push({
-            position: [currentDirection.x, currentDirection.y, currentDirection.z],
-            timestamp: nowMs,
+
+        // Calculate current direction for each segment
+        const currentDirections: Vector3[] = segments.map(segment => {
+            const { prev, next, t } = getCurrentKeyframes(segment.directions, cycleTime, cycleDuration);
+            return interpolateDirection(prev, next, t);
         });
 
-        while (trailPoints.length > 0 && nowMs - trailPoints[0].timestamp > trailFadeTime) {
-            trailPoints.shift();
-        }
-        if (trailPoints.length > maxTrailPoints) {
-            trailPoints.shift();
-        }
+        // Update trail points for each segment
+        segments.forEach((_, idx) => {
+            const trail = segmentTrails[idx];
+            const direction = currentDirections[idx];
+
+            trail.points.push({
+                position: [direction.x, direction.y, direction.z],
+                timestamp: nowMs,
+            });
+
+            while (trail.points.length > 0 && nowMs - trail.points[0].timestamp > trailFadeTime) {
+                trail.points.shift();
+            }
+            if (trail.points.length > maxTrailPoints) {
+                trail.points.shift();
+            }
+        });
 
         const aspect = canvas.width / canvas.height;
         const projectionMatrix = createProjectionMatrix(Math.PI / 4, aspect, 0.1, 100);
@@ -390,31 +449,50 @@ export async function initWebGPUVisualization(
         multiplyMatrices(mvpMatrix, projectionMatrix, viewMatrix);
 
         device.queue.writeBuffer(uniformBuffer, 0, mvpMatrix);
-        device.queue.writeBuffer(dotUniformBuffer, 0, mvpMatrix);
-        device.queue.writeBuffer(
-            dotUniformBuffer,
-            64,
-            new Float32Array([currentDirection.x, currentDirection.y, currentDirection.z, dotSize])
-        );
 
-        device.queue.writeBuffer(
-            lightLineBuffer,
-            0,
-            new Float32Array([0, 0, 0, currentDirection.x, currentDirection.y, currentDirection.z])
-        );
+        // Update per-segment buffers
+        segments.forEach((segment, idx) => {
+            const resources = segmentResources[idx];
+            const trail = segmentTrails[idx];
+            const direction = currentDirections[idx];
 
-        if (trailPoints.length > 0) {
-            const trailData = new Float32Array(trailPoints.length * 4);
-            trailPoints.forEach((point, i) => {
-                const age = Math.min(1, (nowMs - point.timestamp) / trailFadeTime);
-                const baseIndex = i * 4;
-                trailData[baseIndex + 0] = point.position[0];
-                trailData[baseIndex + 1] = point.position[1];
-                trailData[baseIndex + 2] = point.position[2];
-                trailData[baseIndex + 3] = age;
-            });
-            device.queue.writeBuffer(trailBuffer, 0, trailData);
-        }
+            // Trail uniform buffer: MVP matrix + color
+            const trailUniformData = new Float32Array(20); // 16 for mat4 + 3 for color + 1 padding
+            trailUniformData.set(mvpMatrix, 0);
+            trailUniformData.set(segment.color, 16);
+            device.queue.writeBuffer(resources.trailUniformBuffer, 0, trailUniformData);
+
+            // Dot uniform buffer: MVP matrix + position + size + color
+            const dotUniformData = new Float32Array(24); // 16 for mat4 + 4 (pos+size) + 4 (color+padding)
+            dotUniformData.set(mvpMatrix, 0);
+            dotUniformData[16] = direction.x;
+            dotUniformData[17] = direction.y;
+            dotUniformData[18] = direction.z;
+            dotUniformData[19] = dotSize;
+            dotUniformData.set(segment.color, 20);
+            device.queue.writeBuffer(resources.dotUniformBuffer, 0, dotUniformData);
+
+            // Light line buffer
+            device.queue.writeBuffer(
+                resources.lightLineBuffer,
+                0,
+                new Float32Array([0, 0, 0, direction.x, direction.y, direction.z])
+            );
+
+            // Trail vertex buffer
+            if (trail.points.length > 0) {
+                const trailData = new Float32Array(trail.points.length * 4);
+                trail.points.forEach((point, i) => {
+                    const age = Math.min(1, (nowMs - point.timestamp) / trailFadeTime);
+                    const baseIndex = i * 4;
+                    trailData[baseIndex + 0] = point.position[0];
+                    trailData[baseIndex + 1] = point.position[1];
+                    trailData[baseIndex + 2] = point.position[2];
+                    trailData[baseIndex + 3] = age;
+                });
+                device.queue.writeBuffer(resources.trailBuffer, 0, trailData);
+            }
+        });
 
         const textureView = context.getCurrentTexture().createView();
         const commandEncoder = device.createCommandEncoder();
@@ -454,22 +532,35 @@ export async function initWebGPUVisualization(
             passEncoder.draw(lineSegmentSize, 1, i * lineSegmentSize, 0);
         }
 
-        if (trailPoints.length > 1) {
-            passEncoder.setPipeline(trailPipeline);
-            passEncoder.setBindGroup(0, bindGroup);
-            passEncoder.setVertexBuffer(0, trailBuffer);
-            passEncoder.draw(trailPoints.length, 1, 0, 0);
-        }
+        // Draw trails for all segments
+        passEncoder.setPipeline(trailPipeline);
+        segments.forEach((_, idx) => {
+            const resources = segmentResources[idx];
+            const trail = segmentTrails[idx];
+            if (trail.points.length > 1) {
+                passEncoder.setBindGroup(0, resources.trailBindGroup);
+                passEncoder.setVertexBuffer(0, resources.trailBuffer);
+                passEncoder.draw(trail.points.length, 1, 0, 0);
+            }
+        });
 
+        // Draw light lines for all segments
         passEncoder.setPipeline(lightLinePipeline);
         passEncoder.setBindGroup(0, bindGroup);
-        passEncoder.setVertexBuffer(0, lightLineBuffer);
-        passEncoder.draw(2);
+        segments.forEach((_, idx) => {
+            const resources = segmentResources[idx];
+            passEncoder.setVertexBuffer(0, resources.lightLineBuffer);
+            passEncoder.draw(2);
+        });
 
+        // Draw dots for all segments
         passEncoder.setPipeline(dotPipeline);
-        passEncoder.setBindGroup(0, dotBindGroup);
         passEncoder.setVertexBuffer(0, dotQuadBuffer);
-        passEncoder.draw(6);
+        segments.forEach((_, idx) => {
+            const resources = segmentResources[idx];
+            passEncoder.setBindGroup(0, resources.dotBindGroup);
+            passEncoder.draw(6);
+        });
 
         passEncoder.end();
         device.queue.submit([commandEncoder.finish()]);

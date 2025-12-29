@@ -1,5 +1,17 @@
 import { lightAnglePaths } from '../data';
 
+// Predefined colors for different segments (HSL-based for good distinction)
+const segmentColors: Vec3[] = [
+    [1.0, 0.75, 0.15], // Orange (original)
+    [0.15, 0.75, 1.0], // Cyan
+    [1.0, 0.3, 0.4], // Red/Pink
+    [0.4, 1.0, 0.4], // Green
+    [0.8, 0.4, 1.0], // Purple
+    [1.0, 1.0, 0.3], // Yellow
+    [0.3, 0.6, 1.0], // Blue
+    [1.0, 0.5, 0.8], // Pink
+];
+
 function Rad2Point(direction: RadDirection): Vector3 {
     const x = Math.cos(direction.vertical) * -Math.sin(direction.horizontal);
     const z = Math.cos(direction.vertical) * Math.cos(direction.horizontal);
@@ -16,13 +28,14 @@ function geometricSpheralLerp(start: RadPoint, end: RadPoint): LightDirection[] 
     const sinTheta = Math.sin(theta);
     for (let t = start.timestamp; t <= end.timestamp; t += 0.01) {
         let x, y, z;
-        if (theta < 0.001) {
-            x = startVec.x + (endVec.x - startVec.x) * t;
-            y = startVec.y + (endVec.y - startVec.y) * t;
-            z = startVec.z + (endVec.z - startVec.z) * t;
+        const progress = (t - start.timestamp) / (end.timestamp - start.timestamp);
+        if (theta < 0.001 || end.timestamp === start.timestamp) {
+            x = startVec.x + (endVec.x - startVec.x) * progress;
+            y = startVec.y + (endVec.y - startVec.y) * progress;
+            z = startVec.z + (endVec.z - startVec.z) * progress;
         } else {
-            const w1 = Math.sin((1 - t) * theta) / sinTheta;
-            const w2 = Math.sin(t * theta) / sinTheta;
+            const w1 = Math.sin((1 - progress) * theta) / sinTheta;
+            const w2 = Math.sin(progress * theta) / sinTheta;
             x = w1 * startVec.x + w2 * endVec.x;
             y = w1 * startVec.y + w2 * endVec.y;
             z = w1 * startVec.z + w2 * endVec.z;
@@ -38,35 +51,82 @@ function geometricSpheralLerp(start: RadPoint, end: RadPoint): LightDirection[] 
     return result;
 }
 
-export function generateDemoData(): LightDirection[] {
-    let data = lightAnglePaths['m10_00_0000'][0];
-    let keys = Object.keys(data)
+function generateSegmentData(data: { [time: number]: { x: number; y: number } }): LightDirection[] {
+    // Clone and add wrap-around point at time 24
+    const dataCopy = { ...data };
+    const keys = Object.keys(dataCopy)
         .map(k => Number(k))
+        .filter(k => !isNaN(k))
         .sort((a, b) => a - b);
-    data[24] = data[0];
+
+    if (keys.length === 0) return [];
+
+    // Add wrap-around point
+    dataCopy[24] = dataCopy[keys[0]];
+
+    const sortedKeys = [...keys, 24];
     let res: LightDirection[] = [];
-    for (let i = 0; i < keys.length - 1; i++) {
-        let start: RadPoint = {
-            timestamp: keys[i],
+
+    for (let i = 0; i < sortedKeys.length - 1; i++) {
+        const key1 = sortedKeys[i];
+        const key2 = sortedKeys[i + 1];
+        const start: RadPoint = {
+            timestamp: key1,
             direction: {
-                vertical: data[keys[i]].x,
-                horizontal: data[keys[i]].y,
+                vertical: dataCopy[key1].x,
+                horizontal: dataCopy[key1].y,
             },
         };
-        let end: RadPoint = {
-            timestamp: keys[i + 1],
+        const end: RadPoint = {
+            timestamp: key2,
             direction: {
-                vertical: data[keys[i + 1]].x,
-                horizontal: data[keys[i + 1]].y,
+                vertical: dataCopy[key2].x,
+                horizontal: dataCopy[key2].y,
             },
         };
-        console.log(start, end);
-        let part = geometricSpheralLerp(start, end);
-        // console.log(part);
+        const part = geometricSpheralLerp(start, end);
         res = res.concat(part);
     }
-    // console.log(res);
     return res;
+}
+
+export function generateDemoData(): SegmentData[] {
+    const pathData = lightAnglePaths['m13_00_0000'];
+    if (!pathData) {
+        console.error('Path data not found');
+        return [];
+    }
+
+    const segments: SegmentData[] = [];
+    let colorIndex = 0;
+
+    // Get all segment IDs (numeric keys excluding 'title')
+    const segmentIds = Object.keys(pathData)
+        .filter(k => k !== 'title')
+        .map(k => Number(k))
+        .filter(k => !isNaN(k))
+        .sort((a, b) => a - b);
+
+    for (const segmentId of segmentIds) {
+        const segmentTimeData = pathData[segmentId];
+        if (!segmentTimeData || typeof segmentTimeData !== 'object') continue;
+
+        const directions = generateSegmentData(segmentTimeData as { [time: number]: { x: number; y: number } });
+        if (directions.length > 0) {
+            segments.push({
+                id: segmentId,
+                directions,
+                color: segmentColors[colorIndex % segmentColors.length],
+            });
+            colorIndex++;
+        }
+    }
+
+    console.log(
+        `Generated ${segments.length} segments:`,
+        segments.map(s => s.id)
+    );
+    return segments;
 }
 
 export function interpolateDirection(dir1: LightDirection, dir2: LightDirection, t: number): Vector3 {

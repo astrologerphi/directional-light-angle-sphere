@@ -15,9 +15,19 @@ interface LightDirection extends Vector3 {
     time: number;
 }
 
+interface SegmentData {
+    id: number;
+    directions: LightDirection[];
+    color: Vec3;
+}
+
 interface TrailPoint {
     position: Vec3;
     timestamp: number;
+}
+
+interface SegmentTrail {
+    points: TrailPoint[];
 }
 
 // prettier-ignore
