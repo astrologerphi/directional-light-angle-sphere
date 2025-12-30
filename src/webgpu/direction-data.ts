@@ -1,5 +1,12 @@
 import { lightAnglePaths } from '../data';
 
+export function getAvailablePaths(): string[] {
+    return Object.keys(lightAnglePaths)
+        .filter(k => k[0] == 'm')
+        .filter(k => lightAnglePaths[k] && lightAnglePaths[k][0] !== undefined)
+        .sort();
+}
+
 // Predefined colors for different segments (HSL-based for good distinction)
 const segmentColors: Vec3[] = [
     [1.0, 0.75, 0.15], // Orange (original)
@@ -90,10 +97,10 @@ function generateSegmentData(data: { [time: number]: { x: number; y: number } })
     return res;
 }
 
-export function generateDemoData(): SegmentData[] {
-    const pathData = lightAnglePaths['m13_00_0000'];
+export function generateDemoData(pathKey: string = 'default'): SegmentData[] {
+    const pathData = lightAnglePaths[pathKey];
     if (!pathData) {
-        console.error('Path data not found');
+        console.error(`Path data not found for key: ${pathKey}`);
         return [];
     }
 
@@ -122,10 +129,6 @@ export function generateDemoData(): SegmentData[] {
         }
     }
 
-    console.log(
-        `Generated ${segments.length} segments:`,
-        segments.map(s => s.id)
-    );
     return segments;
 }
 

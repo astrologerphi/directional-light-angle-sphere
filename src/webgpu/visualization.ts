@@ -5,7 +5,9 @@ import {
     createViewMatrix,
     multiplyMatrices,
 } from './geometry';
-import { generateDemoData, interpolateDirection } from './direction-data';
+import { generateDemoData, interpolateDirection, getAvailablePaths } from './direction-data';
+
+export { getAvailablePaths };
 import {
     dotFragmentShader,
     dotVertexShader,
@@ -36,7 +38,8 @@ export interface VisualizationController {
 
 export async function initWebGPUVisualization(
     canvas: HTMLCanvasElement,
-    statusEl?: HTMLElement | null
+    statusEl?: HTMLElement | null,
+    pathKey: string = 'default'
 ): Promise<VisualizationController> {
     if (!navigator.gpu) {
         throw new Error('WebGPU is not available in this browser.');
@@ -54,7 +57,7 @@ export async function initWebGPUVisualization(
     }
 
     const presentationFormat = navigator.gpu.getPreferredCanvasFormat();
-    const segments = generateDemoData();
+    const segments = generateDemoData(pathKey).filter(s => s.id == 0);
     if (segments.length === 0) {
         throw new Error('No segment data found.');
     }
