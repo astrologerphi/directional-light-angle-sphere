@@ -2523,7 +2523,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.750492, y: 2.792527 },
             '22.5': { x: -0.750492, y: 2.792527 },
         },
-        title: 'm10_00_0000',
+        title: 'Stormveil Castle',
     },
     m10_00_0200: {
         '0': {
@@ -2718,7 +2718,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.785398, y: 1.396263 },
             '22.5': { x: -0.785398, y: 1.396263 },
         },
-        title: 'm10_01_0000',
+        title: 'Chapel of Anticipation',
     },
     m11_00_0000: {
         '0': {
@@ -2757,7 +2757,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.436332, y: 1.623156 },
             '22.5': { x: -0.436332, y: 1.623156 },
         },
-        title: 'm11_00_0000',
+        title: 'Leyndell, Royal Capital',
     },
     m11_00_0800: {
         '0': { '0': { x: -0.663225, y: 0.84823 } },
@@ -3084,7 +3084,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.436332, y: 1.623156 },
             '22.5': { x: -0.436332, y: 1.623156 },
         },
-        title: 'm14_00_0000',
+        title: 'Academy of Raya Lucaria',
     },
     m14_00_0100: {
         '0': { '0': { x: -0.501483, y: 1.082104 } },
@@ -3130,7 +3130,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.698132, y: 2.792527 },
             '22.5': { x: -0.087266, y: 1.745329 },
         },
-        title: 'm15_00_0000',
+        title: "Miuqella's Haligtree",
     },
     m15_00_0100: {
         '0': {
@@ -4192,7 +4192,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.750492, y: 2.792527 },
             '22.5': { x: -0.750492, y: 2.792527 },
         },
-        title: 'm34_10_0000',
+        title: 'Divine Tower of Limgrave',
     },
     m34_11_0000: {
         '0': {
@@ -4231,7 +4231,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.698132, y: 0.872665 },
             '22.5': { x: -0.174533, y: 0.872665 },
         },
-        title: 'm34_11_0000',
+        title: 'Divine Tower of Liurnia',
     },
     m34_11_0100: {
         '0': {
@@ -4291,7 +4291,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.698132, y: 0.872665 },
             '22.5': { x: -0.174533, y: 0.872665 },
         },
-        title: 'm34_12_0000',
+        title: 'Divine Tower of West Altus',
     },
     m34_12_0100: {
         '0': { '0': { x: -0.174533, y: 0.872665 } },
@@ -4376,7 +4376,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.698132, y: 0.872665 },
             '22.5': { x: -0.174533, y: 0.872665 },
         },
-        title: 'm34_13_0000',
+        title: 'Divine Tower of Caelid',
     },
     m34_14_0000: {
         '0': {
@@ -4415,7 +4415,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.436332, y: 1.623156 },
             '22.5': { x: -0.436332, y: 1.623156 },
         },
-        title: 'm34_14_0000',
+        title: 'Divine Tower of East Altus',
     },
     m34_14_0300: {
         '0': {
@@ -4493,7 +4493,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.698132, y: 0.872665 },
             '22.5': { x: -0.174533, y: 0.872665 },
         },
-        title: 'm34_15_0000',
+        title: 'Isolated Divine Tower',
     },
     m35_00_0000: {
         '0': { '0': { x: -0.663225, y: 0.84823 } },

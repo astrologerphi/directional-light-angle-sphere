@@ -1,10 +1,13 @@
 import { lightAnglePaths } from '../data';
 
 export function getAvailablePaths(): string[] {
-    return Object.keys(lightAnglePaths)
+    let tmp = Object.keys(lightAnglePaths)
         .filter(k => k[0] == 'm')
         .filter(k => lightAnglePaths[k] && lightAnglePaths[k][0] !== undefined)
         .sort();
+    let withNames = tmp.filter(k => lightAnglePaths[k].title != k);
+    let withoutNames = tmp.filter(k => lightAnglePaths[k].title == k);
+    return [...withNames, ...withoutNames];
 }
 
 // Predefined colors for different segments (HSL-based for good distinction)
