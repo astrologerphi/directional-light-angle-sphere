@@ -3314,7 +3314,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.872665, y: -1.22173 },
             '22.5': { x: -0.872665, y: -1.22173 },
         },
-        title: 'm16_00_0000',
+        title: 'Volcano Manor',
     },
     m16_00_0100: {
         '0': {
@@ -3635,7 +3635,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.750492, y: 2.792527 },
             '22.5': { x: -0.750492, y: 2.792527 },
         },
-        title: 'm20_00_0000',
+        title: 'Belurat, Tower Settlement (DLC)',
     },
     m20_00_0900: {
         '0': {
@@ -3786,7 +3786,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.750492, y: 2.792527 },
             '22.5': { x: -0.750492, y: 2.792527 },
         },
-        title: 'm21_00_0000',
+        title: 'Shadow Keep (DLC)',
     },
     m21_00_0100: {
         '0': {
@@ -4093,7 +4093,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '15.33': { x: -0.750492, y: 2.792527 },
             '22.5': { x: -0.174533, y: 0.872665 },
         },
-        title: 'm30_00_0000',
+        title: 'Catacombs',
     },
     m30_00_0200: {
         '0': {
@@ -4678,7 +4678,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '15.33': { x: -0.750492, y: 2.792527 },
             '22.5': { x: -0.174533, y: 0.872665 },
         },
-        title: 'm40_00_0000',
+        title: 'Catacombs (DLC)',
     },
     m40_00_0700: {
         '0': { '0': { x: -0.959931, y: -2.356194 } },
@@ -4816,7 +4816,7 @@ export const lightAnglePaths: LightAnglePathCollection = {
             '21': { x: -0.750492, y: 2.792527 },
             '22.5': { x: -0.750492, y: 2.792527 },
         },
-        title: 'm41_00_0000',
+        title: 'Gaols (DLC)',
     },
     m41_00_0700: {
         '0': {
