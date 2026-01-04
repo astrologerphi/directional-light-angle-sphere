@@ -27,8 +27,8 @@ body {
 .app-container {
     display: flex;
     width: 100%;
-    max-width: 1600px;
     min-height: 100vh;
+    justify-content: space-between;
 }
 
 .sidebar {
@@ -65,7 +65,9 @@ body {
     font-size: 0.9rem;
     font-family: inherit;
     outline: none;
-    transition: border-color 0.2s, background 0.2s;
+    transition:
+        border-color 0.2s,
+        background 0.2s;
 }
 
 .sidebar__search:focus {
@@ -112,7 +114,9 @@ body {
     cursor: pointer;
     font-size: 0.85rem;
     color: var(--muted);
-    transition: background 0.15s, color 0.15s;
+    transition:
+        background 0.15s,
+        color 0.15s;
     border-left: 3px solid transparent;
     display: flex;
     flex-direction: column;
@@ -149,6 +153,187 @@ body {
 
 .sidebar__list li.hidden {
     display: none;
+}
+
+.right-panel {
+    width: 340px;
+    min-width: 340px;
+    background: var(--card-bg);
+    border-left: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.right-panel__header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.right-panel__header h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.right-panel__content {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(108, 241, 255, 0.3) rgba(255, 255, 255, 0.05);
+}
+
+/* Custom scrollbar for WebKit browsers */
+.right-panel__content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.right-panel__content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    margin: 4px 0;
+}
+
+.right-panel__content::-webkit-scrollbar-thumb {
+    background: rgba(108, 241, 255, 0.3);
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.right-panel__content::-webkit-scrollbar-thumb:hover {
+    background: rgba(108, 241, 255, 0.5);
+}
+
+.data-section {
+    margin-bottom: 24px;
+}
+
+.data-section__title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-strong);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.data-section__badge {
+    background: rgba(108, 241, 255, 0.15);
+    color: var(--accent);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.data-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.data-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+.data-item__label {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.data-item__value {
+    font-size: 0.85rem;
+    color: var(--text);
+    font-family: monospace;
+}
+
+.data-grid {
+    display: grid;
+    gap: 8px;
+}
+
+.data-grid__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.data-grid__row:last-child {
+    border-bottom: none;
+}
+
+.data-grid__key {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.data-grid__value {
+    font-size: 0.8rem;
+    color: var(--text);
+    font-family: monospace;
+}
+
+.data-grid__row--aligned {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.data-grid__value--x,
+.data-grid__value--y {
+    text-align: left;
+}
+
+.data-grid__row--vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 0;
+}
+
+.data-grid__values {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    padding-left: 12px;
+}
+
+.data-grid__value-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.data-grid__coord-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 500;
+    min-width: 12px;
+}
+
+.no-data {
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 40px 20px;
+    font-style: italic;
 }
 
 .current-path {
@@ -284,6 +469,13 @@ canvas {
         min-width: 100%;
         height: auto;
         max-height: 40vh;
+        position: relative;
+    }
+
+    .right-panel {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
         position: relative;
     }
 
