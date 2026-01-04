@@ -115,8 +115,8 @@ const updateSelectedData = (path: string) => {
                 html += `
                     <div class="data-grid__row data-grid__row--aligned">
                         <span class="data-grid__key">Time ${timeKey}h:</span>
-                        <span class="data-grid__value data-grid__value--x">${str_x} × π</span>
-                        <span class="data-grid__value data-grid__value--y">${str_y} × π</span>
+                        <span class="data-grid__value data-grid__value--x">${str_x} π</span>
+                        <span class="data-grid__value data-grid__value--y">${str_y} π</span>
                     </div>
                 `;
             });

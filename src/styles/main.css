@@ -280,6 +280,7 @@ body {
     font-size: 0.75rem;
     color: var(--muted);
     font-weight: 500;
+    width: 80px;
 }
 
 .data-grid__value {
@@ -293,6 +294,7 @@ body {
     grid-template-columns: auto 1fr 1fr;
     gap: 12px;
     align-items: center;
+    justify-items: end;
 }
 
 .data-grid__value--x,
