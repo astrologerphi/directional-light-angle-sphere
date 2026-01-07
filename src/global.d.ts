@@ -59,4 +59,5 @@ interface LightAnglePathCollection {
 
 interface Window {
     lightAnglePaths: LightAnglePathCollection;
+    printPathData: () => void;
 }

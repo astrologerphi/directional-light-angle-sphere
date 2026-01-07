@@ -99,3 +99,27 @@ export function formatFraction(numerator: number, denominator: number): string {
     }
     return `${numerator}/${denominator}`;
 }
+
+export function printPathData() {
+    let res = [];
+    let ks = Object.keys(window.lightAnglePaths).filter(k => window.lightAnglePaths[k].title != k);
+    for (let k of ks) {
+        let title = window.lightAnglePaths[k].title;
+        let val = window.lightAnglePaths[k][0];
+        let _val = {};
+        for (const key in val) {
+            const element = val[key];
+            let x = element.x / Math.PI;
+            let y = element.y / Math.PI;
+            let fracX = closestFraction(x, 100);
+            let fracY = closestFraction(y, 100);
+            let _X = formatFraction(fracX.numerator, fracX.denominator);
+            let _Y = formatFraction(fracY.numerator, fracY.denominator);
+            // @ts-ignore
+            _val[key] = { x: 'π * ' + _X, y: 'π * ' + _Y };
+        }
+        res.push({ name: k, title: title, values: _val });
+    }
+
+    console.log(res);
+}

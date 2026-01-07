@@ -1,6 +1,6 @@
 import { lightAnglePaths } from './data';
 import { initWebGPUVisualization, VisualizationController, getAvailablePaths } from './webgpu/visualization';
-import { closestFraction, formatFraction } from './utils';
+import { closestFraction, formatFraction, printPathData } from './utils';
 
 const canvas = document.getElementById('webgpuCanvas');
 const statusMessage = document.getElementById('statusMessage');
@@ -316,3 +316,4 @@ window.addEventListener('beforeunload', () => {
 });
 
 window.lightAnglePaths = lightAnglePaths;
+window.printPathData = printPathData;
