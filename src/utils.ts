@@ -100,6 +100,65 @@ export function formatFraction(numerator: number, denominator: number): string {
     return `${numerator}/${denominator}`;
 }
 
+/**
+ * Groups all lightAnglePaths by their "0" value
+ * @param lightAnglePaths - The light angle paths object
+ * @returns An object where keys are stringified "0" values and values are arrays of matching path names
+ */
+export function groupLightPaths(lightAnglePaths: Record<string, any>): Record<string, string[]> {
+    const groups: Record<string, string[]> = {};
+
+    for (const pathName in lightAnglePaths) {
+        const path = lightAnglePaths[pathName];
+
+        // Skip if the path doesn't have a "0" key
+        if (!path || typeof path !== 'object' || !('0' in path)) {
+            continue;
+        }
+
+        // Create a stable string representation of the "0" value
+        const zeroValue = path['0'];
+        const groupKey = JSON.stringify(zeroValue);
+
+        // Initialize the group if it doesn't exist
+        if (!groups[groupKey]) {
+            groups[groupKey] = [];
+        }
+
+        // Add this path name to the group
+        groups[groupKey].push(pathName);
+    }
+
+    return groups;
+}
+
+export function printPathDataGroups() {
+    let groupedPaths = groupLightPaths(window.lightAnglePaths);
+    let res = [];
+    for (let key in groupedPaths) {
+        let names = groupedPaths[key];
+        let titles: Record<string, string> = {};
+        for (let n of names) {
+            titles[n] = window.lightAnglePaths[n].title;
+        }
+        let val = window.lightAnglePaths[names[0]]['0'];
+        let _val = {};
+        for (const k in val) {
+            const element = val[k];
+            let x = element.x / Math.PI;
+            let y = element.y / Math.PI;
+            let fracX = closestFraction(x, 100);
+            let fracY = closestFraction(y, 100);
+            let _X = formatFraction(fracX.numerator, fracX.denominator);
+            let _Y = formatFraction(fracY.numerator, fracY.denominator);
+            // @ts-ignore
+            _val[k] = { x: 'π * ' + _X, y: 'π * ' + _Y };
+        }
+        res.push({ titles: titles, values: _val });
+    }
+    console.log(res);
+}
+
 export function printPathData() {
     let res = [];
     let ks = Object.keys(window.lightAnglePaths).filter(k => window.lightAnglePaths[k].title != k);

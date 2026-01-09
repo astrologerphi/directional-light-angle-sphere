@@ -6160,6 +6160,10 @@ export const lightAnglePaths: LightAnglePathCollection = {
     mdlvw_default: { '0': { '0': { x: -0.959931, y: 2.234021 } }, title: 'mdlvw_default' },
     mdlvw_entity_thumbnail: { '0': { '0': { x: -0.959931, y: 2.234021 } }, title: 'mdlvw_entity_thumbnail' },
     m_template: { '1000': { '0': { x: -0.785389, y: 1.570796 } }, title: 'm_template' },
+};
+
+// @ts-ignore
+const lightAnglePaths_s: LightAnglePathCollection = {
     s10_00_0010: {
         '0': {
             '0': { x: -0.698132, y: 0.698132 },

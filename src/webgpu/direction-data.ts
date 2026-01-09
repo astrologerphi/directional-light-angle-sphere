@@ -22,7 +22,7 @@ const segmentColors: Vec3[] = [
     [1.0, 0.5, 0.8], // Pink
 ];
 
-function Rad2Point(direction: RadDirection): Vector3 {
+function rad2Point(direction: RadDirection): Vector3 {
     const x = Math.cos(direction.vertical) * -Math.sin(direction.horizontal);
     const z = Math.cos(direction.vertical) * Math.cos(direction.horizontal);
     const y = -Math.sin(direction.vertical);
@@ -31,8 +31,8 @@ function Rad2Point(direction: RadDirection): Vector3 {
 
 function geometricSpheralLerp(start: RadPoint, end: RadPoint): LightDirection[] {
     const result: LightDirection[] = [];
-    const startVec = Rad2Point(start.direction);
-    const endVec = Rad2Point(end.direction);
+    const startVec = rad2Point(start.direction);
+    const endVec = rad2Point(end.direction);
     const dot = startVec.x * endVec.x + startVec.y * endVec.y + startVec.z * endVec.z;
     const theta = Math.acos(Math.max(-1, Math.min(1, dot)));
     const sinTheta = Math.sin(theta);
