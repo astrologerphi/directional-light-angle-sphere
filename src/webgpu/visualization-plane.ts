@@ -2,7 +2,14 @@ import { createProjectionMatrix, createViewMatrix, multiplyMatrices } from './ge
 import { generateDemoData, interpolateDirection, getAvailablePaths } from './direction-data';
 
 export { getAvailablePaths };
-import { dotFragmentShader, dotVertexShader, trailFragmentShader, trailVertexShader } from '../shaders/_index';
+import {
+    dotFragmentShader,
+    dotVertexShader,
+    gridFragmentShader,
+    gridVertexShader,
+    trailFragmentShader,
+    trailVertexShader,
+} from '../shaders/_index';
 
 const dotSize = 0.08;
 const maxTrailPoints = 3600;
@@ -193,29 +200,10 @@ export async function initWebGPUVisualizationPlane(
     });
 
     // Simple line shader for grid
-    const lineVertexShader = `
-        struct Uniforms {
-            modelViewProjection: mat4x4<f32>,
-        }
-        @group(0) @binding(0) var<uniform> uniforms: Uniforms;
-        
-        @vertex
-        fn main(@location(0) position: vec3<f32>) -> @builtin(position) vec4<f32> {
-            return uniforms.modelViewProjection * vec4<f32>(position, 1.0);
-        }
-    `;
-
-    const lineFragmentShader = `
-        @fragment
-        fn main() -> @location(0) vec4<f32> {
-            return vec4<f32>(0.3, 0.4, 0.5, 0.4);
-        }
-    `;
-
     const linesPipeline = device.createRenderPipeline({
         layout: pipelineLayout,
         vertex: {
-            module: device.createShaderModule({ code: lineVertexShader }),
+            module: device.createShaderModule({ code: gridVertexShader }),
             entryPoint: 'main',
             buffers: [
                 {
@@ -225,7 +213,7 @@ export async function initWebGPUVisualizationPlane(
             ],
         },
         fragment: {
-            module: device.createShaderModule({ code: lineFragmentShader }),
+            module: device.createShaderModule({ code: gridFragmentShader }),
             entryPoint: 'main',
             targets: [{ format: presentationFormat, blend: alphaBlend() }],
         },

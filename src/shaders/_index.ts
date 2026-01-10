@@ -7,9 +7,12 @@ import dotVertexShader from './dot.vert.wgsl';
 import dotFragmentShader from './dot.frag.wgsl';
 import trailVertexShader from './trail.vert.wgsl';
 import trailFragmentShader from './trail.frag.wgsl';
+import gridFragmentShader from './grid.frag.wgsl';
 
 // Light line uses the same vertex shader as line
 const lightLineVertexShader = lineVertexShader;
+// Grid uses the same vertex shader as line
+const gridVertexShader = lineVertexShader;
 
 export {
     sphereVertexShader,
@@ -22,4 +25,6 @@ export {
     dotFragmentShader,
     trailVertexShader,
     trailFragmentShader,
+    gridVertexShader,
+    gridFragmentShader,
 };
