@@ -4,6 +4,7 @@ import {
     createSphereGeometry,
     createViewMatrix,
     multiplyMatrices,
+    createCoordinateAxes,
 } from './geometry';
 import { generateDemoData, interpolateDirection, getAvailablePaths } from './direction-data';
 
@@ -73,11 +74,13 @@ export async function initWebGPUVisualization(
 
     const sphere = createSphereGeometry(0.99, 48, 24);
     const scaleLines = createScaleLines(1.01);
+    const coordinateAxes = createCoordinateAxes(1.5);
 
     const sphereVertexBuffer = createStaticBuffer(device, sphere.vertices, GPUBufferUsage.VERTEX);
     const sphereNormalBuffer = createStaticBuffer(device, sphere.normals, GPUBufferUsage.VERTEX);
     const sphereIndexBuffer = createStaticBuffer(device, sphere.indices, GPUBufferUsage.INDEX);
     const scaleLinesBuffer = createStaticBuffer(device, scaleLines.vertices, GPUBufferUsage.VERTEX);
+    const coordinateAxesBuffer = createStaticBuffer(device, coordinateAxes.vertices, GPUBufferUsage.VERTEX);
 
     const uniformBufferSize = 64;
     const uniformBuffer = device.createBuffer({
@@ -325,6 +328,14 @@ export async function initWebGPUVisualization(
     let depthTexture: GPUTexture | null = null;
     let configured = false;
 
+    // Camera control state
+    let cameraDistance = 3;
+    let cameraTheta = -Math.PI / 2; // Rotation around Y axis (horizontal)
+    let cameraPhi = Math.PI / 8; // Rotation from Y axis (vertical)
+    let isDragging = false;
+    let lastMouseX = 0;
+    let lastMouseY = 0;
+
     const configureSurface = (force = false) => {
         const rect = canvas.getBoundingClientRect();
         const dpr = window.devicePixelRatio || 1;
@@ -367,6 +378,38 @@ export async function initWebGPUVisualization(
         resizeFallbackAttached = true;
     }
 
+    // Camera controls
+    const handleMouseDown = (e: MouseEvent) => {
+        isDragging = true;
+        lastMouseX = e.clientX;
+        lastMouseY = e.clientY;
+        canvas.style.cursor = 'grabbing';
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+        if (!isDragging) return;
+
+        const deltaX = e.clientX - lastMouseX;
+        const deltaY = e.clientY - lastMouseY;
+
+        cameraTheta += deltaX * 0.01;
+        cameraPhi = Math.max(0.01, Math.min(Math.PI - 0.01, cameraPhi - deltaY * 0.01));
+
+        lastMouseX = e.clientX;
+        lastMouseY = e.clientY;
+    };
+
+    const handleMouseUp = () => {
+        isDragging = false;
+        canvas.style.cursor = 'grab';
+    };
+
+    canvas.style.cursor = 'grab';
+    canvas.addEventListener('mousedown', handleMouseDown);
+    canvas.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener('mouseup', handleMouseUp);
+    canvas.addEventListener('mouseleave', handleMouseUp);
+
     let animationFrameId: number | null = null;
     let isRunning = true;
     let pauseOffset = 0;
@@ -399,6 +442,11 @@ export async function initWebGPUVisualization(
             } else if (resizeFallbackAttached) {
                 window.removeEventListener('resize', handleResize);
             }
+            // Clean up camera event listeners
+            canvas.removeEventListener('mousedown', handleMouseDown);
+            canvas.removeEventListener('mousemove', handleMouseMove);
+            canvas.removeEventListener('mouseup', handleMouseUp);
+            canvas.removeEventListener('mouseleave', handleMouseUp);
         },
         get running() {
             return isRunning;
@@ -446,8 +494,13 @@ export async function initWebGPUVisualization(
 
         const aspect = canvas.width / canvas.height;
         const projectionMatrix = createProjectionMatrix(Math.PI / 4, aspect, 0.1, 100);
-        // view from top looking down
-        const viewMatrix = createViewMatrix([0, 3, 0], [0, 0, 0], [0, 0, 1]);
+
+        // Calculate camera position from spherical coordinates
+        const eyeX = cameraDistance * Math.sin(cameraPhi) * Math.cos(cameraTheta);
+        const eyeY = cameraDistance * Math.cos(cameraPhi);
+        const eyeZ = cameraDistance * Math.sin(cameraPhi) * Math.sin(cameraTheta);
+
+        const viewMatrix = createViewMatrix([eyeX, eyeY, eyeZ], [0, 0, 0], [0, 1, 0]);
         const mvpMatrix = new Float32Array(16);
         multiplyMatrices(mvpMatrix, projectionMatrix, viewMatrix);
 
@@ -534,6 +587,12 @@ export async function initWebGPUVisualization(
         for (let i = 0; i < numLineSegments; i++) {
             passEncoder.draw(lineSegmentSize, 1, i * lineSegmentSize, 0);
         }
+
+        // Draw coordinate axes
+        passEncoder.setPipeline(lightLinePipeline);
+        passEncoder.setBindGroup(0, bindGroup);
+        passEncoder.setVertexBuffer(0, coordinateAxesBuffer);
+        passEncoder.draw(6); // 3 axes * 2 vertices each
 
         // Draw trails for all segments
         passEncoder.setPipeline(trailPipeline);

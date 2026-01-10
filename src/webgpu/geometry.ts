@@ -8,6 +8,10 @@ export interface ScaleLines {
     vertices: Float32Array;
 }
 
+export interface CoordinateAxes {
+    vertices: Float32Array;
+}
+
 export function createSphereGeometry(radius = 1, widthSegments = 32, heightSegments = 16): SphereGeometry {
     const vertices: number[] = [];
     const indices: number[] = [];
@@ -88,6 +92,26 @@ export function createScaleLines(radius = 1): ScaleLines {
         const z = radius * Math.sin(phi);
         vertices.push(x, 0, z);
     }
+
+    return {
+        vertices: new Float32Array(vertices),
+    };
+}
+
+export function createCoordinateAxes(length = 1.5): CoordinateAxes {
+    const vertices: number[] = [];
+
+    // X axis (red) - pointing right
+    vertices.push(0, 0, 0);
+    vertices.push(length, 0, 0);
+
+    // Y axis (green) - pointing up
+    vertices.push(0, 0, 0);
+    vertices.push(0, length, 0);
+
+    // Z axis (blue) - pointing forward
+    vertices.push(0, 0, 0);
+    vertices.push(0, 0, length);
 
     return {
         vertices: new Float32Array(vertices),

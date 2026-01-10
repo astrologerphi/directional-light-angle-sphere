@@ -1,30 +1,82 @@
 import { lightAnglePaths } from './data';
-import { initWebGPUVisualization, VisualizationController, getAvailablePaths } from './webgpu/visualization';
+import { initWebGPUVisualization, getAvailablePaths } from './webgpu/visualization-sphere';
+import { initWebGPUVisualizationPlane } from './webgpu/visualization-plane';
+import { initWebGPUVisualizationRing } from './webgpu/visualization-ring';
 import { closestFraction, formatFraction, printPathData, printPathDataGroups } from './utils';
 
-const canvas = document.getElementById('webgpuCanvas');
-const statusMessage = document.getElementById('statusMessage');
+export interface VisualizationController {
+    pause(): void;
+    resume(): void;
+    stop(): void;
+    readonly running: boolean;
+}
+
+// Canvas elements
+const sphereCanvas = document.getElementById('sphereCanvas');
+const planeCanvas = document.getElementById('planeCanvas');
+const ringCanvas = document.getElementById('ringCanvas');
+
+// Status elements
+const sphereStatus = document.getElementById('sphereStatus');
+const planeStatus = document.getElementById('planeStatus');
+const ringStatus = document.getElementById('ringStatus');
+
+// UI controls
 const toggleButton = document.getElementById('toggleButton');
 const pathList = document.getElementById('pathList');
 const pathSearch = document.getElementById('pathSearch');
 const currentPathEl = document.getElementById('currentPath');
 const selectedDataEl = document.getElementById('selectedData');
 
-if (!(canvas instanceof HTMLCanvasElement)) {
-    throw new Error('Canvas element #webgpuCanvas not found.');
+// Carousel controls
+const carouselPrev = document.getElementById('carouselPrev');
+const carouselNext = document.getElementById('carouselNext');
+const carouselIndicators = document.querySelectorAll('.carousel__indicator');
+const carouselSlides = document.querySelectorAll('.carousel__slide');
+const carouselTitles = document.querySelectorAll('.carousel__title');
+
+if (!(sphereCanvas instanceof HTMLCanvasElement)) {
+    throw new Error('Canvas element #sphereCanvas not found.');
+}
+
+if (!(planeCanvas instanceof HTMLCanvasElement)) {
+    throw new Error('Canvas element #planeCanvas not found.');
+}
+
+if (!(ringCanvas instanceof HTMLCanvasElement)) {
+    throw new Error('Canvas element #ringCanvas not found.');
 }
 
 if (!(toggleButton instanceof HTMLButtonElement)) {
     throw new Error('Toggle button #toggleButton not found.');
 }
 
-let controller: VisualizationController | null = null;
+let sphereController: VisualizationController | null = null;
+let planeController: VisualizationController | null = null;
+let ringController: VisualizationController | null = null;
 let currentPath = 'default';
 let focusedIndex = -1;
+let currentSlideIndex = 0;
+
+const getActiveController = (): VisualizationController | null => {
+    switch (currentSlideIndex) {
+        case 0:
+            return sphereController;
+        case 1:
+            return planeController;
+        case 2:
+            return ringController;
+        default:
+            return null;
+    }
+};
 
 const setStatus = (message: string) => {
-    if (statusMessage) {
-        statusMessage.textContent = message;
+    // Update status for the currently active canvas
+    const activeSlide = carouselSlides[currentSlideIndex];
+    const statusEl = activeSlide?.querySelector('.status');
+    if (statusEl) {
+        statusEl.textContent = message;
     }
 };
 
@@ -185,15 +237,28 @@ const selectPath = async (path: string) => {
 
     updateCurrentPath(path);
 
-    // Stop current visualization
-    controller?.stop();
-    controller = null;
+    // Stop all visualizations
+    sphereController?.stop();
+    planeController?.stop();
+    ringController?.stop();
+    sphereController = null;
+    planeController = null;
+    ringController = null;
 
-    // Reinitialize with new path
+    // Reinitialize with new path for all views
     try {
         setStatus(`Loading ${path}...`);
         toggleButton.disabled = true;
-        controller = await initWebGPUVisualization(canvas, statusMessage, path);
+
+        // Initialize sphere view
+        sphereController = await initWebGPUVisualization(sphereCanvas, sphereStatus, path);
+
+        // Initialize plane view
+        planeController = await initWebGPUVisualizationPlane(planeCanvas, planeStatus, path);
+
+        // Initialize ring view (torus)
+        ringController = await initWebGPUVisualizationRing(ringCanvas, ringStatus, path);
+
         toggleButton.disabled = false;
         updateToggleLabel(true);
         setStatus(`Playing: ${path}`);
@@ -246,6 +311,11 @@ const updateFocusedItem = (index: number) => {
 };
 
 const handleKeyboardNavigation = (e: KeyboardEvent) => {
+    // Skip if carousel navigation keys are pressed
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+        return;
+    }
+
     const visibleItems = getVisibleItems();
     if (visibleItems.length === 0) return;
 
@@ -275,7 +345,12 @@ const bootstrap = async () => {
 
     try {
         setStatus('Initializing WebGPU...');
-        controller = await initWebGPUVisualization(canvas, statusMessage, currentPath);
+
+        // Initialize all visualizations
+        sphereController = await initWebGPUVisualization(sphereCanvas, sphereStatus, currentPath);
+        planeController = await initWebGPUVisualizationPlane(planeCanvas, planeStatus, currentPath);
+        ringController = await initWebGPUVisualizationRing(ringCanvas, ringStatus, currentPath);
+
         toggleButton.disabled = false;
         updateToggleLabel(true);
         setStatus(`Playing: ${currentPath}`);
@@ -290,7 +365,59 @@ const bootstrap = async () => {
 
 void bootstrap();
 
+// Carousel navigation
+const updateCarousel = (index: number) => {
+    currentSlideIndex = index;
+
+    // Update slides
+    carouselSlides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+
+    // Update indicators
+    carouselIndicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === index);
+    });
+
+    // Update titles
+    carouselTitles.forEach((title, i) => {
+        title.classList.toggle('active', i === index);
+    });
+};
+
+const nextSlide = () => {
+    const nextIndex = (currentSlideIndex + 1) % carouselSlides.length;
+    updateCarousel(nextIndex);
+};
+
+const prevSlide = () => {
+    const prevIndex = (currentSlideIndex - 1 + carouselSlides.length) % carouselSlides.length;
+    updateCarousel(prevIndex);
+};
+
+carouselNext?.addEventListener('click', nextSlide);
+carouselPrev?.addEventListener('click', prevSlide);
+
+carouselIndicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        updateCarousel(index);
+    });
+});
+
+// Keyboard navigation for carousel
+window.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') {
+        prevSlide();
+    } else if (e.key === 'ArrowRight') {
+        nextSlide();
+    }
+});
+
+// Initialize carousel
+updateCarousel(0);
+
 toggleButton.addEventListener('click', () => {
+    const controller = getActiveController();
     if (!controller) return;
 
     if (controller.running) {
@@ -312,7 +439,9 @@ pathSearch?.addEventListener('input', e => {
 window.addEventListener('keydown', handleKeyboardNavigation);
 
 window.addEventListener('beforeunload', () => {
-    controller?.stop();
+    sphereController?.stop();
+    planeController?.stop();
+    ringController?.stop();
 });
 
 window.lightAnglePaths = lightAnglePaths;

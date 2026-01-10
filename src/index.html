@@ -25,15 +25,72 @@
             </nav>
             <div class="app">
                 <header class="hero">
-                    <div class="hero__actions">
-                        <span id="currentPath" class="current-path">default</span>
-                        <button id="toggleButton" class="primary" hidden disabled>Loading...</button>
+                    <button
+                        class="carousel__nav carousel__nav--prev"
+                        id="carouselPrev"
+                        aria-label="Previous visualization"
+                    >
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="hero__content">
+                        <div class="carousel__titles">
+                            <h3 class="carousel__title active" data-index="0">Sphere</h3>
+                            <h3 class="carousel__title" data-index="1">Plane</h3>
+                            <h3 class="carousel__title" data-index="2">Ring</h3>
+                        </div>
+                        <div class="hero__actions">
+                            <span id="currentPath" class="current-path">default</span>
+                            <button id="toggleButton" class="primary" hidden disabled>Loading...</button>
+                        </div>
                     </div>
+
+                    <button class="carousel__nav carousel__nav--next" id="carouselNext" aria-label="Next visualization">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
                 </header>
 
                 <main class="stage">
-                    <canvas id="webgpuCanvas" aria-label="Directional light visualization" role="img"></canvas>
-                    <div id="statusMessage" class="status"></div>
+                    <div class="carousel">
+                        <div class="carousel__container">
+                            <div class="carousel__slide" data-slide="sphere">
+                                <canvas id="sphereCanvas" aria-label="Sphere visualization" role="img"></canvas>
+                                <div id="sphereStatus" class="status"></div>
+                            </div>
+                            <div class="carousel__slide" data-slide="plane">
+                                <canvas id="planeCanvas" aria-label="Plane visualization" role="img"></canvas>
+                                <div id="planeStatus" class="status"></div>
+                            </div>
+                            <div class="carousel__slide" data-slide="ring">
+                                <canvas id="ringCanvas" aria-label="Ring visualization" role="img"></canvas>
+                                <div id="ringStatus" class="status"></div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__indicators">
+                            <button class="carousel__indicator active" data-index="0" aria-label="Sphere view"></button>
+                            <button class="carousel__indicator" data-index="1" aria-label="Plane view"></button>
+                            <button class="carousel__indicator" data-index="2" aria-label="Ring view"></button>
+                        </div>
+                    </div>
                 </main>
             </div>
 
