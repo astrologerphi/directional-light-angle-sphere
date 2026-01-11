@@ -12,6 +12,7 @@ import {
 } from '../shaders/_index';
 
 const dotSize = 0.04;
+const pathThickness = 5; // Adjust this value to change path thickness (1 = thin, 5 = thick)
 const animationSpeed = 10;
 
 // Uniform buffer sizes (must be aligned to 16 bytes)
@@ -218,7 +219,7 @@ export async function initWebGPUVisualizationRing(
     }
 
     const presentationFormat = navigator.gpu.getPreferredCanvasFormat();
-    const segments = generateDemoData(pathKey).filter(s => s.id == 0);
+    const segments = generateDemoData(pathKey);
     if (segments.length === 0) {
         throw new Error('No segment data found.');
     }
@@ -696,7 +697,7 @@ export async function initWebGPUVisualizationRing(
             passEncoder.draw(pointsPerCircle, 1, i * pointsPerCircle, 0);
         }
 
-        // Draw path on torus
+        // Draw path on torus (render multiple times with instance offsets for thickness)
         passEncoder.setPipeline(trailPipeline);
         segments.forEach((_, idx) => {
             const resources = segmentResources[idx];
@@ -704,7 +705,8 @@ export async function initWebGPUVisualizationRing(
             if (path.points.length > 0) {
                 passEncoder.setBindGroup(0, resources.pathBindGroup);
                 passEncoder.setVertexBuffer(0, resources.pathBuffer);
-                passEncoder.draw(path.points.length, 1, 0, 0);
+                // Draw multiple instances for thickness effect
+                passEncoder.draw(path.points.length, pathThickness, 0, 0);
             }
         });
 

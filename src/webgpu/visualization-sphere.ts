@@ -58,7 +58,7 @@ export async function initWebGPUVisualization(
     }
 
     const presentationFormat = navigator.gpu.getPreferredCanvasFormat();
-    const segments = generateDemoData(pathKey).filter(s => s.id == 0);
+    const segments = generateDemoData(pathKey);
     if (segments.length === 0) {
         throw new Error('No segment data found.');
     }

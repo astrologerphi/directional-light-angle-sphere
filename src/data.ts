@@ -1,3 +1,5 @@
+import { getPathDataGroups } from './utils';
+
 export const lightAnglePaths: LightAnglePathCollection = {
     default: {
         '0': {
@@ -9946,3 +9948,5 @@ const lightAnglePaths_s: LightAnglePathCollection = {
         title: 's61_44_0000_weatheroverride_50',
     },
 };
+
+export const lightPathGroups = getPathDataGroups(lightAnglePaths);

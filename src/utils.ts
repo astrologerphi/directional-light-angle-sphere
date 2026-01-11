@@ -105,7 +105,7 @@ export function formatFraction(numerator: number, denominator: number): string {
  * @param lightAnglePaths - The light angle paths object
  * @returns An object where keys are stringified "0" values and values are arrays of matching path names
  */
-export function groupLightPaths(lightAnglePaths: Record<string, any>): Record<string, string[]> {
+function _groupLightPaths(lightAnglePaths: Record<string, any>): Record<string, string[]> {
     const groups: Record<string, string[]> = {};
 
     for (const pathName in lightAnglePaths) {
@@ -132,16 +132,33 @@ export function groupLightPaths(lightAnglePaths: Record<string, any>): Record<st
     return groups;
 }
 
-export function printPathDataGroups() {
-    let groupedPaths = groupLightPaths(window.lightAnglePaths);
+export function getPathDataGroups(lightAnglePaths?: Record<string, any>) {
+    const paths = lightAnglePaths || window.lightAnglePaths;
+    let groupedPaths = _groupLightPaths(paths);
     let res = [];
     for (let key in groupedPaths) {
         let names = groupedPaths[key];
         let titles: Record<string, string> = {};
         for (let n of names) {
-            titles[n] = window.lightAnglePaths[n].title;
+            titles[n] = paths[n].title;
         }
-        let val = window.lightAnglePaths[names[0]]['0'];
+        let val = paths[names[0]]['0'];
+        res.push({ titles: titles, values: val });
+    }
+    return res;
+}
+
+export function getPathDataGroupsFormatted(lightAnglePaths?: Record<string, any>) {
+    const paths = lightAnglePaths || window.lightAnglePaths;
+    let groupedPaths = _groupLightPaths(paths);
+    let res = [];
+    for (let key in groupedPaths) {
+        let names = groupedPaths[key];
+        let titles: Record<string, string> = {};
+        for (let n of names) {
+            titles[n] = paths[n].title;
+        }
+        let val = paths[names[0]]['0'];
         let _val = {};
         for (const k in val) {
             const element = val[k];
@@ -156,7 +173,7 @@ export function printPathDataGroups() {
         }
         res.push({ titles: titles, values: _val });
     }
-    console.log(res);
+    return res;
 }
 
 export function printPathData() {

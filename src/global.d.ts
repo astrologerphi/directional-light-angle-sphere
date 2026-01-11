@@ -57,8 +57,19 @@ interface LightAnglePathCollection {
     };
 }
 
+interface LightAnglePathGroup {
+    titles: Record<string, string>;
+    values: {
+        [time: number]: {
+            x: number;
+            y: number;
+        };
+    };
+}
+
 interface Window {
     lightAnglePaths: LightAnglePathCollection;
     printPathData: () => void;
-    printPathDataGroups: () => void;
+    getPathDataGroups: () => void;
+    getPathDataGroupsFormatted: () => void;
 }
