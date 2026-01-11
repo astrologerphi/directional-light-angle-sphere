@@ -250,60 +250,105 @@ const updateSelectedData = (groupIndex: number) => {
     selectedDataEl.innerHTML = html;
 };
 
+// Section colors based on values count
+const sectionColors: Record<number, string> = {
+    1: '#b54ee4', // Red - single value
+    2: '#ffa94d', // Orange - 2 values
+    3: '#ffd43b', // Yellow - 3 values
+    4: '#69db7c', // Green - 4 values
+    5: '#4dabf7', // Blue - 5 values
+    6: '#3276bf', // Purple - 6 values
+    7: '#1dd387', // Pink - 7 values
+    8: '#7485d8', // Teal - 8+ values
+};
+
+const getSectionColor = (count: number): string => {
+    if (count >= 8) return sectionColors[8];
+    return sectionColors[count] || sectionColors[8];
+};
+
 const populatePathList = () => {
     if (!pathList) return;
 
     pathList.innerHTML = '';
 
+    // Group items by values count
+    const groupedByCount: Map<number, { group: (typeof lightPathGroups)[0]; index: number }[]> = new Map();
+
     lightPathGroups.forEach((group, index) => {
-        const li = document.createElement('li');
-        const titlesList = Object.values(group.titles);
-        const displayTitle = titlesList.length > 0 ? titlesList[0] : `Group ${index}`;
+        const valuesCount = Object.keys(group.values).length;
+        if (!groupedByCount.has(valuesCount)) {
+            groupedByCount.set(valuesCount, []);
+        }
+        groupedByCount.get(valuesCount)!.push({ group, index });
+    });
 
-        const contentWrapper = document.createElement('div');
-        contentWrapper.className = 'path-item-content';
+    // Sort by values count (ascending)
+    const sortedCounts = Array.from(groupedByCount.keys()).sort((a, b) => a - b);
 
-        const nameSpan = document.createElement('span');
-        nameSpan.className = 'path-name';
-        nameSpan.textContent = `Group ${index}`;
+    sortedCounts.forEach(count => {
+        const items = groupedByCount.get(count)!;
+        const sectionColor = getSectionColor(count);
 
-        const titleSpan = document.createElement('span');
-        titleSpan.className = 'path-title';
-        titleSpan.textContent = displayTitle;
+        // Create section header
+        const sectionHeader = document.createElement('li');
+        sectionHeader.className = 'section-header';
+        sectionHeader.style.setProperty('--section-color', sectionColor);
+        sectionHeader.innerHTML = `<span class="section-count">${count}</span><span class="section-label">${count === 1 ? 'value' : 'values'}</span><span class="section-items-count">(${items.length})</span>`;
+        pathList.appendChild(sectionHeader);
 
-        contentWrapper.appendChild(nameSpan);
-        contentWrapper.appendChild(titleSpan);
-        li.appendChild(contentWrapper);
+        // Create items in this section
+        items.forEach(({ group, index }) => {
+            const li = document.createElement('li');
+            li.style.setProperty('--section-color', sectionColor);
+            const titlesList = Object.values(group.titles);
+            const displayTitle = titlesList.length > 0 ? titlesList[0] : `Group ${index}`;
 
-        // Add overlay button for non-active items
-        if (index !== currentGroupIndex) {
-            const overlayBtn = document.createElement('button');
-            overlayBtn.className = 'overlay-btn';
-            overlayBtn.dataset.groupIndex = String(index);
+            const contentWrapper = document.createElement('div');
+            contentWrapper.className = 'path-item-content';
 
-            if (overlayGroups.has(index)) {
-                overlayBtn.classList.add('active');
-                overlayBtn.textContent = '−';
-                overlayBtn.title = 'Remove overlay';
-            } else {
-                overlayBtn.textContent = '+';
-                overlayBtn.title = 'Add overlay';
+            const nameSpan = document.createElement('span');
+            nameSpan.className = 'path-name';
+            nameSpan.textContent = `Group ${index}`;
+
+            const titleSpan = document.createElement('span');
+            titleSpan.className = 'path-title';
+            titleSpan.textContent = displayTitle;
+
+            contentWrapper.appendChild(nameSpan);
+            contentWrapper.appendChild(titleSpan);
+            li.appendChild(contentWrapper);
+
+            // Add overlay button for non-active items
+            if (index !== currentGroupIndex) {
+                const overlayBtn = document.createElement('button');
+                overlayBtn.className = 'overlay-btn';
+                overlayBtn.dataset.groupIndex = String(index);
+
+                if (overlayGroups.has(index)) {
+                    overlayBtn.classList.add('active');
+                    overlayBtn.textContent = '−';
+                    overlayBtn.title = 'Remove overlay';
+                } else {
+                    overlayBtn.textContent = '+';
+                    overlayBtn.title = 'Add overlay';
+                }
+
+                overlayBtn.addEventListener('click', e => {
+                    e.stopPropagation();
+                    toggleOverlay(index);
+                });
+                li.appendChild(overlayBtn);
             }
 
-            overlayBtn.addEventListener('click', e => {
-                e.stopPropagation();
-                toggleOverlay(index);
-            });
-            li.appendChild(overlayBtn);
-        }
-
-        li.dataset.groupIndex = String(index);
-        li.dataset.title = displayTitle;
-        if (index === currentGroupIndex) {
-            li.classList.add('active');
-        }
-        li.addEventListener('click', () => selectGroup(index));
-        pathList.appendChild(li);
+            li.dataset.groupIndex = String(index);
+            li.dataset.title = displayTitle;
+            if (index === currentGroupIndex) {
+                li.classList.add('active');
+            }
+            li.addEventListener('click', () => selectGroup(index));
+            pathList.appendChild(li);
+        });
     });
 };
 
