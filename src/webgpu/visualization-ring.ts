@@ -14,6 +14,8 @@ import {
 const dotSize = 0.04;
 const pathThickness = 5; // Adjust this value to change path thickness (1 = thin, 5 = thick)
 const animationSpeed = 10;
+const majorRadius = 1.5; // Distance from center to tube center
+const minorRadius = 1.4; // Tube radius
 
 // Uniform buffer sizes (must be aligned to 16 bytes)
 const trailUniformBufferSize = 80; // mat4x4 (64) + vec3 (12) + padding (4)
@@ -28,8 +30,8 @@ export interface VisualizationController {
 
 // Create a torus geometry (donut shape)
 function createTorusGeometry(
-    majorRadius = 1.5, // Distance from center to tube center
-    minorRadius = 0.6, // Tube radius
+    major = majorRadius,
+    minor = minorRadius,
     majorSegments = 48, // Segments around the major circle (time divisions)
     minorSegments = 24 // Segments around the tube
 ): { vertices: Float32Array; indices: Uint16Array } {
@@ -43,9 +45,9 @@ function createTorusGeometry(
         for (let j = 0; j <= minorSegments; j++) {
             const v = (j / minorSegments) * Math.PI * 2;
 
-            const x = (majorRadius + minorRadius * Math.cos(v)) * Math.cos(u);
-            const y = minorRadius * Math.sin(v);
-            const z = (majorRadius + minorRadius * Math.cos(v)) * Math.sin(u);
+            const x = (major + minor * Math.cos(v)) * Math.cos(u);
+            const y = minor * Math.sin(v);
+            const z = (major + minor * Math.cos(v)) * Math.sin(u);
 
             vertices.push(x, y, z);
         }
@@ -75,8 +77,8 @@ function createTorusGeometry(
 function projectToTorus(
     time: number, // 0-24 hours
     direction: Vector3, // Light direction
-    majorRadius = 1.5,
-    minorRadius = 0.6
+    major = majorRadius,
+    minor = minorRadius
 ): Vec3 {
     // Convert time to angle around major circle (0 hours = -90 degrees, top)
     const majorAngle = (time / 24) * Math.PI * 2 - Math.PI / 2;
@@ -91,15 +93,15 @@ function projectToTorus(
     const angle = Math.atan2(projZ, projX);
 
     // Clamp distance to fit within tube
-    const radiusOnTube = Math.min(distance, 1.0) * minorRadius * 0.9;
+    const radiusOnTube = Math.min(distance, 1.0) * minor * 0.9;
 
     // Calculate position on torus
     const tubeX = radiusOnTube * Math.cos(angle);
     const tubeY = radiusOnTube * Math.sin(angle);
 
     // Position of tube center
-    const centerX = majorRadius * Math.cos(majorAngle);
-    const centerZ = majorRadius * Math.sin(majorAngle);
+    const centerX = major * Math.cos(majorAngle);
+    const centerZ = major * Math.sin(majorAngle);
 
     // Rotate tube position to align with major circle
     const x = centerX + tubeX * Math.cos(majorAngle) - tubeY * 0;
@@ -111,8 +113,8 @@ function projectToTorus(
 
 // Create circular cross-sections at intervals around the torus to show the "plane" projections
 function createCrossSectionCircles(
-    majorRadius = 1.5,
-    minorRadius = 0.6,
+    major = majorRadius,
+    minor = minorRadius,
     numSections = 24 // One per hour
 ): { vertices: Float32Array } {
     const vertices: number[] = [];
@@ -120,13 +122,13 @@ function createCrossSectionCircles(
 
     for (let section = 0; section < numSections; section++) {
         const majorAngle = (section / numSections) * Math.PI * 2 - Math.PI / 2;
-        const centerX = majorRadius * Math.cos(majorAngle);
-        const centerZ = majorRadius * Math.sin(majorAngle);
+        const centerX = major * Math.cos(majorAngle);
+        const centerZ = major * Math.sin(majorAngle);
 
         // Draw a circle in the cross-section plane
         for (let i = 0; i <= pointsPerCircle; i++) {
             const angle = (i / pointsPerCircle) * Math.PI * 2;
-            const r = minorRadius * 0.85;
+            const r = minor * 0.85;
 
             const localX = r * Math.cos(angle);
             const localY = r * Math.sin(angle);
@@ -232,8 +234,8 @@ export async function initWebGPUVisualizationRing(
     // Create full path visualization (all time points on torus)
     const segmentPaths: { points: Vec3[] }[] = segments.map(() => ({ points: [] }));
 
-    const torus = createTorusGeometry(1.5, 0.6, 48, 24);
-    const crossSections = createCrossSectionCircles(1.5, 0.6, 24);
+    const torus = createTorusGeometry(majorRadius, minorRadius, 48, 24);
+    const crossSections = createCrossSectionCircles(majorRadius, minorRadius, 24);
 
     const torusVertexBuffer = createStaticBuffer(device, torus.vertices, GPUBufferUsage.VERTEX);
     const torusIndexBuffer = createStaticBuffer(device, torus.indices, GPUBufferUsage.INDEX);
