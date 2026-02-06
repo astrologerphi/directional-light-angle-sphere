@@ -2,6 +2,7 @@ import { lightAnglePaths, lightPathGroups } from './data';
 import { initWebGPUVisualization } from './webgpu/visualization-sphere';
 import { initWebGPUVisualizationPlane } from './webgpu/visualization-plane';
 import { initWebGPUVisualizationRing } from './webgpu/visualization-ring';
+import { initWebGPUVisualizationCylinder } from './webgpu/visualization-cylinder';
 import { printPathData, getPathDataGroups, getPathDataGroupsFormatted } from './utils';
 
 export interface VisualizationController {
@@ -15,11 +16,13 @@ export interface VisualizationController {
 const sphereCanvas = document.getElementById('sphereCanvas');
 const planeCanvas = document.getElementById('planeCanvas');
 const ringCanvas = document.getElementById('ringCanvas');
+const cylinderCanvas = document.getElementById('cylinderCanvas');
 
 // Status elements
 const sphereStatus = document.getElementById('sphereStatus');
 const planeStatus = document.getElementById('planeStatus');
 const ringStatus = document.getElementById('ringStatus');
+const cylinderStatus = document.getElementById('cylinderStatus');
 
 // UI controls
 const toggleButton = document.getElementById('toggleButton');
@@ -47,6 +50,10 @@ if (!(ringCanvas instanceof HTMLCanvasElement)) {
     throw new Error('Canvas element #ringCanvas not found.');
 }
 
+if (!(cylinderCanvas instanceof HTMLCanvasElement)) {
+    throw new Error('Canvas element #cylinderCanvas not found.');
+}
+
 if (!(toggleButton instanceof HTMLButtonElement)) {
     throw new Error('Toggle button #toggleButton not found.');
 }
@@ -54,6 +61,7 @@ if (!(toggleButton instanceof HTMLButtonElement)) {
 let sphereController: VisualizationController | null = null;
 let planeController: VisualizationController | null = null;
 let ringController: VisualizationController | null = null;
+let cylinderController: VisualizationController | null = null;
 let currentGroupIndex = 0;
 let focusedIndex = -1;
 let currentSlideIndex = 0;
@@ -109,6 +117,8 @@ const getActiveController = (): VisualizationController | null => {
             return planeController;
         case 2:
             return ringController;
+        case 3:
+            return cylinderController;
         default:
             return null;
     }
@@ -373,9 +383,11 @@ const reinitializeWithOverlays = async () => {
     sphereController?.stop();
     planeController?.stop();
     ringController?.stop();
+    cylinderController?.stop();
     sphereController = null;
     planeController = null;
     ringController = null;
+    cylinderController = null;
 
     // Create combined path data with main group and overlays
     const mainGroup = lightPathGroups[currentGroupIndex];
@@ -410,6 +422,7 @@ const reinitializeWithOverlays = async () => {
         sphereController = await initWebGPUVisualization(sphereCanvas, sphereStatus, tempPathKey);
         planeController = await initWebGPUVisualizationPlane(planeCanvas, planeStatus, tempPathKey);
         ringController = await initWebGPUVisualizationRing(ringCanvas, ringStatus, tempPathKey);
+        cylinderController = await initWebGPUVisualizationCylinder(cylinderCanvas, cylinderStatus, tempPathKey);
 
         toggleButton.disabled = false;
         updateToggleLabel(true);
@@ -446,9 +459,11 @@ const selectGroup = async (groupIndex: number) => {
     sphereController?.stop();
     planeController?.stop();
     ringController?.stop();
+    cylinderController?.stop();
     sphereController = null;
     planeController = null;
     ringController = null;
+    cylinderController = null;
 
     // Get group data and create a temporary path
     const group = lightPathGroups[groupIndex];
@@ -473,6 +488,9 @@ const selectGroup = async (groupIndex: number) => {
 
         // Initialize ring view (torus)
         ringController = await initWebGPUVisualizationRing(ringCanvas, ringStatus, tempPathKey);
+
+        // Initialize cylinder view
+        cylinderController = await initWebGPUVisualizationCylinder(cylinderCanvas, cylinderStatus, tempPathKey);
 
         toggleButton.disabled = false;
         updateToggleLabel(true);
@@ -574,6 +592,7 @@ const bootstrap = async () => {
         sphereController = await initWebGPUVisualization(sphereCanvas, sphereStatus, tempPathKey);
         planeController = await initWebGPUVisualizationPlane(planeCanvas, planeStatus, tempPathKey);
         ringController = await initWebGPUVisualizationRing(ringCanvas, ringStatus, tempPathKey);
+        cylinderController = await initWebGPUVisualizationCylinder(cylinderCanvas, cylinderStatus, tempPathKey);
 
         toggleButton.disabled = false;
         updateToggleLabel(true);
@@ -675,4 +694,5 @@ window.addEventListener('beforeunload', () => {
     sphereController?.stop();
     planeController?.stop();
     ringController?.stop();
+    cylinderController?.stop();
 });
