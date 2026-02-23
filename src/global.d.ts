@@ -72,4 +72,5 @@ interface Window {
     printPathData: () => void;
     getPathDataGroups: () => void;
     getPathDataGroupsFormatted: () => void;
+    calculateAndFormatClosestFraction: (value: number, maxDenominator: number) => string;
 }

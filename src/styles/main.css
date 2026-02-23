@@ -31,6 +31,229 @@ body {
     justify-content: space-between;
 }
 
+/* ── Top-level shell & navigation ── */
+.shell {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.top-nav {
+    width: 80px;
+    min-width: 80px;
+    background: rgba(8, 11, 20, 0.95);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+    gap: 2px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 10;
+}
+
+.top-nav__tab {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    color: var(--muted);
+    cursor: pointer;
+    transition:
+        color 0.2s,
+        background 0.2s;
+    position: relative;
+}
+
+.top-nav__tab:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.top-nav__tab.active {
+    color: var(--accent);
+    background: rgba(108, 241, 255, 0.08);
+}
+
+.top-nav__tab.active::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 20px;
+    background: var(--accent);
+    border-radius: 0 3px 3px 0;
+}
+
+.top-nav__label {
+    font-size: 0.5rem;
+    font-weight: 500;
+    margin-top: 2px;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+}
+
+/* Tab panels */
+.tab-panel {
+    display: none;
+    flex: 1;
+    min-width: 0;
+}
+
+.tab-panel.active {
+    display: flex;
+}
+
+.tab-panel__empty {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--muted);
+}
+
+.tab-panel__empty h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.tab-panel__empty p {
+    font-size: 0.95rem;
+}
+
+/* ── Divine Hexagon panel ── */
+.hexagon-sidebar {
+    width: 280px;
+    min-width: 280px;
+    background: var(--card-bg);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.hexagon-sidebar__header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.hexagon-sidebar__header h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+
+.hexagon-sidebar__header p {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.hexagon-sidebar__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.coord-input {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.coord-input__label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+}
+
+/* Per-vertex label colors */
+.coord-input[data-index='0'] .coord-input__label {
+    color: #33e650;
+}
+.coord-input[data-index='1'] .coord-input__label {
+    color: #4d80ff;
+}
+.coord-input[data-index='2'] .coord-input__label {
+    color: #ff9933;
+}
+.coord-input[data-index='3'] .coord-input__label {
+    color: #fff34d;
+}
+.coord-input[data-index='4'] .coord-input__label {
+    color: #b34dff;
+}
+.coord-input[data-index='5'] .coord-input__label {
+    color: #ff4d4d;
+}
+
+.coord-input__field {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 0.85rem;
+    font-family: 'Space Grotesk', monospace;
+    outline: none;
+    transition:
+        border-color 0.2s,
+        background 0.2s;
+}
+
+.coord-input__field:focus {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.coord-input__field::placeholder {
+    color: var(--muted);
+    opacity: 0.6;
+}
+
+.hexagon-sidebar__status {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    color: var(--accent);
+    min-height: 1.6em;
+    border-top: 1px solid var(--border);
+}
+
+.hexagon-content {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    min-width: 0;
+}
+
+.hexagon-content canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 .sidebar {
     width: 280px;
     min-width: 280px;

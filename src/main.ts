@@ -3,7 +3,13 @@ import { initWebGPUVisualization } from './webgpu/visualization-sphere';
 import { initWebGPUVisualizationPlane } from './webgpu/visualization-plane';
 import { initWebGPUVisualizationRing } from './webgpu/visualization-ring';
 import { initWebGPUVisualizationCylinder } from './webgpu/visualization-cylinder';
-import { printPathData, getPathDataGroups, getPathDataGroupsFormatted } from './utils';
+import { initHexagonVisualization, HexagonController } from './webgpu/visualization-hexagon';
+import {
+    printPathData,
+    getPathDataGroups,
+    getPathDataGroupsFormatted,
+    calculateAndFormatClosestFraction,
+} from './utils';
 
 export interface VisualizationController {
     pause(): void;
@@ -611,6 +617,7 @@ window.lightAnglePaths = lightAnglePaths;
 window.printPathData = printPathData;
 window.getPathDataGroups = getPathDataGroups;
 window.getPathDataGroupsFormatted = getPathDataGroupsFormatted;
+window.calculateAndFormatClosestFraction = calculateAndFormatClosestFraction;
 
 void bootstrap();
 
@@ -695,4 +702,93 @@ window.addEventListener('beforeunload', () => {
     planeController?.stop();
     ringController?.stop();
     cylinderController?.stop();
+});
+
+// Top-level tab navigation
+const topNavTabs = document.querySelectorAll<HTMLButtonElement>('.top-nav__tab');
+const tabPanels = document.querySelectorAll<HTMLElement>('.tab-panel');
+
+topNavTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const targetPanel = tab.dataset.tab;
+        if (!targetPanel) return;
+
+        topNavTabs.forEach(t => t.classList.toggle('active', t === tab));
+        tabPanels.forEach(p => p.classList.toggle('active', p.dataset.panel === targetPanel));
+    });
+});
+
+// Divine Hexagon coordinate persistence
+const HEXAGON_STORAGE_KEY = 'divine-hexagon-coords';
+const hexagonInputs = document.querySelectorAll<HTMLElement>('.coord-input');
+const hexagonStatus = document.getElementById('hexagonStatus');
+
+const loadHexagonCoords = (): string[] => {
+    try {
+        const raw = localStorage.getItem(HEXAGON_STORAGE_KEY);
+        if (raw) return JSON.parse(raw);
+    } catch {
+        /* ignore */
+    }
+    return Array.from({ length: 6 }, () => '');
+};
+
+const saveHexagonCoords = () => {
+    const coords: string[] = [];
+    hexagonInputs.forEach(group => {
+        const input = group.querySelector<HTMLInputElement>('.coord-input__field');
+        coords.push(input?.value ?? '');
+    });
+    localStorage.setItem(HEXAGON_STORAGE_KEY, JSON.stringify(coords));
+    if (hexagonStatus) hexagonStatus.textContent = 'Saved.';
+    setTimeout(() => {
+        if (hexagonStatus) hexagonStatus.textContent = '';
+    }, 1500);
+};
+
+// Restore saved values
+const savedCoords = loadHexagonCoords();
+hexagonInputs.forEach((group, idx) => {
+    const value = savedCoords[idx];
+    if (!value) return;
+    const input = group.querySelector<HTMLInputElement>('.coord-input__field');
+    if (input) input.value = value;
+});
+
+// Parse a "x, y, z" string into a Vec3 or null
+const parseVec3 = (s: string): Vec3 | null => {
+    const parts = s.split(',').map(p => parseFloat(p.trim()));
+    if (parts.length >= 3 && parts.every(n => Number.isFinite(n))) {
+        return [parts[0], parts[1], parts[2]];
+    }
+    return null;
+};
+
+const getHexagonVertices = (): (Vec3 | null)[] => {
+    const coords = loadHexagonCoords();
+    return coords.map(parseVec3);
+};
+
+// Hexagon WebGPU visualization
+let hexagonController: HexagonController | null = null;
+const hexagonCanvas = document.getElementById('hexagonCanvas');
+
+if (hexagonCanvas instanceof HTMLCanvasElement) {
+    initHexagonVisualization(hexagonCanvas)
+        .then(ctrl => {
+            hexagonController = ctrl;
+            ctrl.updateVertices(getHexagonVertices());
+        })
+        .catch(err => {
+            console.error('Hexagon visualization error:', err);
+        });
+}
+
+// Save on any input change & update hex visualization
+hexagonInputs.forEach(group => {
+    const input = group.querySelector<HTMLInputElement>('.coord-input__field');
+    input?.addEventListener('input', () => {
+        saveHexagonCoords();
+        hexagonController?.updateVertices(getHexagonVertices());
+    });
 });

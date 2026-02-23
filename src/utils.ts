@@ -100,6 +100,11 @@ export function formatFraction(numerator: number, denominator: number): string {
     return `${numerator}/${denominator}`;
 }
 
+export function calculateAndFormatClosestFraction(value: number, maxDenominator: number): string {
+    const fraction = closestFraction(value, maxDenominator);
+    return formatFraction(fraction.numerator, fraction.denominator);
+}
+
 /**
  * Groups all lightAnglePaths by their "0" value
  * @param lightAnglePaths - The light angle paths object
