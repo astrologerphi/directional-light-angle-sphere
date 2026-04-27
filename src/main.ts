@@ -4,6 +4,7 @@ import { initWebGPUVisualizationPlane } from './webgpu/visualization-plane';
 import { initWebGPUVisualizationRing } from './webgpu/visualization-ring';
 import { initWebGPUVisualizationCylinder } from './webgpu/visualization-cylinder';
 import { initHexagonVisualization, HexagonController } from './webgpu/visualization-hexagon';
+import { initPuzzleEditor, PuzzleEditorController } from './puzzle/editor';
 import {
     printPathData,
     getPathDataGroups,
@@ -23,12 +24,16 @@ const sphereCanvas = document.getElementById('sphereCanvas');
 const planeCanvas = document.getElementById('planeCanvas');
 const ringCanvas = document.getElementById('ringCanvas');
 const cylinderCanvas = document.getElementById('cylinderCanvas');
+const puzzleSphereCanvas = document.getElementById('puzzleSphereCanvas');
+const puzzlePlaneCanvas = document.getElementById('puzzlePlaneCanvas');
 
 // Status elements
 const sphereStatus = document.getElementById('sphereStatus');
 const planeStatus = document.getElementById('planeStatus');
 const ringStatus = document.getElementById('ringStatus');
 const cylinderStatus = document.getElementById('cylinderStatus');
+const puzzleSphereStatus = document.getElementById('puzzleSphereStatus');
+const puzzlePlaneStatus = document.getElementById('puzzlePlaneStatus');
 
 // UI controls
 const toggleButton = document.getElementById('toggleButton');
@@ -36,13 +41,16 @@ const pathList = document.getElementById('pathList');
 const pathSearch = document.getElementById('pathSearch');
 const currentPathEl = document.getElementById('currentPath');
 const selectedDataEl = document.getElementById('selectedData');
+const puzzleFigureList = document.getElementById('puzzleFigureList');
+const puzzleSidebarStatus = document.getElementById('puzzleSidebarStatus');
 
 // Carousel controls
-const carouselPrev = document.getElementById('carouselPrev');
-const carouselNext = document.getElementById('carouselNext');
-const carouselIndicators = document.querySelectorAll('.carousel__indicator');
-const carouselSlides = document.querySelectorAll('.carousel__slide');
-const carouselTitles = document.querySelectorAll('.carousel__title');
+const lightPathsPanel = document.querySelector('[data-panel="light-paths"]');
+const carouselPrev = lightPathsPanel?.querySelector('#carouselPrev') ?? null;
+const carouselNext = lightPathsPanel?.querySelector('#carouselNext') ?? null;
+const carouselIndicators = lightPathsPanel?.querySelectorAll('.carousel__indicator') ?? [];
+const carouselSlides = lightPathsPanel?.querySelectorAll('.carousel__slide') ?? [];
+const carouselTitles = lightPathsPanel?.querySelectorAll('.carousel__title') ?? [];
 
 if (!(sphereCanvas instanceof HTMLCanvasElement)) {
     throw new Error('Canvas element #sphereCanvas not found.');
@@ -60,6 +68,14 @@ if (!(cylinderCanvas instanceof HTMLCanvasElement)) {
     throw new Error('Canvas element #cylinderCanvas not found.');
 }
 
+if (!(puzzleSphereCanvas instanceof HTMLCanvasElement)) {
+    throw new Error('Canvas element #puzzleSphereCanvas not found.');
+}
+
+if (!(puzzlePlaneCanvas instanceof HTMLCanvasElement)) {
+    throw new Error('Canvas element #puzzlePlaneCanvas not found.');
+}
+
 if (!(toggleButton instanceof HTMLButtonElement)) {
     throw new Error('Toggle button #toggleButton not found.');
 }
@@ -68,6 +84,7 @@ let sphereController: VisualizationController | null = null;
 let planeController: VisualizationController | null = null;
 let ringController: VisualizationController | null = null;
 let cylinderController: VisualizationController | null = null;
+let puzzleEditorController: PuzzleEditorController | null = null;
 let currentGroupIndex = 0;
 let focusedIndex = -1;
 let currentSlideIndex = 0;
@@ -143,12 +160,21 @@ const updateToggleLabel = (isRunning: boolean) => {
     toggleButton.textContent = isRunning ? 'Pause' : 'Play';
 };
 
+const getCurrentGroupTitle = (groupIndex: number): string => {
+    const group = lightPathGroups[groupIndex];
+    if (!group) {
+        return `Group ${groupIndex}`;
+    }
+
+    const titlesList = Object.values(group.titles);
+    return titlesList.length > 0 ? titlesList[0] : `Group ${groupIndex}`;
+};
+
 const updateCurrentGroup = (groupIndex: number) => {
     currentGroupIndex = groupIndex;
-    const group = lightPathGroups[groupIndex];
-    if (currentPathEl && group) {
-        const titlesList = Object.values(group.titles);
-        currentPathEl.textContent = titlesList.length > 0 ? titlesList[0] : `Group ${groupIndex}`;
+    const title = getCurrentGroupTitle(groupIndex);
+    if (currentPathEl) {
+        currentPathEl.textContent = title;
     }
     updateSelectedData(groupIndex);
 };
@@ -384,8 +410,7 @@ const toggleOverlay = async (groupIndex: number) => {
     await reinitializeWithOverlays();
 };
 
-const reinitializeWithOverlays = async () => {
-    // Stop all visualizations
+const stopLightPathVisualizations = () => {
     sphereController?.stop();
     planeController?.stop();
     ringController?.stop();
@@ -394,41 +419,78 @@ const reinitializeWithOverlays = async () => {
     planeController = null;
     ringController = null;
     cylinderController = null;
+};
 
-    // Create combined path data with main group and overlays
+const stopPuzzleVisualizations = () => {
+    puzzleEditorController?.destroy();
+    puzzleEditorController = null;
+};
+
+const createCurrentPathData = (): {
+    pathKey: string;
+    pathData: {
+        title: string;
+        [id: string]: any;
+    };
+} => {
     const mainGroup = lightPathGroups[currentGroupIndex];
-    const tempPathKey = `__temp_combined__`;
+    const title = getCurrentGroupTitle(currentGroupIndex);
 
-    // Build combined path data
+    if (overlayGroups.size === 0) {
+        return {
+            pathKey: `__temp_group_${currentGroupIndex}__`,
+            pathData: {
+                '0': mainGroup.values,
+                title,
+            },
+        };
+    }
+
     const combinedPathData: {
         title: string;
         [id: string]: any;
     } = {
-        // Main group uses segment ID 0
         '0': mainGroup.values,
-        title: Object.values(mainGroup.titles)[0] || `Group ${currentGroupIndex}`,
+        title,
     };
 
-    // Add overlay groups with different segment IDs
     let segmentId = 1;
     overlayGroups.forEach((_color, groupIndex) => {
         const overlayGroup = lightPathGroups[groupIndex];
-        if (overlayGroup) {
-            combinedPathData[String(segmentId)] = overlayGroup.values;
-            segmentId++;
-        }
+        if (!overlayGroup) return;
+        combinedPathData[String(segmentId)] = overlayGroup.values;
+        segmentId++;
     });
 
-    window.lightAnglePaths[tempPathKey] = combinedPathData;
+    return {
+        pathKey: '__temp_combined__',
+        pathData: combinedPathData,
+    };
+};
+
+const updateTemporaryPathData = (): string => {
+    const { pathKey, pathData } = createCurrentPathData();
+    window.lightAnglePaths[pathKey] = pathData;
+    return pathKey;
+};
+
+const initializeLightPathVisualizations = async (pathKey: string) => {
+    sphereController = await initWebGPUVisualization(sphereCanvas, sphereStatus, pathKey);
+    planeController = await initWebGPUVisualizationPlane(planeCanvas, planeStatus, pathKey);
+    ringController = await initWebGPUVisualizationRing(ringCanvas, ringStatus, pathKey);
+    cylinderController = await initWebGPUVisualizationCylinder(cylinderCanvas, cylinderStatus, pathKey);
+};
+
+const reinitializeWithOverlays = async () => {
+    stopLightPathVisualizations();
+
+    const tempPathKey = updateTemporaryPathData();
 
     try {
         setStatus('Updating visualizations...');
         toggleButton.disabled = true;
 
-        sphereController = await initWebGPUVisualization(sphereCanvas, sphereStatus, tempPathKey);
-        planeController = await initWebGPUVisualizationPlane(planeCanvas, planeStatus, tempPathKey);
-        ringController = await initWebGPUVisualizationRing(ringCanvas, ringStatus, tempPathKey);
-        cylinderController = await initWebGPUVisualizationCylinder(cylinderCanvas, cylinderStatus, tempPathKey);
+        await initializeLightPathVisualizations(tempPathKey);
 
         toggleButton.disabled = false;
         updateToggleLabel(true);
@@ -461,42 +523,16 @@ const selectGroup = async (groupIndex: number) => {
     // Refresh the path list to update overlay buttons
     populatePathList();
 
-    // Stop all visualizations
-    sphereController?.stop();
-    planeController?.stop();
-    ringController?.stop();
-    cylinderController?.stop();
-    sphereController = null;
-    planeController = null;
-    ringController = null;
-    cylinderController = null;
+    stopLightPathVisualizations();
 
-    // Get group data and create a temporary path
-    const group = lightPathGroups[groupIndex];
-    const tempPathKey = `__temp_group_${groupIndex}__`;
-
-    // Add the group's raw values to lightAnglePaths temporarily
-    window.lightAnglePaths[tempPathKey] = {
-        '0': group.values,
-        title: Object.values(group.titles)[0] || `Group ${groupIndex}`,
-    };
+    const tempPathKey = updateTemporaryPathData();
 
     // Reinitialize with new group for all views
     try {
         setStatus(`Loading Group ${groupIndex}...`);
         toggleButton.disabled = true;
 
-        // Initialize sphere view
-        sphereController = await initWebGPUVisualization(sphereCanvas, sphereStatus, tempPathKey);
-
-        // Initialize plane view
-        planeController = await initWebGPUVisualizationPlane(planeCanvas, planeStatus, tempPathKey);
-
-        // Initialize ring view (torus)
-        ringController = await initWebGPUVisualizationRing(ringCanvas, ringStatus, tempPathKey);
-
-        // Initialize cylinder view
-        cylinderController = await initWebGPUVisualizationCylinder(cylinderCanvas, cylinderStatus, tempPathKey);
+        await initializeLightPathVisualizations(tempPathKey);
 
         toggleButton.disabled = false;
         updateToggleLabel(true);
@@ -573,7 +609,7 @@ const handleKeyboardNavigation = (e: KeyboardEvent) => {
 
 const bootstrap = async () => {
     populatePathList();
-    updateSelectedData(currentGroupIndex); // Initialize with default group
+    updateCurrentGroup(currentGroupIndex);
 
     if (!navigator.gpu) {
         setStatus('WebGPU is not supported in this browser. Try Chrome 113+ or Edge 113+.');
@@ -585,20 +621,9 @@ const bootstrap = async () => {
     try {
         setStatus('Initializing WebGPU...');
 
-        // Get first group and create temporary path
-        const group = lightPathGroups[currentGroupIndex];
-        const tempPathKey = `__temp_group_${currentGroupIndex}__`;
+        const tempPathKey = updateTemporaryPathData();
 
-        (window as any).lightAnglePaths[tempPathKey] = {
-            '0': group.values,
-            title: Object.values(group.titles)[0] || `Group ${currentGroupIndex}`,
-        };
-
-        // Initialize all visualizations
-        sphereController = await initWebGPUVisualization(sphereCanvas, sphereStatus, tempPathKey);
-        planeController = await initWebGPUVisualizationPlane(planeCanvas, planeStatus, tempPathKey);
-        ringController = await initWebGPUVisualizationRing(ringCanvas, ringStatus, tempPathKey);
-        cylinderController = await initWebGPUVisualizationCylinder(cylinderCanvas, cylinderStatus, tempPathKey);
+        await initializeLightPathVisualizations(tempPathKey);
 
         toggleButton.disabled = false;
         updateToggleLabel(true);
@@ -698,10 +723,8 @@ pathSearch?.addEventListener('input', e => {
 window.addEventListener('keydown', handleKeyboardNavigation);
 
 window.addEventListener('beforeunload', () => {
-    sphereController?.stop();
-    planeController?.stop();
-    ringController?.stop();
-    cylinderController?.stop();
+    stopLightPathVisualizations();
+    stopPuzzleVisualizations();
 });
 
 // Top-level tab navigation
@@ -715,7 +738,24 @@ topNavTabs.forEach(tab => {
 
         topNavTabs.forEach(t => t.classList.toggle('active', t === tab));
         tabPanels.forEach(p => p.classList.toggle('active', p.dataset.panel === targetPanel));
+
+        if (targetPanel === 'puzzle') {
+            puzzleEditorController?.refresh();
+        }
     });
+});
+
+if (!(puzzleFigureList instanceof HTMLElement)) {
+    throw new Error('Puzzle figure list #puzzleFigureList not found.');
+}
+
+puzzleEditorController = initPuzzleEditor({
+    planeCanvas: puzzlePlaneCanvas,
+    sphereCanvas: puzzleSphereCanvas,
+    figureList: puzzleFigureList,
+    sidebarStatus: puzzleSidebarStatus,
+    planeStatus: puzzlePlaneStatus,
+    sphereStatus: puzzleSphereStatus,
 });
 
 // Divine Hexagon coordinate persistence

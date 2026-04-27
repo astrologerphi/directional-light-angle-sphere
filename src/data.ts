@@ -9949,4 +9949,33 @@ const lightAnglePaths_s: LightAnglePathCollection = {
     },
 };
 
+const puzzleGroupIDs = [
+    'default',
+    'm00_00_0000',
+    'm00_00_0020_weatheroutdoor',
+    'm00_00_0115_weatheroutdoor',
+    'm00_00_0148_weatheroutdoor',
+    'm00_00_0149_weatheroutdoor',
+    'm00_00_0150_weatheroutdoor',
+    'm00_00_0821_weatheroutdoor',
+    'm10_01_0000',
+    'm14_00_0000',
+    'm15_00_0000',
+    'm16_00_0000',
+    'm21_00_0000',
+    'm30_00_0200',
+    'm43_00_0900',
+    'm00_00_0001_weatheroutdoor',
+    'm61_00_0000',
+];
+
+export const puzzleGroups = puzzleGroupIDs.map(x => {
+    let res: { x: number; y: number }[] = [];
+    for (const key in lightAnglePaths[x]['0']) {
+        const element = lightAnglePaths[x]['0'][key];
+        res.push(element);
+    }
+    return res;
+});
+
 export const lightPathGroups = getPathDataGroups(lightAnglePaths);
