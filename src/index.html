@@ -255,7 +255,7 @@
                     <nav class="puzzle-sidebar">
                         <div class="puzzle-sidebar__header">
                             <h2>Puzzle Figures</h2>
-                            <p>Checked figures can move and rotate in the plane view.</p>
+                            <p>Checked figures are visible. Select a figure from this list to edit it.</p>
                         </div>
                         <ul id="puzzleFigureList" class="puzzle-figure-list">
                             <!-- Figures are populated by JavaScript -->
@@ -270,7 +270,8 @@
                                     <h3 class="carousel__title active">Puzzle</h3>
                                 </div>
                                 <p class="subtitle">
-                                    Drag a checked triangle to move it, or drag its ring handle in the plane to rotate it.
+                                    Select a figure from the list, then drag it in the plane to move it or use its ring
+                                    handle to rotate it.
                                 </p>
                             </div>
                         </header>
@@ -281,7 +282,11 @@
                                     <h2>Sphere</h2>
                                 </div>
                                 <div class="puzzle-view__canvas">
-                                    <canvas id="puzzleSphereCanvas" aria-label="Puzzle sphere visualization" role="img"></canvas>
+                                    <canvas
+                                        id="puzzleSphereCanvas"
+                                        aria-label="Puzzle sphere visualization"
+                                        role="img"
+                                    ></canvas>
                                     <div id="puzzleSphereStatus" class="status"></div>
                                 </div>
                             </section>
@@ -291,7 +296,11 @@
                                     <h2>Plane</h2>
                                 </div>
                                 <div class="puzzle-view__canvas">
-                                    <canvas id="puzzlePlaneCanvas" aria-label="Puzzle plane visualization" role="img"></canvas>
+                                    <canvas
+                                        id="puzzlePlaneCanvas"
+                                        aria-label="Puzzle plane visualization"
+                                        role="img"
+                                    ></canvas>
                                     <div id="puzzlePlaneStatus" class="status"></div>
                                 </div>
                             </section>

@@ -19,7 +19,7 @@ interface PuzzleFigure {
     id: string;
     name: string;
     color: string;
-    unlocked: boolean;
+    visible: boolean;
     valueCount: number;
     center: Point3;
     rotation: number;
@@ -84,6 +84,7 @@ const MOVE_LIMIT = VIEW_RADIUS;
 const ROTATION_HANDLE_RADIUS_PX = 14;
 const GRID_RADII = [0.4, 0.8, 1.2, 1.6];
 const SPHERE_RADIUS_SCALE = 0.95;
+const BOUNDARY_SEGMENT_SAMPLES = 20;
 const PUZZLE_FIGURE_COLORS = ['#6cf1ff', '#eeff71', '#ff9f68', '#9d7cff', '#6effa7', '#ff6f91', '#7bd0ff', '#ffcf5a'];
 
 export function initPuzzleEditor({
@@ -112,8 +113,7 @@ export function initPuzzleEditor({
     planeCanvas.style.touchAction = 'none';
     sphereCanvas.style.touchAction = 'none';
 
-    const getSelectedFigure = (): PuzzleFigure | undefined =>
-        figures.find(figure => figure.id === selectedFigureId) ?? figures[0];
+    const getSelectedFigure = (): PuzzleFigure | undefined => figures.find(figure => figure.id === selectedFigureId);
 
     const syncCanvasResolution = (canvas: HTMLCanvasElement) => {
         const rect = canvas.getBoundingClientRect();
@@ -182,11 +182,6 @@ export function initPuzzleEditor({
             y: point.x * sin + point.y * cos,
         };
     };
-
-    const lerpPoint2 = (a: Point2, b: Point2, t: number): Point2 => ({
-        x: a.x + (b.x - a.x) * t,
-        y: a.y + (b.y - a.y) * t,
-    });
 
     const addPoint3 = (a: Point3, b: Point3): Point3 => ({
         x: a.x + b.x,
@@ -287,6 +282,58 @@ export function initPuzzleEditor({
     const pointsAlmostEqual = (a: Point3, b: Point3): boolean =>
         Math.abs(a.x - b.x) < 1e-6 && Math.abs(a.y - b.y) < 1e-6 && Math.abs(a.z - b.z) < 1e-6;
 
+    const collapseNeighboringDuplicateVertices = (points: Point3[]): Point3[] => {
+        const collapsed: Point3[] = [];
+
+        points.forEach(point => {
+            if (collapsed.length === 0 || !pointsAlmostEqual(point, collapsed[collapsed.length - 1])) {
+                collapsed.push(point);
+            }
+        });
+
+        if (collapsed.length > 1 && pointsAlmostEqual(collapsed[0], collapsed[collapsed.length - 1])) {
+            collapsed.pop();
+        }
+
+        return collapsed;
+    };
+
+    const slerpSpherePoints = (start: Point3, end: Point3, t: number): Point3 => {
+        if (pointsAlmostEqual(start, end)) {
+            return start;
+        }
+
+        const startNormalized = normalizePoint3(start);
+        const endNormalized = normalizePoint3(end);
+        const dot = Math.max(-1, Math.min(1, dotPoint3(startNormalized, endNormalized)));
+
+        if (dot > 1 - 1e-6) {
+            return startNormalized;
+        }
+
+        if (dot < -1 + 1e-6) {
+            const reference =
+                Math.abs(startNormalized.x) < 0.9 ? ({ x: 1, y: 0, z: 0 } as Point3) : ({ x: 0, y: 1, z: 0 } as Point3);
+            const orthogonal = normalizePoint3(crossPoint3(startNormalized, reference));
+            return normalizePoint3(
+                addPoint3(
+                    scalePoint3(startNormalized, Math.cos(Math.PI * t)),
+                    scalePoint3(orthogonal, Math.sin(Math.PI * t))
+                )
+            );
+        }
+
+        const omega = Math.acos(dot);
+        const sinOmega = Math.sin(omega);
+
+        return normalizePoint3(
+            addPoint3(
+                scalePoint3(startNormalized, Math.sin((1 - t) * omega) / sinOmega),
+                scalePoint3(endNormalized, Math.sin(t * omega) / sinOmega)
+            )
+        );
+    };
+
     const projectSpherePointToLocal = (
         point: Point3,
         center: Point3,
@@ -301,17 +348,7 @@ export function initPuzzleEditor({
 
     const buildPuzzleFigure = (group: { x: number; y: number }[], index: number): PuzzleFigure => {
         const spherePoints = group.map(radAnglesToSphere);
-        const uniquePoints = spherePoints.filter((point, pointIndex, points) => {
-            if (pointIndex > 0 && pointsAlmostEqual(point, points[pointIndex - 1])) {
-                return false;
-            }
-
-            if (pointIndex === points.length - 1 && pointsAlmostEqual(point, points[0])) {
-                return false;
-            }
-
-            return true;
-        });
+        const uniquePoints = collapseNeighboringDuplicateVertices(spherePoints);
 
         const center = normalizePoint3(
             uniquePoints.reduce(
@@ -331,7 +368,7 @@ export function initPuzzleEditor({
             id: `puzzle-shape-${index}`,
             name: `Shape ${index + 1}`,
             color: PUZZLE_FIGURE_COLORS[index % PUZZLE_FIGURE_COLORS.length],
-            unlocked: true,
+            visible: true,
             valueCount: group.length,
             center,
             rotation: 0,
@@ -345,6 +382,8 @@ export function initPuzzleEditor({
 
     selectedFigureId = figures[0]?.id ?? '';
 
+    const getVisibleFigures = (): PuzzleFigure[] => figures.filter(figure => figure.visible);
+
     const localPointToSphere = (center: Point3, localPoint: Point2): Point3 => {
         const basis = getFigureBasis(center);
         return normalizePoint3(
@@ -357,17 +396,24 @@ export function initPuzzleEditor({
 
     const getFigureGeometry = (figure: PuzzleFigure): FigureGeometry => {
         const transformedVertices = figure.baseVertices.map(vertex => transformLocalPoint(figure, vertex));
-        const sphereVertices = transformedVertices.map(vertex => localPointToSphere(figure.center, vertex));
+        const sphereVertices = collapseNeighboringDuplicateVertices(
+            transformedVertices.map(vertex => localPointToSphere(figure.center, vertex))
+        );
         const planeVertices = sphereVertices.map(sphereToPlane);
         const handleLocal = transformLocalPoint(figure, { x: 0, y: -figure.handleDistance });
         const handlePlane = sphereToPlane(localPointToSphere(figure.center, handleLocal));
         const sphereBoundary: Point3[] = [];
 
-        for (let index = 0; index < transformedVertices.length; index++) {
-            const start = transformedVertices[index];
-            const end = transformedVertices[(index + 1) % transformedVertices.length];
-            for (let step = 0; step < 20; step++) {
-                sphereBoundary.push(localPointToSphere(figure.center, lerpPoint2(start, end, step / 20)));
+        for (let index = 0; index < sphereVertices.length; index++) {
+            const start = sphereVertices[index];
+            const end = sphereVertices[(index + 1) % sphereVertices.length];
+
+            if (pointsAlmostEqual(start, end)) {
+                continue;
+            }
+
+            for (let step = 0; step < BOUNDARY_SEGMENT_SAMPLES; step++) {
+                sphereBoundary.push(slerpSpherePoints(start, end, step / BOUNDARY_SEGMENT_SAMPLES));
             }
         }
 
@@ -413,6 +459,9 @@ export function initPuzzleEditor({
     ): PuzzleFigure | undefined => {
         for (let index = figures.length - 1; index >= 0; index--) {
             const figure = figures[index];
+            if (!figure.visible) {
+                continue;
+            }
             const geometry = geometries.get(figure.id);
             if (geometry && pointInPolygon(worldPoint, geometry.planeBoundary)) {
                 return figure;
@@ -535,8 +584,8 @@ export function initPuzzleEditor({
             }
         });
         context.closePath();
-        context.fillStyle = hexToRgba(figure.color, figure.unlocked ? 0.24 : 0.12);
-        context.strokeStyle = hexToRgba(figure.color, selected ? 1 : figure.unlocked ? 0.88 : 0.45);
+        context.fillStyle = hexToRgba(figure.color, 0.24);
+        context.strokeStyle = hexToRgba(figure.color, selected ? 1 : 0.88);
         context.lineWidth = selected ? 4 : 2;
         context.lineJoin = 'round';
         context.fill();
@@ -558,10 +607,6 @@ export function initPuzzleEditor({
         context.arc(center.x, center.y, 5, 0, Math.PI * 2);
         context.fillStyle = 'rgba(255, 255, 255, 0.92)';
         context.fill();
-
-        if (!figure.unlocked) {
-            return;
-        }
 
         const handlePoint = toCanvasPoint(geometry.handlePlane, metrics);
 
@@ -701,13 +746,13 @@ export function initPuzzleEditor({
             const item = document.createElement('li');
             item.className = 'puzzle-figure-item';
             item.classList.toggle('active', figure.id === selectedFigureId);
-            item.classList.toggle('locked', !figure.unlocked);
+            item.classList.toggle('hidden', !figure.visible);
 
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.className = 'puzzle-figure-checkbox';
-            checkbox.checked = figure.unlocked;
-            checkbox.setAttribute('aria-label', `Enable editing for ${figure.name}`);
+            checkbox.checked = figure.visible;
+            checkbox.setAttribute('aria-label', `Show ${figure.name}`);
 
             const swatch = document.createElement('span');
             swatch.className = 'puzzle-figure-swatch';
@@ -723,7 +768,7 @@ export function initPuzzleEditor({
 
             const meta = document.createElement('span');
             meta.className = 'puzzle-figure-meta';
-            meta.textContent = `${figure.valueCount} values • ${figure.unlocked ? 'Editable' : 'Locked'}`;
+            meta.textContent = `${figure.valueCount} values • ${figure.visible ? 'Visible' : 'Hidden'}`;
 
             content.appendChild(name);
             content.appendChild(meta);
@@ -733,7 +778,7 @@ export function initPuzzleEditor({
             item.appendChild(content);
 
             item.addEventListener('click', () => {
-                selectedFigureId = figure.id;
+                selectedFigureId = selectedFigureId === figure.id ? '' : figure.id;
                 render();
             });
 
@@ -742,8 +787,8 @@ export function initPuzzleEditor({
             });
 
             checkbox.addEventListener('change', () => {
-                figure.unlocked = checkbox.checked;
-                if (!figure.unlocked && planeInteraction?.figureId === figure.id) {
+                figure.visible = checkbox.checked;
+                if (!figure.visible && planeInteraction?.figureId === figure.id) {
                     planeInteraction = null;
                 }
                 render();
@@ -755,25 +800,25 @@ export function initPuzzleEditor({
 
     const updateStatuses = () => {
         const selectedFigure = getSelectedFigure();
-        if (!selectedFigure) {
-            return;
-        }
-
         if (sidebarStatus) {
-            sidebarStatus.textContent = selectedFigure.unlocked
-                ? `${selectedFigure.name} is editable. Drag it in the plane to move it, drag its ring handle to rotate it, and drag the sphere view to orbit the camera.`
-                : `${selectedFigure.name} is locked. Check it in the list to enable moving and rotating.`;
+            sidebarStatus.textContent = selectedFigure
+                ? selectedFigure.visible
+                    ? `${selectedFigure.name} is selected. Drag it in the plane to move it, drag its ring handle to rotate it, and drag the sphere view to orbit the camera.`
+                    : `${selectedFigure.name} is selected but hidden. Check it in the list to show it in the plane and sphere views.`
+                : 'Select a figure from the list. Checked figures are shown in the plane and sphere views.';
         }
 
         if (planeStatus) {
-            if (planeInteraction?.mode === 'move' && planeInteraction.figureId === selectedFigure.id) {
+            if (!selectedFigure) {
+                planeStatus.textContent = 'Select a checked figure from the list to move or rotate it.';
+            } else if (planeInteraction?.mode === 'move' && planeInteraction.figureId === selectedFigure.id) {
                 planeStatus.textContent = `Moving ${selectedFigure.name} in the plane projection...`;
             } else if (planeInteraction?.mode === 'rotate' && planeInteraction.figureId === selectedFigure.id) {
                 planeStatus.textContent = `Rotating ${selectedFigure.name} in the plane projection...`;
-            } else if (selectedFigure.unlocked) {
-                planeStatus.textContent = `${selectedFigure.name}: drag to move, handle to rotate.`;
+            } else if (selectedFigure.visible) {
+                planeStatus.textContent = `${selectedFigure.name}: selected in the list. Drag to move, handle to rotate.`;
             } else {
-                planeStatus.textContent = `${selectedFigure.name}: locked.`;
+                planeStatus.textContent = `${selectedFigure.name}: hidden. Check it in the list to show it.`;
             }
         }
 
@@ -791,7 +836,7 @@ export function initPuzzleEditor({
         planeContext.clearRect(0, 0, metrics.width, metrics.height);
         drawPlaneGrid(planeContext, metrics);
 
-        figures.forEach(figure => {
+        getVisibleFigures().forEach(figure => {
             const geometry = geometries.get(figure.id);
             if (geometry) {
                 drawFigureOnPlane(planeContext, figure, geometry, metrics);
@@ -806,7 +851,7 @@ export function initPuzzleEditor({
         sphereContext.clearRect(0, 0, metrics.width, metrics.height);
         drawSphereGrid(sphereContext, metrics);
 
-        const sortedFigures = [...figures]
+        const sortedFigures = getVisibleFigures()
             .map(figure => ({
                 figure,
                 depth: projectSpherePoint(figure.center, metrics).depth,
@@ -843,13 +888,18 @@ export function initPuzzleEditor({
         const selectedGeometry = selectedFigure ? geometries.get(selectedFigure.id) : undefined;
         const hitFigure = getFigureAtPlanePoint(worldPoint, geometries);
 
-        if (selectedFigure?.unlocked && isRotationHandleHit(selectedGeometry, canvasPoint, metrics)) {
+        if (selectedFigure?.visible && isRotationHandleHit(selectedGeometry, canvasPoint, metrics)) {
             planeCanvas.style.cursor = 'crosshair';
             return;
         }
 
+        if (selectedFigure?.visible && selectedGeometry && pointInPolygon(worldPoint, selectedGeometry.planeBoundary)) {
+            planeCanvas.style.cursor = 'grab';
+            return;
+        }
+
         if (hitFigure) {
-            planeCanvas.style.cursor = hitFigure.unlocked ? 'grab' : 'not-allowed';
+            planeCanvas.style.cursor = 'default';
             return;
         }
 
@@ -864,7 +914,7 @@ export function initPuzzleEditor({
         const selectedFigure = getSelectedFigure();
         const selectedGeometry = selectedFigure ? geometries.get(selectedFigure.id) : undefined;
 
-        if (selectedFigure?.unlocked && isRotationHandleHit(selectedGeometry, canvasPoint, metrics)) {
+        if (selectedFigure?.visible && isRotationHandleHit(selectedGeometry, canvasPoint, metrics)) {
             planeInteraction = {
                 mode: 'rotate',
                 pointerId: event.pointerId,
@@ -875,26 +925,22 @@ export function initPuzzleEditor({
             return;
         }
 
-        const hitFigure = getFigureAtPlanePoint(worldPoint, geometries);
-        if (!hitFigure) {
+        if (
+            !selectedFigure?.visible ||
+            !selectedGeometry ||
+            !pointInPolygon(worldPoint, selectedGeometry.planeBoundary)
+        ) {
             render();
             return;
         }
 
-        selectedFigureId = hitFigure.id;
-
-        if (hitFigure.unlocked) {
-            const geometry = geometries.get(hitFigure.id);
-            if (geometry) {
-                planeInteraction = {
-                    mode: 'move',
-                    pointerId: event.pointerId,
-                    figureId: hitFigure.id,
-                    offset: subtractPoint2(worldPoint, geometry.centerPlane),
-                };
-                planeCanvas.setPointerCapture(event.pointerId);
-            }
-        }
+        planeInteraction = {
+            mode: 'move',
+            pointerId: event.pointerId,
+            figureId: selectedFigure.id,
+            offset: subtractPoint2(worldPoint, selectedGeometry.centerPlane),
+        };
+        planeCanvas.setPointerCapture(event.pointerId);
 
         render();
     };
@@ -903,7 +949,7 @@ export function initPuzzleEditor({
         if (planeInteraction && planeInteraction.pointerId === event.pointerId) {
             const activeInteraction = planeInteraction;
             const figure = figures.find(item => item.id === activeInteraction.figureId);
-            if (!figure || !figure.unlocked) {
+            if (!figure || !figure.visible) {
                 planeInteraction = null;
                 render();
                 return;
