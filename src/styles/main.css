@@ -744,6 +744,24 @@ body {
     cursor: pointer;
 }
 
+.puzzle-figure-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    color: var(--muted);
+    cursor: pointer;
+    user-select: none;
+}
+
+.puzzle-figure-toggle--end {
+    margin-left: auto;
+}
+
+.puzzle-figure-toggle-label {
+    min-width: 2.2rem;
+}
+
 .puzzle-figure-swatch {
     width: 14px;
     height: 14px;
@@ -757,6 +775,7 @@ body {
     flex-direction: column;
     gap: 4px;
     min-width: 0;
+    flex: 1;
 }
 
 .puzzle-figure-name {

@@ -8,6 +8,7 @@
         "check": "tsc --noEmit"
     },
     "devDependencies": {
+        "@types/node": "24.12.3",
         "@webgpu/types": "0.1.69",
         "esbuild": "0.27.2",
         "prettier": "3.8.0",

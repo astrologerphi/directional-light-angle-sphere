@@ -1,4 +1,5 @@
 import { puzzleGroups } from '../data';
+import { closestFraction } from '../utils';
 
 interface Point2 {
     x: number;
@@ -20,6 +21,7 @@ interface PuzzleFigure {
     name: string;
     color: string;
     visible: boolean;
+    showLengths: boolean;
     valueCount: number;
     center: Point3;
     rotation: number;
@@ -35,6 +37,13 @@ interface FigureGeometry {
     planeVertices: Point2[];
     sphereBoundary: Point3[];
     planeBoundary: Point2[];
+    edgeLabels: FigureEdgeLabel[];
+}
+
+interface FigureEdgeLabel {
+    text: string;
+    planePoint: Point2;
+    spherePoint: Point3;
 }
 
 interface PuzzleEditorElements {
@@ -235,6 +244,68 @@ export function initPuzzleEditor({
         return `rgba(${r}, ${g}, ${b}, ${alpha})`;
     };
 
+    const formatLineLength = (length: number): string => {
+        const normalized = length / Math.PI;
+        const fraction = closestFraction(normalized, 32);
+        const approximation = fraction.numerator / fraction.denominator;
+
+        if (Math.abs(approximation - normalized) > 0.0025) {
+            return length.toFixed(2);
+        }
+
+        if (fraction.numerator === 0) {
+            return '0';
+        }
+
+        const sign = fraction.numerator < 0 ? '-' : '';
+        const numerator = Math.abs(fraction.numerator);
+
+        if (fraction.denominator === 1) {
+            return numerator === 1 ? `${sign}π` : `${sign}${numerator}π`;
+        }
+
+        return numerator === 1 ? `${sign}π/${fraction.denominator}` : `${sign}${numerator}π/${fraction.denominator}`;
+    };
+
+    const getSphereArcLength = (start: Point3, end: Point3): number =>
+        Math.acos(Math.max(-1, Math.min(1, dotPoint3(normalizePoint3(start), normalizePoint3(end)))));
+
+    const drawCanvasLabel = (
+        context: CanvasRenderingContext2D,
+        anchor: Point2,
+        origin: Point2,
+        text: string,
+        color: string,
+        metrics: CanvasMetrics,
+        alpha = 1
+    ) => {
+        const directionX = anchor.x - origin.x;
+        const directionY = anchor.y - origin.y;
+        const directionLength = Math.hypot(directionX, directionY) || 1;
+        const offset = Math.max(14, Math.min(24, metrics.radiusPx * 0.06));
+        const labelX = anchor.x + (directionX / directionLength) * offset;
+        const labelY = anchor.y + (directionY / directionLength) * offset;
+        const fontSize = Math.max(12, Math.min(20, metrics.radiusPx * 0.05));
+
+        context.save();
+        context.font = `600 ${fontSize}px system-ui, sans-serif`;
+        context.textAlign = 'center';
+        context.textBaseline = 'middle';
+        const textWidth = context.measureText(text).width;
+        const paddingX = fontSize * 0.45;
+        const paddingY = fontSize * 0.32;
+        const boxWidth = textWidth + paddingX * 2;
+        const boxHeight = fontSize + paddingY * 2;
+        context.fillStyle = `rgba(3, 6, 12, ${0.86 * alpha})`;
+        context.strokeStyle = hexToRgba(color, 0.45 * alpha);
+        context.lineWidth = 1.25;
+        context.fillRect(labelX - boxWidth / 2, labelY - boxHeight / 2, boxWidth, boxHeight);
+        context.strokeRect(labelX - boxWidth / 2, labelY - boxHeight / 2, boxWidth, boxHeight);
+        context.fillStyle = hexToRgba(color, alpha);
+        context.fillText(text, labelX, labelY + fontSize * 0.04);
+        context.restore();
+    };
+
     const planeToSphere = (point: Point2): Point3 => {
         const clampedPoint = clampToCircle(point, MOVE_LIMIT);
         const radius = Math.hypot(clampedPoint.x, clampedPoint.y);
@@ -369,6 +440,7 @@ export function initPuzzleEditor({
             name: `Shape ${index + 1}`,
             color: PUZZLE_FIGURE_COLORS[index % PUZZLE_FIGURE_COLORS.length],
             visible: true,
+            showLengths: false,
             valueCount: group.length,
             center,
             rotation: 0,
@@ -403,6 +475,7 @@ export function initPuzzleEditor({
         const handleLocal = transformLocalPoint(figure, { x: 0, y: -figure.handleDistance });
         const handlePlane = sphereToPlane(localPointToSphere(figure.center, handleLocal));
         const sphereBoundary: Point3[] = [];
+        const edgeLabels: FigureEdgeLabel[] = [];
 
         for (let index = 0; index < sphereVertices.length; index++) {
             const start = sphereVertices[index];
@@ -415,6 +488,13 @@ export function initPuzzleEditor({
             for (let step = 0; step < BOUNDARY_SEGMENT_SAMPLES; step++) {
                 sphereBoundary.push(slerpSpherePoints(start, end, step / BOUNDARY_SEGMENT_SAMPLES));
             }
+
+            const midpoint = slerpSpherePoints(start, end, 0.5);
+            edgeLabels.push({
+                text: formatLineLength(getSphereArcLength(start, end)),
+                planePoint: sphereToPlane(midpoint),
+                spherePoint: midpoint,
+            });
         }
 
         const planeBoundary = sphereBoundary.map(sphereToPlane);
@@ -426,6 +506,7 @@ export function initPuzzleEditor({
             planeVertices,
             sphereBoundary,
             planeBoundary,
+            edgeLabels,
         };
     };
 
@@ -598,6 +679,20 @@ export function initPuzzleEditor({
             context.fill();
         });
 
+        if (figure.showLengths) {
+            const center = toCanvasPoint(geometry.centerPlane, metrics);
+            geometry.edgeLabels.forEach(label => {
+                drawCanvasLabel(
+                    context,
+                    toCanvasPoint(label.planePoint, metrics),
+                    center,
+                    label.text,
+                    figure.color,
+                    metrics
+                );
+            });
+        }
+
         if (!selected) {
             return;
         }
@@ -729,6 +824,21 @@ export function initPuzzleEditor({
             context.fill();
         });
 
+        if (figure.showLengths) {
+            geometry.edgeLabels.forEach(label => {
+                const anchor = projectSpherePoint(label.spherePoint, metrics);
+                drawCanvasLabel(
+                    context,
+                    anchor,
+                    center,
+                    label.text,
+                    figure.color,
+                    metrics,
+                    anchor.depth >= 0 ? 0.92 : 0.46
+                );
+            });
+        }
+
         if (!selected) {
             return;
         }
@@ -748,11 +858,39 @@ export function initPuzzleEditor({
             item.classList.toggle('active', figure.id === selectedFigureId);
             item.classList.toggle('hidden', !figure.visible);
 
-            const checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            checkbox.className = 'puzzle-figure-checkbox';
-            checkbox.checked = figure.visible;
-            checkbox.setAttribute('aria-label', `Show ${figure.name}`);
+            const visibilityToggle = document.createElement('label');
+            visibilityToggle.className = 'puzzle-figure-toggle';
+            visibilityToggle.title = `Show ${figure.name}`;
+
+            const visibilityCheckbox = document.createElement('input');
+            visibilityCheckbox.type = 'checkbox';
+            visibilityCheckbox.className = 'puzzle-figure-checkbox';
+            visibilityCheckbox.checked = figure.visible;
+            visibilityCheckbox.setAttribute('aria-label', `Show ${figure.name}`);
+
+            const visibilityLabel = document.createElement('span');
+            visibilityLabel.className = 'puzzle-figure-toggle-label';
+            visibilityLabel.textContent = 'Show';
+
+            visibilityToggle.appendChild(visibilityCheckbox);
+            visibilityToggle.appendChild(visibilityLabel);
+
+            const lengthsToggle = document.createElement('label');
+            lengthsToggle.className = 'puzzle-figure-toggle puzzle-figure-toggle--end';
+            lengthsToggle.title = `Show line lengths for ${figure.name}`;
+
+            const lengthsCheckbox = document.createElement('input');
+            lengthsCheckbox.type = 'checkbox';
+            lengthsCheckbox.className = 'puzzle-figure-checkbox';
+            lengthsCheckbox.checked = figure.showLengths;
+            lengthsCheckbox.setAttribute('aria-label', `Show line lengths for ${figure.name}`);
+
+            const lengthsLabel = document.createElement('span');
+            lengthsLabel.className = 'puzzle-figure-toggle-label';
+            lengthsLabel.textContent = 'Len';
+
+            lengthsToggle.appendChild(lengthsCheckbox);
+            lengthsToggle.appendChild(lengthsLabel);
 
             const swatch = document.createElement('span');
             swatch.className = 'puzzle-figure-swatch';
@@ -773,24 +911,34 @@ export function initPuzzleEditor({
             content.appendChild(name);
             content.appendChild(meta);
 
-            item.appendChild(checkbox);
+            item.appendChild(visibilityToggle);
             item.appendChild(swatch);
             item.appendChild(content);
+            item.appendChild(lengthsToggle);
 
             item.addEventListener('click', () => {
                 selectedFigureId = selectedFigureId === figure.id ? '' : figure.id;
                 render();
             });
 
-            checkbox.addEventListener('click', event => {
+            visibilityToggle.addEventListener('click', event => {
                 event.stopPropagation();
             });
 
-            checkbox.addEventListener('change', () => {
-                figure.visible = checkbox.checked;
+            lengthsToggle.addEventListener('click', event => {
+                event.stopPropagation();
+            });
+
+            visibilityCheckbox.addEventListener('change', () => {
+                figure.visible = visibilityCheckbox.checked;
                 if (!figure.visible && planeInteraction?.figureId === figure.id) {
                     planeInteraction = null;
                 }
+                render();
+            });
+
+            lengthsCheckbox.addEventListener('change', () => {
+                figure.showLengths = lengthsCheckbox.checked;
                 render();
             });
 
@@ -803,9 +951,9 @@ export function initPuzzleEditor({
         if (sidebarStatus) {
             sidebarStatus.textContent = selectedFigure
                 ? selectedFigure.visible
-                    ? `${selectedFigure.name} is selected. Drag it in the plane to move it, drag its ring handle to rotate it, and drag the sphere view to orbit the camera.`
+                    ? `${selectedFigure.name} is selected. Drag it in the plane to move it, drag its ring handle to rotate it, and use Len in the list to label each edge.`
                     : `${selectedFigure.name} is selected but hidden. Check it in the list to show it in the plane and sphere views.`
-                : 'Select a figure from the list. Checked figures are shown in the plane and sphere views.';
+                : 'Select a figure from the list. Checked figures are shown in the plane and sphere views, and Len labels each edge.';
         }
 
         if (planeStatus) {
