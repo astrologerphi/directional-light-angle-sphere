@@ -1,4 +1,4 @@
-import { puzzleGroups } from '../data';
+import { shapes } from './shapes';
 import { closestFraction } from '../utils';
 
 interface Point2 {
@@ -417,7 +417,7 @@ export function initPuzzleEditor({
         };
     };
 
-    const buildPuzzleFigure = (group: { x: number; y: number }[], index: number): PuzzleFigure => {
+    const buildPuzzleFigure = (name: string, group: { x: number; y: number }[], index: number): PuzzleFigure => {
         const spherePoints = group.map(radAnglesToSphere);
         const uniquePoints = collapseNeighboringDuplicateVertices(spherePoints);
 
@@ -437,7 +437,7 @@ export function initPuzzleEditor({
 
         return {
             id: `puzzle-shape-${index}`,
-            name: `Shape ${index + 1}`,
+            name,
             color: PUZZLE_FIGURE_COLORS[index % PUZZLE_FIGURE_COLORS.length],
             visible: true,
             showLengths: false,
@@ -450,7 +450,9 @@ export function initPuzzleEditor({
         };
     };
 
-    const figures: PuzzleFigure[] = puzzleGroups.map((group, index) => buildPuzzleFigure(group, index));
+    const figures: PuzzleFigure[] = Object.entries(shapes).map(([name, group], index) =>
+        buildPuzzleFigure(name, group, index)
+    );
 
     selectedFigureId = figures[0]?.id ?? '';
 
