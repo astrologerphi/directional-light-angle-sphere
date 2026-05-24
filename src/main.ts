@@ -43,6 +43,7 @@ const currentPathEl = document.getElementById('currentPath');
 const selectedDataEl = document.getElementById('selectedData');
 const puzzleFigureList = document.getElementById('puzzleFigureList');
 const puzzleSidebarStatus = document.getElementById('puzzleSidebarStatus');
+const puzzleSelectionSummary = document.getElementById('puzzleSelectionSummary');
 
 // Carousel controls
 const lightPathsPanel = document.querySelector('[data-panel="light-paths"]');
@@ -754,6 +755,7 @@ puzzleEditorController = initPuzzleEditor({
     sphereCanvas: puzzleSphereCanvas,
     figureList: puzzleFigureList,
     sidebarStatus: puzzleSidebarStatus,
+    selectionSummary: puzzleSelectionSummary,
     planeStatus: puzzlePlaneStatus,
     sphereStatus: puzzleSphereStatus,
 });

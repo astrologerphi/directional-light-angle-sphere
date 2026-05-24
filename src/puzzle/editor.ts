@@ -51,6 +51,7 @@ interface PuzzleEditorElements {
     sphereCanvas: HTMLCanvasElement;
     figureList: HTMLElement;
     sidebarStatus?: HTMLElement | null;
+    selectionSummary?: HTMLElement | null;
     planeStatus?: HTMLElement | null;
     sphereStatus?: HTMLElement | null;
 }
@@ -101,6 +102,7 @@ export function initPuzzleEditor({
     sphereCanvas,
     figureList,
     sidebarStatus,
+    selectionSummary,
     planeStatus,
     sphereStatus,
 }: PuzzleEditorElements): PuzzleEditorController {
@@ -457,6 +459,26 @@ export function initPuzzleEditor({
     selectedFigureId = figures[0]?.id ?? '';
 
     const getVisibleFigures = (): PuzzleFigure[] => figures.filter(figure => figure.visible);
+    const areAllFiguresVisible = (): boolean => figures.every(figure => figure.visible);
+    const hasSomeVisibleFigures = (): boolean => figures.some(figure => figure.visible);
+    const areAllFigureLengthsVisible = (): boolean => figures.every(figure => figure.showLengths);
+    const hasSomeFigureLengthsVisible = (): boolean => figures.some(figure => figure.showLengths);
+
+    const setAllFiguresVisible = (visible: boolean) => {
+        figures.forEach(figure => {
+            figure.visible = visible;
+        });
+
+        if (!visible) {
+            planeInteraction = null;
+        }
+    };
+
+    const setAllFigureLengthsVisible = (showLengths: boolean) => {
+        figures.forEach(figure => {
+            figure.showLengths = showLengths;
+        });
+    };
 
     const localPointToSphere = (center: Point3, localPoint: Point2): Point3 => {
         const basis = getFigureBasis(center);
@@ -854,6 +876,87 @@ export function initPuzzleEditor({
     const renderFigureList = () => {
         figureList.innerHTML = '';
 
+        const bulkItem = document.createElement('li');
+        bulkItem.className = 'puzzle-figure-item puzzle-figure-item--bulk';
+
+        const bulkShowToggle = document.createElement('label');
+        bulkShowToggle.className = 'puzzle-figure-toggle';
+        bulkShowToggle.title = 'Show all figures';
+
+        const bulkShowCheckbox = document.createElement('input');
+        bulkShowCheckbox.type = 'checkbox';
+        bulkShowCheckbox.className = 'puzzle-figure-checkbox';
+        bulkShowCheckbox.checked = areAllFiguresVisible();
+        bulkShowCheckbox.indeterminate = hasSomeVisibleFigures() && !bulkShowCheckbox.checked;
+        bulkShowCheckbox.setAttribute('aria-label', 'Show all figures');
+
+        const bulkShowLabel = document.createElement('span');
+        bulkShowLabel.className = 'puzzle-figure-toggle-label';
+        bulkShowLabel.textContent = 'Show';
+
+        bulkShowToggle.appendChild(bulkShowCheckbox);
+        bulkShowToggle.appendChild(bulkShowLabel);
+
+        const bulkContent = document.createElement('div');
+        bulkContent.className = 'puzzle-figure-content';
+
+        const bulkName = document.createElement('span');
+        bulkName.className = 'puzzle-figure-name';
+        bulkName.textContent = 'All figures';
+
+        const bulkMeta = document.createElement('span');
+        bulkMeta.className = 'puzzle-figure-meta';
+        bulkMeta.textContent = `${figures.length} figures`;
+
+        bulkContent.appendChild(bulkName);
+        bulkContent.appendChild(bulkMeta);
+
+        const bulkLengthsToggle = document.createElement('label');
+        bulkLengthsToggle.className = 'puzzle-figure-toggle puzzle-figure-toggle--end';
+        bulkLengthsToggle.title = 'Show line lengths for all figures';
+
+        const bulkLengthsCheckbox = document.createElement('input');
+        bulkLengthsCheckbox.type = 'checkbox';
+        bulkLengthsCheckbox.className = 'puzzle-figure-checkbox';
+        bulkLengthsCheckbox.checked = areAllFigureLengthsVisible();
+        bulkLengthsCheckbox.indeterminate = hasSomeFigureLengthsVisible() && !bulkLengthsCheckbox.checked;
+        bulkLengthsCheckbox.setAttribute('aria-label', 'Show line lengths for all figures');
+
+        const bulkLengthsLabel = document.createElement('span');
+        bulkLengthsLabel.className = 'puzzle-figure-toggle-label';
+        bulkLengthsLabel.textContent = 'Len';
+
+        bulkLengthsToggle.appendChild(bulkLengthsCheckbox);
+        bulkLengthsToggle.appendChild(bulkLengthsLabel);
+
+        bulkItem.appendChild(bulkShowToggle);
+        bulkItem.appendChild(bulkContent);
+        bulkItem.appendChild(bulkLengthsToggle);
+
+        bulkItem.addEventListener('click', event => {
+            event.stopPropagation();
+        });
+
+        bulkShowToggle.addEventListener('click', event => {
+            event.stopPropagation();
+        });
+
+        bulkLengthsToggle.addEventListener('click', event => {
+            event.stopPropagation();
+        });
+
+        bulkShowCheckbox.addEventListener('change', () => {
+            setAllFiguresVisible(bulkShowCheckbox.checked);
+            render();
+        });
+
+        bulkLengthsCheckbox.addEventListener('change', () => {
+            setAllFigureLengthsVisible(bulkLengthsCheckbox.checked);
+            render();
+        });
+
+        figureList.appendChild(bulkItem);
+
         figures.forEach(figure => {
             const item = document.createElement('li');
             item.className = 'puzzle-figure-item';
@@ -948,8 +1051,41 @@ export function initPuzzleEditor({
         });
     };
 
-    const updateStatuses = () => {
+    const updateSelectionSummary = (selectedFigure: PuzzleFigure | undefined, selectedGeometry: FigureGeometry | undefined) => {
+        if (!selectionSummary) {
+            return;
+        }
+
+        if (!selectedFigure || !selectedGeometry || selectedGeometry.edgeLabels.length === 0) {
+            selectionSummary.hidden = true;
+            selectionSummary.replaceChildren();
+            return;
+        }
+
+        const title = document.createElement('div');
+        title.className = 'puzzle-selection-summary__title';
+        title.textContent = `${selectedFigure.name} lengths`;
+
+        const list = document.createElement('div');
+        list.className = 'puzzle-selection-summary__list';
+
+        selectedGeometry.edgeLabels.forEach((label, index) => {
+            const item = document.createElement('div');
+            item.className = 'puzzle-selection-summary__item';
+            item.textContent = `${index + 1}. ${label.text}`;
+            list.appendChild(item);
+        });
+
+        selectionSummary.hidden = false;
+        selectionSummary.replaceChildren(title, list);
+    };
+
+    const updateStatuses = (geometries: Map<string, FigureGeometry>) => {
         const selectedFigure = getSelectedFigure();
+        const selectedGeometry = selectedFigure ? geometries.get(selectedFigure.id) : undefined;
+
+        updateSelectionSummary(selectedFigure, selectedGeometry);
+
         if (sidebarStatus) {
             sidebarStatus.textContent = selectedFigure
                 ? selectedFigure.visible
@@ -1021,7 +1157,7 @@ export function initPuzzleEditor({
         renderFigureList();
         renderPlane(geometries);
         renderSphere(geometries);
-        updateStatuses();
+        updateStatuses(geometries);
     };
 
     const updatePlaneCursor = (event: PointerEvent) => {
