@@ -105,6 +105,131 @@ export function calculateAndFormatClosestFraction(value: number, maxDenominator:
     return formatFraction(fraction.numerator, fraction.denominator);
 }
 
+type SphereAnglePoint = { x: number; y: number };
+type SphereVector = { x: number; y: number; z: number };
+
+const SPHERE_INTERSECTION_EPSILON = 1e-9;
+
+function sphereAnglesToVector(point: SphereAnglePoint): SphereVector {
+    const cosVertical = Math.cos(point.x);
+    return {
+        x: cosVertical * -Math.sin(point.y),
+        y: -Math.sin(point.x),
+        z: cosVertical * Math.cos(point.y),
+    };
+}
+
+function vectorToSphereAngles(vector: SphereVector): SphereAnglePoint {
+    const normalized = normalizeSphereVector(vector);
+    return {
+        x: -Math.asin(clamp(normalized.y, -1, 1)),
+        y: Math.atan2(-normalized.x, normalized.z),
+    };
+}
+
+function crossSphereVector(a: SphereVector, b: SphereVector): SphereVector {
+    return {
+        x: a.y * b.z - a.z * b.y,
+        y: a.z * b.x - a.x * b.z,
+        z: a.x * b.y - a.y * b.x,
+    };
+}
+
+function vectorLength(vector: SphereVector): number {
+    return Math.hypot(vector.x, vector.y, vector.z);
+}
+
+function normalizeSphereVector(vector: SphereVector): SphereVector {
+    const length = vectorLength(vector);
+    if (length < SPHERE_INTERSECTION_EPSILON) {
+        throw new Error('Cannot normalize a zero-length vector');
+    }
+
+    return {
+        x: vector.x / length,
+        y: vector.y / length,
+        z: vector.z / length,
+    };
+}
+
+function negateSphereVector(vector: SphereVector): SphereVector {
+    return {
+        x: -vector.x,
+        y: -vector.y,
+        z: -vector.z,
+    };
+}
+
+function clamp(value: number, min: number, max: number): number {
+    return Math.max(min, Math.min(max, value));
+}
+
+function dotSphereVector(a: SphereVector, b: SphereVector): number {
+    return a.x * b.x + a.y * b.y + a.z * b.z;
+}
+
+function angleBetweenSphereVectors(a: SphereVector, b: SphereVector): number {
+    return Math.acos(clamp(dotSphereVector(a, b), -1, 1));
+}
+
+function isPointOnShorterSphereArc(start: SphereVector, end: SphereVector, candidate: SphereVector): boolean {
+    const totalAngle = angleBetweenSphereVectors(start, end);
+    if (totalAngle < SPHERE_INTERSECTION_EPSILON || totalAngle >= Math.PI - SPHERE_INTERSECTION_EPSILON) {
+        return false;
+    }
+
+    const startToCandidate = angleBetweenSphereVectors(start, candidate);
+    const candidateToEnd = angleBetweenSphereVectors(candidate, end);
+
+    return Math.abs(startToCandidate + candidateToEnd - totalAngle) <= 1e-7;
+}
+
+export function getSphereLineIntersectionPoints(
+    line1PointA: SphereAnglePoint,
+    line1PointB: SphereAnglePoint,
+    line2PointA: SphereAnglePoint,
+    line2PointB: SphereAnglePoint,
+): SphereAnglePoint | null {
+    const line1VectorA = sphereAnglesToVector(line1PointA);
+    const line1VectorB = sphereAnglesToVector(line1PointB);
+    const line2VectorA = sphereAnglesToVector(line2PointA);
+    const line2VectorB = sphereAnglesToVector(line2PointB);
+
+    const normal1 = crossSphereVector(line1VectorA, line1VectorB);
+    const normal2 = crossSphereVector(line2VectorA, line2VectorB);
+
+    if (
+        vectorLength(normal1) < SPHERE_INTERSECTION_EPSILON ||
+        vectorLength(normal2) < SPHERE_INTERSECTION_EPSILON
+    ) {
+        return null;
+    }
+
+    const intersectionVector = crossSphereVector(normal1, normal2);
+    if (vectorLength(intersectionVector) < SPHERE_INTERSECTION_EPSILON) {
+        return null;
+    }
+
+    const primaryIntersection = normalizeSphereVector(intersectionVector);
+    const secondaryIntersection = negateSphereVector(primaryIntersection);
+
+    if (
+        isPointOnShorterSphereArc(line1VectorA, line1VectorB, primaryIntersection) &&
+        isPointOnShorterSphereArc(line2VectorA, line2VectorB, primaryIntersection)
+    ) {
+        return vectorToSphereAngles(primaryIntersection);
+    }
+
+    if (
+        isPointOnShorterSphereArc(line1VectorA, line1VectorB, secondaryIntersection) &&
+        isPointOnShorterSphereArc(line2VectorA, line2VectorB, secondaryIntersection)
+    ) {
+        return vectorToSphereAngles(secondaryIntersection);
+    }
+
+    return null;
+}
+
 /**
  * Groups all lightAnglePaths by their "0" value
  * @param lightAnglePaths - The light angle paths object

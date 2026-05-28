@@ -10,6 +10,7 @@ import {
     getPathDataGroups,
     getPathDataGroupsFormatted,
     calculateAndFormatClosestFraction,
+    getSphereLineIntersectionPoints,
 } from './utils';
 
 export interface VisualizationController {
@@ -644,6 +645,7 @@ window.printPathData = printPathData;
 window.getPathDataGroups = getPathDataGroups;
 window.getPathDataGroupsFormatted = getPathDataGroupsFormatted;
 window.calculateAndFormatClosestFraction = calculateAndFormatClosestFraction;
+window.getSphereLineIntersectionPoints = getSphereLineIntersectionPoints;
 
 void bootstrap();
 

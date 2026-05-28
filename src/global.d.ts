@@ -73,4 +73,10 @@ interface Window {
     getPathDataGroups: () => void;
     getPathDataGroupsFormatted: () => void;
     calculateAndFormatClosestFraction: (value: number, maxDenominator: number) => string;
+    getSphereLineIntersectionPoints: (
+        line1PointA: { x: number; y: number },
+        line1PointB: { x: number; y: number },
+        line2PointA: { x: number; y: number },
+        line2PointB: { x: number; y: number },
+    ) => { x: number; y: number } | null;
 }
