@@ -412,10 +412,22 @@ export function initPuzzleEditor({
         center: Point3,
         basis: { tangentX: Point3; tangentY: Point3 }
     ): Point2 => {
-        const centerDot = Math.max(0.001, dotPoint3(point, center));
+        const normalizedPoint = normalizePoint3(point);
+        const normalizedCenter = normalizePoint3(center);
+        const centerDot = Math.max(-1, Math.min(1, dotPoint3(normalizedPoint, normalizedCenter)));
+        const angle = Math.acos(centerDot);
+
+        if (angle < 1e-6) {
+            return { x: 0, y: 0 };
+        }
+
+        const tangentVector = addPoint3(normalizedPoint, scalePoint3(normalizedCenter, -centerDot));
+        const tangentLength = Math.hypot(tangentVector.x, tangentVector.y, tangentVector.z);
+        const tangentDirection = tangentLength < 1e-6 ? basis.tangentX : scalePoint3(tangentVector, 1 / tangentLength);
+
         return {
-            x: dotPoint3(point, basis.tangentX) / centerDot,
-            y: dotPoint3(point, basis.tangentY) / centerDot,
+            x: dotPoint3(tangentDirection, basis.tangentX) * angle,
+            y: dotPoint3(tangentDirection, basis.tangentY) * angle,
         };
     };
 
@@ -482,11 +494,18 @@ export function initPuzzleEditor({
 
     const localPointToSphere = (center: Point3, localPoint: Point2): Point3 => {
         const basis = getFigureBasis(center);
+        const angle = Math.hypot(localPoint.x, localPoint.y);
+
+        if (angle < 1e-6) {
+            return normalizePoint3(center);
+        }
+
+        const tangentDirection = normalizePoint3(
+            addPoint3(scalePoint3(basis.tangentX, localPoint.x), scalePoint3(basis.tangentY, localPoint.y))
+        );
+
         return normalizePoint3(
-            addPoint3(
-                center,
-                addPoint3(scalePoint3(basis.tangentX, localPoint.x), scalePoint3(basis.tangentY, localPoint.y))
-            )
+            addPoint3(scalePoint3(center, Math.cos(angle)), scalePoint3(tangentDirection, Math.sin(angle)))
         );
     };
 
@@ -1051,7 +1070,10 @@ export function initPuzzleEditor({
         });
     };
 
-    const updateSelectionSummary = (selectedFigure: PuzzleFigure | undefined, selectedGeometry: FigureGeometry | undefined) => {
+    const updateSelectionSummary = (
+        selectedFigure: PuzzleFigure | undefined,
+        selectedGeometry: FigureGeometry | undefined
+    ) => {
         if (!selectionSummary) {
             return;
         }
