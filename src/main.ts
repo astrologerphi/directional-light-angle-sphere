@@ -588,6 +588,10 @@ const updateFocusedItem = (index: number) => {
 };
 
 const handleKeyboardNavigation = (e: KeyboardEvent) => {
+    if (e.defaultPrevented || !lightPathsPanel?.classList.contains('active')) {
+        return;
+    }
+
     // Skip if carousel navigation keys are pressed
     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
         return;
@@ -690,6 +694,10 @@ carouselIndicators.forEach((indicator, index) => {
 
 // Keyboard navigation for carousel
 window.addEventListener('keydown', e => {
+    if (e.defaultPrevented || !lightPathsPanel?.classList.contains('active')) {
+        return;
+    }
+
     if (e.key === 'ArrowLeft') {
         prevSlide();
     } else if (e.key === 'ArrowRight') {

@@ -95,6 +95,8 @@ const ROTATION_HANDLE_RADIUS_PX = 14;
 const GRID_RADII = [0.4, 0.8, 1.2, 1.6];
 const SPHERE_RADIUS_SCALE = 0.95;
 const BOUNDARY_SEGMENT_SAMPLES = 20;
+const POSITION_KEY_STEP = Math.PI / 36;
+const ROTATION_KEY_STEP = Math.PI / 36;
 const PUZZLE_FIGURE_COLORS = ['#6cf1ff', '#eeff71', '#ff9f68', '#9d7cff', '#6effa7', '#ff6f91', '#7bd0ff', '#ffcf5a'];
 
 export function initPuzzleEditor({
@@ -123,6 +125,7 @@ export function initPuzzleEditor({
 
     planeCanvas.style.touchAction = 'none';
     sphereCanvas.style.touchAction = 'none';
+    const puzzlePanel = planeCanvas.closest<HTMLElement>('[data-panel="puzzle"]');
 
     const getSelectedFigure = (): PuzzleFigure | undefined => figures.find(figure => figure.id === selectedFigureId);
 
@@ -236,6 +239,18 @@ export function initPuzzleEditor({
         };
     };
 
+    const clamp = (value: number, min: number, max: number): number => Math.max(min, Math.min(max, value));
+
+    const normalizeAngle = (angle: number): number => {
+        let normalized = angle % (Math.PI * 2);
+        if (normalized <= -Math.PI) {
+            normalized += Math.PI * 2;
+        } else if (normalized > Math.PI) {
+            normalized -= Math.PI * 2;
+        }
+        return normalized;
+    };
+
     const hexToRgba = (hex: string, alpha: number): string => {
         const normalized = hex.replace('#', '');
         const safeHex = normalized.length === 3 ? normalized.replace(/(.)/g, '$1$1') : normalized;
@@ -332,6 +347,21 @@ export function initPuzzleEditor({
             y: radius * Math.sin(azimuth),
         };
     };
+
+    const sphereToLatitudeLongitude = (point: Point3): { latitude: number; longitude: number } => {
+        const normalized = normalizePoint3(point);
+        return {
+            latitude: Math.asin(clamp(normalized.y, -1, 1)),
+            longitude: Math.atan2(normalized.z, normalized.x),
+        };
+    };
+
+    const latitudeLongitudeToSphere = (latitude: number, longitude: number): Point3 =>
+        normalizePoint3({
+            x: Math.cos(latitude) * Math.cos(longitude),
+            y: Math.sin(latitude),
+            z: Math.cos(latitude) * Math.sin(longitude),
+        });
 
     const getFigureBasis = (center: Point3) => {
         const reference =
@@ -1111,20 +1141,20 @@ export function initPuzzleEditor({
         if (sidebarStatus) {
             sidebarStatus.textContent = selectedFigure
                 ? selectedFigure.visible
-                    ? `${selectedFigure.name} is selected. Drag it in the plane to move it, drag its ring handle to rotate it, and use Len in the list to label each edge.`
+                    ? `${selectedFigure.name} is selected. Drag it in the plane to move it, drag its ring handle to rotate it, use the arrow keys to adjust longitude and latitude, and use Shift + Left/Right to rotate it.`
                     : `${selectedFigure.name} is selected but hidden. Check it in the list to show it in the plane and sphere views.`
                 : 'Select a figure from the list. Checked figures are shown in the plane and sphere views, and Len labels each edge.';
         }
 
         if (planeStatus) {
             if (!selectedFigure) {
-                planeStatus.textContent = 'Select a checked figure from the list to move or rotate it.';
+                planeStatus.textContent = 'Select a checked figure from the list to move or rotate it with dragging or the arrow keys.';
             } else if (planeInteraction?.mode === 'move' && planeInteraction.figureId === selectedFigure.id) {
                 planeStatus.textContent = `Moving ${selectedFigure.name} in the plane projection...`;
             } else if (planeInteraction?.mode === 'rotate' && planeInteraction.figureId === selectedFigure.id) {
                 planeStatus.textContent = `Rotating ${selectedFigure.name} in the plane projection...`;
             } else if (selectedFigure.visible) {
-                planeStatus.textContent = `${selectedFigure.name}: selected in the list. Drag to move, handle to rotate.`;
+                planeStatus.textContent = `${selectedFigure.name}: selected in the list. Drag to move, Up/Down adjusts longitude, Left/Right adjusts latitude, and Shift + Left/Right rotates it.`;
             } else {
                 planeStatus.textContent = `${selectedFigure.name}: hidden. Check it in the list to show it.`;
             }
@@ -1329,6 +1359,60 @@ export function initPuzzleEditor({
         }
     };
 
+    const isKeyboardEditableTarget = (target: EventTarget | null): boolean =>
+        target instanceof HTMLInputElement ||
+        target instanceof HTMLTextAreaElement ||
+        target instanceof HTMLSelectElement ||
+        target instanceof HTMLButtonElement ||
+        (target instanceof HTMLElement && target.isContentEditable);
+
+    const handleFigureKeyboardControl = (event: KeyboardEvent) => {
+        if (
+            event.defaultPrevented ||
+            event.altKey ||
+            event.ctrlKey ||
+            event.metaKey ||
+            !puzzlePanel?.classList.contains('active') ||
+            isKeyboardEditableTarget(event.target) ||
+            planeInteraction ||
+            sphereInteraction
+        ) {
+            return;
+        }
+
+        const selectedFigure = getSelectedFigure();
+        if (!selectedFigure?.visible) {
+            return;
+        }
+
+        if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+            const { latitude, longitude } = sphereToLatitudeLongitude(selectedFigure.center);
+            const longitudeDelta = event.key === 'ArrowUp' ? POSITION_KEY_STEP : -POSITION_KEY_STEP;
+            selectedFigure.center = latitudeLongitudeToSphere(latitude, normalizeAngle(longitude + longitudeDelta));
+            event.preventDefault();
+            render();
+            return;
+        }
+
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            event.preventDefault();
+
+            if (event.shiftKey) {
+                const rotationDelta = event.key === 'ArrowRight' ? ROTATION_KEY_STEP : -ROTATION_KEY_STEP;
+                selectedFigure.rotation = normalizeAngle(selectedFigure.rotation + rotationDelta);
+            } else {
+                const { latitude, longitude } = sphereToLatitudeLongitude(selectedFigure.center);
+                const latitudeDelta = event.key === 'ArrowRight' ? POSITION_KEY_STEP : -POSITION_KEY_STEP;
+                selectedFigure.center = latitudeLongitudeToSphere(
+                    clamp(latitude + latitudeDelta, -Math.PI / 2, Math.PI / 2),
+                    longitude
+                );
+            }
+
+            render();
+        }
+    };
+
     const handleSpherePointerLeave = () => {
         if (!sphereInteraction) {
             sphereCanvas.style.cursor = 'grab';
@@ -1354,6 +1438,7 @@ export function initPuzzleEditor({
     window.addEventListener('pointermove', handleWindowPointerMove);
     window.addEventListener('pointerup', handleWindowPointerUp);
     window.addEventListener('pointercancel', handleWindowPointerUp);
+    window.addEventListener('keydown', handleFigureKeyboardControl);
 
     if (typeof ResizeObserver !== 'undefined') {
         resizeObserver = new ResizeObserver(handleResize);
@@ -1380,6 +1465,7 @@ export function initPuzzleEditor({
             window.removeEventListener('pointermove', handleWindowPointerMove);
             window.removeEventListener('pointerup', handleWindowPointerUp);
             window.removeEventListener('pointercancel', handleWindowPointerUp);
+            window.removeEventListener('keydown', handleFigureKeyboardControl);
 
             if (resizeObserver) {
                 resizeObserver.disconnect();
