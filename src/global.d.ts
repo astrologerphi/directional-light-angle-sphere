@@ -79,4 +79,5 @@ interface Window {
         line2PointA: { x: number; y: number },
         line2PointB: { x: number; y: number },
     ) => { x: number; y: number } | null;
+    towerTopPositions: Record<string, { x: number; y: number; h: number }>;
 }

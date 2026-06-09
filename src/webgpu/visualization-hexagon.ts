@@ -6,6 +6,21 @@ export interface HexagonController {
     stop(): void;
 }
 
+interface TowerTopPosition {
+    x: number;
+    y: number;
+    h: number;
+}
+
+export const TOWER_TOP_POSITIONS: Record<string, TowerTopPosition> = {
+    LIMGRAVE: { x: 661.2, y: 1721, h: 636.9 },
+    CAELID: { x: 2000.9, y: 1885.5, h: 587.6 },
+    ISOLATED: { x: 2414.3, y: 3118.4, h: 582.5 },
+    EAST: { x: 1551.7, y: 4083.5, h: 1424.4 },
+    WEST: { x: 337.3, y: 3904.1, h: 1017.3 },
+    LIURNIA: { x: -234.6, y: 2803.7, h: 704.7 },
+};
+
 // Connections: Vertex 1–4, Vertex 2–5, Vertex 3–6 (0-indexed: 0–3, 1–4, 2–5)
 const CONNECTIONS: [number, number][] = [
     [0, 3], // Vertex 1 ↔ Vertex 4

@@ -3,7 +3,7 @@ import { initWebGPUVisualization } from './webgpu/visualization-sphere';
 import { initWebGPUVisualizationPlane } from './webgpu/visualization-plane';
 import { initWebGPUVisualizationRing } from './webgpu/visualization-ring';
 import { initWebGPUVisualizationCylinder } from './webgpu/visualization-cylinder';
-import { initHexagonVisualization, HexagonController } from './webgpu/visualization-hexagon';
+import { initHexagonVisualization, HexagonController, TOWER_TOP_POSITIONS } from './webgpu/visualization-hexagon';
 import { initPuzzleEditor, PuzzleEditorController } from './puzzle/editor';
 import {
     printPathData,
@@ -650,6 +650,7 @@ window.getPathDataGroups = getPathDataGroups;
 window.getPathDataGroupsFormatted = getPathDataGroupsFormatted;
 window.calculateAndFormatClosestFraction = calculateAndFormatClosestFraction;
 window.getSphereLineIntersectionPoints = getSphereLineIntersectionPoints;
+window.towerTopPositions = TOWER_TOP_POSITIONS;
 
 void bootstrap();
 
