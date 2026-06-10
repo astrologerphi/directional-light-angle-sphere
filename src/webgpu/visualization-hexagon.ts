@@ -1,7 +1,16 @@
-import { createProjectionMatrix, createViewMatrix, multiplyMatrices } from './geometry';
-import { lineVertexShader, dotVertexShader, dotFragmentShader } from '../shaders/_index';
+import {
+    createOrthographicMatrix,
+    createProjectionMatrix,
+    createSphereGeometry,
+    createViewMatrix,
+    multiplyMatrices,
+} from './geometry';
+import { hexagonSphereFragmentShader, hexagonSphereVertexShader, lineVertexShader } from '../shaders/_index';
+
+export type HexagonProjectionMode = 'perspective' | 'orthographic';
 
 export interface HexagonController {
+    setProjectionMode(mode: HexagonProjectionMode): void;
     updateVertices(vertices: (Vec3 | null)[]): void;
     stop(): void;
 }
@@ -12,7 +21,11 @@ interface TowerTopPosition {
     h: number;
 }
 
-export const TOWER_TOP_POSITIONS: Record<string, TowerTopPosition> = {
+export const TOWER_TOP_ORDER = ['LIMGRAVE', 'CAELID', 'ISOLATED', 'EAST', 'WEST', 'LIURNIA'] as const;
+
+type TowerTopKey = (typeof TOWER_TOP_ORDER)[number];
+
+export const TOWER_TOP_POSITIONS: Record<TowerTopKey, TowerTopPosition> = {
     LIMGRAVE: { x: 661.2, y: 1721, h: 636.9 },
     CAELID: { x: 2000.9, y: 1885.5, h: 587.6 },
     ISOLATED: { x: 2414.3, y: 3118.4, h: 582.5 },
@@ -21,14 +34,22 @@ export const TOWER_TOP_POSITIONS: Record<string, TowerTopPosition> = {
     LIURNIA: { x: -234.6, y: 2803.7, h: 704.7 },
 };
 
-// Connections: Vertex 1–4, Vertex 2–5, Vertex 3–6 (0-indexed: 0–3, 1–4, 2–5)
 const CONNECTIONS: [number, number][] = [
-    [0, 3], // Vertex 1 ↔ Vertex 4
-    [1, 4], // Vertex 2 ↔ Vertex 5
-    [2, 5], // Vertex 3 ↔ Vertex 6
+    [0, 1], // Limgrave → Caelid
+    [1, 2], // Caelid → Isolated
+    [2, 3], // Isolated → East
+    [3, 4], // East → West
+    [4, 5], // West → Liurnia
+    [5, 0], // Liurnia → Limgrave
 ];
 
-const DOT_SIZE = 0.06;
+const SPHERE_RADIUS = 0.11;
+const NORMALIZED_RADIUS = 1.02;
+const FLOOR_Y = -1.34;
+const FLOOR_MARGIN = 0.18;
+const FLOOR_EXTENT = 2.15;
+const FLOOR_GRID_DIVISIONS = 10;
+const CAMERA_FOV = Math.PI / 4;
 
 // Per-vertex colors: green, blue, orange, yellow, purple, red
 const VERTEX_COLORS: Vec3[] = [
@@ -45,6 +66,13 @@ const whiteLineFragmentShader = `
 @fragment
 fn main() -> @location(0) vec4<f32> {
   return vec4<f32>(1.0, 1.0, 1.0, 0.9);
+}
+`;
+
+const floorLineFragmentShader = `
+@fragment
+fn main() -> @location(0) vec4<f32> {
+  return vec4<f32>(0.42, 0.70, 1.0, 0.42);
 }
 `;
 
@@ -85,7 +113,7 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
     // Current vertex data (6 vertices, nullable)
     let currentVertices: (Vec3 | null)[] = Array.from({ length: 6 }, () => null);
 
-    // Normalised vertices (centred at origin, scaled to fit radius ~2)
+    // Normalized vertices, centered and scaled to leave room for the floor grid in view
     let normalizedVertices: (Vec3 | null)[] = Array.from({ length: 6 }, () => null);
 
     const normalizeVertices = () => {
@@ -100,20 +128,25 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
             return;
         }
 
-        // Compute centroid
-        let cx = 0,
-            cy = 0,
-            cz = 0;
+        let minX = Number.POSITIVE_INFINITY;
+        let maxX = Number.NEGATIVE_INFINITY;
+        let minY = Number.POSITIVE_INFINITY;
+        let maxY = Number.NEGATIVE_INFINITY;
+        let minZ = Number.POSITIVE_INFINITY;
+        let maxZ = Number.NEGATIVE_INFINITY;
         for (const v of valid) {
-            cx += v[0];
-            cy += v[1];
-            cz += v[2];
+            minX = Math.min(minX, v[0]);
+            maxX = Math.max(maxX, v[0]);
+            minY = Math.min(minY, v[1]);
+            maxY = Math.max(maxY, v[1]);
+            minZ = Math.min(minZ, v[2]);
+            maxZ = Math.max(maxZ, v[2]);
         }
-        cx /= valid.length;
-        cy /= valid.length;
-        cz /= valid.length;
 
-        // Compute max distance from centroid
+        const cx = (minX + maxX) * 0.5;
+        const cy = (minY + maxY) * 0.5;
+        const cz = (minZ + maxZ) * 0.5;
+
         let maxDist = 0;
         for (const v of valid) {
             const dx = v[0] - cx,
@@ -122,13 +155,18 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
             maxDist = Math.max(maxDist, Math.sqrt(dx * dx + dy * dy + dz * dz));
         }
 
-        // Scale so all points fit within radius 2 (if maxDist is 0, use scale=1)
-        const scale = maxDist > 1e-6 ? 2 / maxDist : 1;
-
-        normalizedVertices = currentVertices.map(v => {
+        const scale = maxDist > 1e-6 ? NORMALIZED_RADIUS / maxDist : 1;
+        const transformedVertices = currentVertices.map(v => {
             if (!v) return null;
             return [(v[2] - cz) * scale, (v[1] - cy) * scale, (v[0] - cx) * scale] as Vec3;
         });
+        const normalizedMinY = transformedVertices.reduce(
+            (lowest, vertex) => (vertex ? Math.min(lowest, vertex[1]) : lowest),
+            Number.POSITIVE_INFINITY
+        );
+        const verticalOffset = Number.isFinite(normalizedMinY) ? FLOOR_Y + FLOOR_MARGIN - normalizedMinY : 0;
+
+        normalizedVertices = transformedVertices.map(v => (v ? ([v[0], v[1] + verticalOffset, v[2]] as Vec3) : null));
     };
 
     // --- GPU resources ---
@@ -167,43 +205,62 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
         depthStencil: { depthWriteEnabled: false, depthCompare: 'less', format: 'depth24plus' },
     });
 
-    // Dot bind group layout & pipeline (per-dot uniforms: MVP + position + size + color)
-    const dotUniformSize = 96; // mat4(64) + vec3+f32(16) + vec3+pad(16)
-    const dotBindGroupLayout = device.createBindGroupLayout({
+    const floorPipeline = device.createRenderPipeline({
+        layout: pipelineLayout,
+        vertex: {
+            module: device.createShaderModule({ code: lineVertexShader }),
+            entryPoint: 'main',
+            buffers: [{ arrayStride: 12, attributes: [{ shaderLocation: 0, offset: 0, format: 'float32x3' }] }],
+        },
+        fragment: {
+            module: device.createShaderModule({ code: floorLineFragmentShader }),
+            entryPoint: 'main',
+            targets: [{ format: presentationFormat, blend: alphaBlend() }],
+        },
+        primitive: { topology: 'line-list' },
+        depthStencil: { depthWriteEnabled: false, depthCompare: 'less', format: 'depth24plus' },
+    });
+
+    const markerSphere = createSphereGeometry(1, 24, 12);
+    const markerVertexBuffer = createStaticBuffer(device, markerSphere.vertices, GPUBufferUsage.VERTEX);
+    const markerNormalBuffer = createStaticBuffer(device, markerSphere.normals, GPUBufferUsage.VERTEX);
+    const markerIndexBuffer = createStaticBuffer(device, markerSphere.indices, GPUBufferUsage.INDEX);
+
+    // Marker bind group layout & pipeline (per-sphere uniforms: MVP + position + size + color)
+    const markerUniformSize = 96; // mat4(64) + vec3+f32(16) + vec3+pad(16)
+    const markerBindGroupLayout = device.createBindGroupLayout({
         entries: [
             { binding: 0, visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT, buffer: { type: 'uniform' } },
         ],
     });
 
-    const dotPipeline = device.createRenderPipeline({
-        layout: device.createPipelineLayout({ bindGroupLayouts: [dotBindGroupLayout] }),
+    const markerPipeline = device.createRenderPipeline({
+        layout: device.createPipelineLayout({ bindGroupLayouts: [markerBindGroupLayout] }),
         vertex: {
-            module: device.createShaderModule({ code: dotVertexShader }),
+            module: device.createShaderModule({ code: hexagonSphereVertexShader }),
             entryPoint: 'main',
-            buffers: [{ arrayStride: 12, attributes: [{ shaderLocation: 0, offset: 0, format: 'float32x3' }] }],
+            buffers: [
+                { arrayStride: 12, attributes: [{ shaderLocation: 0, offset: 0, format: 'float32x3' }] },
+                { arrayStride: 12, attributes: [{ shaderLocation: 1, offset: 0, format: 'float32x3' }] },
+            ],
         },
         fragment: {
-            module: device.createShaderModule({ code: dotFragmentShader }),
+            module: device.createShaderModule({ code: hexagonSphereFragmentShader }),
             entryPoint: 'main',
             targets: [{ format: presentationFormat, blend: alphaBlend() }],
         },
-        primitive: { topology: 'triangle-list' },
-        depthStencil: { depthWriteEnabled: false, depthCompare: 'less', format: 'depth24plus' },
+        primitive: { topology: 'triangle-list', cullMode: 'back' },
+        depthStencil: { depthWriteEnabled: true, depthCompare: 'less', format: 'depth24plus' },
     });
 
-    const dotQuadVertices = new Float32Array([
-        -0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0,
-    ]);
-    const dotQuadBuffer = createStaticBuffer(device, dotQuadVertices, GPUBufferUsage.VERTEX);
-
-    // Per-vertex dot resources (6 dots)
-    const dotResources = Array.from({ length: 6 }, () => {
+    // Per-vertex marker resources (6 spheres)
+    const markerResources = Array.from({ length: 6 }, () => {
         const buf = device.createBuffer({
-            size: dotUniformSize,
+            size: markerUniformSize,
             usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
         });
         const bg = device.createBindGroup({
-            layout: dotBindGroupLayout,
+            layout: markerBindGroupLayout,
             entries: [{ binding: 0, resource: { buffer: buf } }],
         });
         return { uniformBuffer: buf, bindGroup: bg };
@@ -214,6 +271,42 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
         size: CONNECTIONS.length * 2 * 12,
         usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST,
     });
+
+    const floorVertices: number[] = [];
+    for (let i = 0; i <= FLOOR_GRID_DIVISIONS; i++) {
+        const t = i / FLOOR_GRID_DIVISIONS;
+        const offset = -FLOOR_EXTENT + t * FLOOR_EXTENT * 2;
+        floorVertices.push(-FLOOR_EXTENT, FLOOR_Y, offset, FLOOR_EXTENT, FLOOR_Y, offset);
+        floorVertices.push(offset, FLOOR_Y, -FLOOR_EXTENT, offset, FLOOR_Y, FLOOR_EXTENT);
+    }
+    floorVertices.push(
+        -FLOOR_EXTENT,
+        FLOOR_Y,
+        -FLOOR_EXTENT,
+        FLOOR_EXTENT,
+        FLOOR_Y,
+        -FLOOR_EXTENT,
+        FLOOR_EXTENT,
+        FLOOR_Y,
+        -FLOOR_EXTENT,
+        FLOOR_EXTENT,
+        FLOOR_Y,
+        FLOOR_EXTENT,
+        FLOOR_EXTENT,
+        FLOOR_Y,
+        FLOOR_EXTENT,
+        -FLOOR_EXTENT,
+        FLOOR_Y,
+        FLOOR_EXTENT,
+        -FLOOR_EXTENT,
+        FLOOR_Y,
+        FLOOR_EXTENT,
+        -FLOOR_EXTENT,
+        FLOOR_Y,
+        -FLOOR_EXTENT
+    );
+    const floorBuffer = createStaticBuffer(device, new Float32Array(floorVertices), GPUBufferUsage.VERTEX);
+    const floorVertexCount = floorVertices.length / 3;
 
     // --- Depth texture & surface ---
 
@@ -260,9 +353,10 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
 
     // --- Camera (same spherical setup as visualization-sphere) ---
 
-    let cameraDistance = 5;
-    let cameraTheta = -Math.PI / 2;
-    let cameraPhi = Math.PI / 8;
+    let cameraDistance = 4.6;
+    let cameraTheta = -Math.PI * 0.68;
+    let cameraPhi = Math.PI / 2.75;
+    let projectionMode: HexagonProjectionMode = 'perspective';
     let isDragging = false;
     let lastMouseX = 0;
     let lastMouseY = 0;
@@ -313,7 +407,18 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
         }
 
         const aspect = canvas.width / canvas.height;
-        const projectionMatrix = createProjectionMatrix(Math.PI / 4, aspect, 0.1, 100);
+        const orthographicSize = Math.tan(CAMERA_FOV / 2) * cameraDistance;
+        const projectionMatrix =
+            projectionMode === 'perspective'
+                ? createProjectionMatrix(CAMERA_FOV, aspect, 0.1, 100)
+                : createOrthographicMatrix(
+                    -orthographicSize * aspect,
+                    orthographicSize * aspect,
+                    -orthographicSize,
+                    orthographicSize,
+                    0.1,
+                    100
+                );
 
         const eyeX = cameraDistance * Math.sin(cameraPhi) * Math.cos(cameraTheta);
         const eyeY = cameraDistance * Math.cos(cameraPhi);
@@ -346,7 +451,7 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
             device.queue.writeBuffer(lineBuffer, 0, lineData.buffer, 0, validLines * 6 * 4);
         }
 
-        // Update dot uniforms for valid vertices (use normalized positions)
+        // Update marker uniforms for valid vertices (use normalized positions)
         normalizedVertices.forEach((v, idx) => {
             if (!v) return;
             const data = new Float32Array(24);
@@ -354,9 +459,9 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
             data[16] = v[0];
             data[17] = v[1];
             data[18] = v[2];
-            data[19] = DOT_SIZE;
+            data[19] = SPHERE_RADIUS;
             data.set(VERTEX_COLORS[idx], 20);
-            device.queue.writeBuffer(dotResources[idx].uniformBuffer, 0, data);
+            device.queue.writeBuffer(markerResources[idx].uniformBuffer, 0, data);
         });
 
         // --- Render pass ---
@@ -380,6 +485,11 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
             },
         });
 
+        passEncoder.setPipeline(floorPipeline);
+        passEncoder.setBindGroup(0, bindGroup);
+        passEncoder.setVertexBuffer(0, floorBuffer);
+        passEncoder.draw(floorVertexCount);
+
         // Draw connection lines
         if (validLines > 0) {
             passEncoder.setPipeline(linePipeline);
@@ -388,13 +498,15 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
             passEncoder.draw(validLines * 2);
         }
 
-        // Draw vertex dots
-        passEncoder.setPipeline(dotPipeline);
-        passEncoder.setVertexBuffer(0, dotQuadBuffer);
+        // Draw vertex spheres
+        passEncoder.setPipeline(markerPipeline);
+        passEncoder.setVertexBuffer(0, markerVertexBuffer);
+        passEncoder.setVertexBuffer(1, markerNormalBuffer);
+        passEncoder.setIndexBuffer(markerIndexBuffer, 'uint16');
         normalizedVertices.forEach((v, idx) => {
             if (!v) return;
-            passEncoder.setBindGroup(0, dotResources[idx].bindGroup);
-            passEncoder.draw(6);
+            passEncoder.setBindGroup(0, markerResources[idx].bindGroup);
+            passEncoder.drawIndexed(markerSphere.indices.length);
         });
 
         passEncoder.end();
@@ -406,6 +518,9 @@ export async function initHexagonVisualization(canvas: HTMLCanvasElement): Promi
     animationFrameId = requestAnimationFrame(render);
 
     return {
+        setProjectionMode(mode: HexagonProjectionMode) {
+            projectionMode = mode;
+        },
         updateVertices(vertices: (Vec3 | null)[]) {
             currentVertices = vertices.slice(0, 6);
             while (currentVertices.length < 6) currentVertices.push(null);

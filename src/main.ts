@@ -3,7 +3,12 @@ import { initWebGPUVisualization } from './webgpu/visualization-sphere';
 import { initWebGPUVisualizationPlane } from './webgpu/visualization-plane';
 import { initWebGPUVisualizationRing } from './webgpu/visualization-ring';
 import { initWebGPUVisualizationCylinder } from './webgpu/visualization-cylinder';
-import { initHexagonVisualization, HexagonController, TOWER_TOP_POSITIONS } from './webgpu/visualization-hexagon';
+import type { HexagonController, HexagonProjectionMode } from './webgpu/visualization-hexagon';
+import {
+    initHexagonVisualization,
+    TOWER_TOP_ORDER,
+    TOWER_TOP_POSITIONS,
+} from './webgpu/visualization-hexagon';
 import { initPuzzleEditor, PuzzleEditorController } from './puzzle/editor';
 import {
     printPathData,
@@ -771,65 +776,76 @@ puzzleEditorController = initPuzzleEditor({
     sphereStatus: puzzleSphereStatus,
 });
 
-// Divine Hexagon coordinate persistence
-const HEXAGON_STORAGE_KEY = 'divine-hexagon-coords';
-const hexagonInputs = document.querySelectorAll<HTMLElement>('.coord-input');
-const hexagonStatus = document.getElementById('hexagonStatus');
+// Divine Hexagon tower-top display and geometry
+const hexagonTowerList = document.getElementById('hexagonTowerList');
+const hexagonProjectionButtons = Array.from(
+    document.querySelectorAll<HTMLButtonElement>('[data-hexagon-projection]')
+);
 
-const loadHexagonCoords = (): string[] => {
-    try {
-        const raw = localStorage.getItem(HEXAGON_STORAGE_KEY);
-        if (raw) return JSON.parse(raw);
-    } catch {
-        /* ignore */
-    }
-    return Array.from({ length: 6 }, () => '');
-};
+const formatTowerName = (name: string): string =>
+    name
+        .toLowerCase()
+        .split('_')
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(' ');
 
-const saveHexagonCoords = () => {
-    const coords: string[] = [];
-    hexagonInputs.forEach(group => {
-        const input = group.querySelector<HTMLInputElement>('.coord-input__field');
-        coords.push(input?.value ?? '');
+const formatTowerCoord = (value: number): string => value.toFixed(1);
+
+const getHexagonVertices = (): Vec3[] =>
+    TOWER_TOP_ORDER.map(key => {
+        const position = TOWER_TOP_POSITIONS[key];
+        return [position.x, position.h, position.y];
     });
-    localStorage.setItem(HEXAGON_STORAGE_KEY, JSON.stringify(coords));
-    if (hexagonStatus) hexagonStatus.textContent = 'Saved.';
-    setTimeout(() => {
-        if (hexagonStatus) hexagonStatus.textContent = '';
-    }, 1500);
+
+let hexagonController: HexagonController | null = null;
+let hexagonProjectionMode: HexagonProjectionMode = 'perspective';
+
+const setHexagonProjectionMode = (mode: HexagonProjectionMode) => {
+    hexagonProjectionMode = mode;
+    hexagonProjectionButtons.forEach(button => {
+        const isActive = button.dataset.hexagonProjection === mode;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+    });
+    hexagonController?.setProjectionMode(mode);
 };
 
-// Restore saved values
-const savedCoords = loadHexagonCoords();
-hexagonInputs.forEach((group, idx) => {
-    const value = savedCoords[idx];
-    if (!value) return;
-    const input = group.querySelector<HTMLInputElement>('.coord-input__field');
-    if (input) input.value = value;
-});
-
-// Parse a "x, y, z" string into a Vec3 or null
-const parseVec3 = (s: string): Vec3 | null => {
-    const parts = s.split(',').map(p => parseFloat(p.trim()));
-    if (parts.length >= 3 && parts.every(n => Number.isFinite(n))) {
-        return [parts[0], parts[1], parts[2]];
-    }
-    return null;
-};
-
-const getHexagonVertices = (): (Vec3 | null)[] => {
-    const coords = loadHexagonCoords();
-    return coords.map(parseVec3);
-};
+if (hexagonTowerList instanceof HTMLElement) {
+    hexagonTowerList.innerHTML = TOWER_TOP_ORDER.map((key, index) => {
+        const position = TOWER_TOP_POSITIONS[key];
+        return `
+            <section class="tower-top-card" data-index="${index}">
+                <div class="tower-top-card__header">
+                    <span class="tower-top-card__marker" aria-hidden="true"></span>
+                    <h3 class="tower-top-card__name">${formatTowerName(key)}</h3>
+                </div>
+                <div class="tower-top-card__coords">
+                    <div class="tower-top-card__coord">
+                        <span class="tower-top-card__coord-label">X</span>
+                        <span class="tower-top-card__coord-value">${formatTowerCoord(position.x)}</span>
+                    </div>
+                    <div class="tower-top-card__coord">
+                        <span class="tower-top-card__coord-label">Y</span>
+                        <span class="tower-top-card__coord-value">${formatTowerCoord(position.y)}</span>
+                    </div>
+                    <div class="tower-top-card__coord">
+                        <span class="tower-top-card__coord-label">H</span>
+                        <span class="tower-top-card__coord-value">${formatTowerCoord(position.h)}</span>
+                    </div>
+                </div>
+            </section>
+        `;
+    }).join('');
+}
 
 // Hexagon WebGPU visualization
-let hexagonController: HexagonController | null = null;
 const hexagonCanvas = document.getElementById('hexagonCanvas');
 
 if (hexagonCanvas instanceof HTMLCanvasElement) {
     initHexagonVisualization(hexagonCanvas)
         .then(ctrl => {
             hexagonController = ctrl;
+            ctrl.setProjectionMode(hexagonProjectionMode);
             ctrl.updateVertices(getHexagonVertices());
         })
         .catch(err => {
@@ -837,11 +853,11 @@ if (hexagonCanvas instanceof HTMLCanvasElement) {
         });
 }
 
-// Save on any input change & update hex visualization
-hexagonInputs.forEach(group => {
-    const input = group.querySelector<HTMLInputElement>('.coord-input__field');
-    input?.addEventListener('input', () => {
-        saveHexagonCoords();
-        hexagonController?.updateVertices(getHexagonVertices());
+hexagonProjectionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const mode = button.dataset.hexagonProjection;
+        if (mode === 'perspective' || mode === 'orthographic') {
+            setHexagonProjectionMode(mode);
+        }
     });
 });

@@ -1,319 +1,238 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Directional Light Angle Sphere</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./styles/main.css" />
-    </head>
-    <body>
-        <div class="shell">
-            <!-- Top-level left navigation -->
-            <nav class="top-nav" aria-label="Main navigation">
-                <button class="top-nav__tab active" data-tab="light-paths" aria-label="Light Paths">
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <span class="top-nav__label">Light Paths</span>
-                </button>
-                <button class="top-nav__tab" data-tab="divine-hexagon" aria-label="Divine Hexagon">
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
-                        <line x1="12" y1="2" x2="12" y2="22"></line>
-                        <line x1="2" y1="8.5" x2="22" y2="15.5"></line>
-                        <line x1="22" y1="8.5" x2="2" y2="15.5"></line>
-                    </svg>
-                    <span class="top-nav__label">Divine Hexagon</span>
-                </button>
-                <button class="top-nav__tab" data-tab="puzzle" aria-label="Puzzle">
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="3" y1="9" x2="21" y2="9"></line>
-                        <line x1="9" y1="21" x2="9" y2="9"></line>
-                    </svg>
-                    <span class="top-nav__label">Puzzle</span>
-                </button>
-                <button class="top-nav__tab" data-tab="tab-3" aria-label="Tab 3">
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path
-                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                        ></path>
-                    </svg>
-                    <span class="top-nav__label">Tab 3</span>
-                </button>
-            </nav>
 
-            <!-- Tab panels -->
-            <div class="tab-panel active" data-panel="light-paths">
-                <div class="app-container">
-                    <nav class="sidebar">
-                        <div class="sidebar__header">
-                            <h2>Light Paths</h2>
-                            <input type="text" id="pathSearch" class="sidebar__search" placeholder="Search paths..." />
-                        </div>
-                        <ul id="pathList" class="sidebar__list">
-                            <!-- Paths will be populated by JavaScript -->
-                        </ul>
-                    </nav>
-                    <div class="app">
-                        <header class="hero">
-                            <button
-                                class="carousel__nav carousel__nav--prev"
-                                id="carouselPrev"
-                                aria-label="Previous visualization"
-                            >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                >
-                                    <polyline points="15 18 9 12 15 6"></polyline>
-                                </svg>
-                            </button>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Directional Light Angle Sphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/main.css" />
+</head>
 
-                            <div class="hero__content">
-                                <div class="carousel__titles">
-                                    <h3 class="carousel__title active" data-index="0">Sphere</h3>
-                                    <h3 class="carousel__title" data-index="1">Plane</h3>
-                                    <h3 class="carousel__title" data-index="2">Ring</h3>
-                                    <h3 class="carousel__title" data-index="3">Cylinder</h3>
-                                </div>
-                                <div class="hero__actions">
-                                    <span id="currentPath" class="current-path">default</span>
-                                    <button id="toggleButton" class="primary" hidden disabled>Loading...</button>
-                                </div>
-                            </div>
+<body>
+    <div class="shell">
+        <!-- Top-level left navigation -->
+        <nav class="top-nav" aria-label="Main navigation">
+            <button class="top-nav__tab active" data-tab="light-paths" aria-label="Light Paths">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <span class="top-nav__label">Light Paths</span>
+            </button>
+            <button class="top-nav__tab" data-tab="divine-hexagon" aria-label="Divine Hexagon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                    <line x1="12" y1="2" x2="12" y2="22"></line>
+                    <line x1="2" y1="8.5" x2="22" y2="15.5"></line>
+                    <line x1="22" y1="8.5" x2="2" y2="15.5"></line>
+                </svg>
+                <span class="top-nav__label">Divine Hexagon</span>
+            </button>
+            <button class="top-nav__tab" data-tab="puzzle" aria-label="Puzzle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+                <span class="top-nav__label">Puzzle</span>
+            </button>
+            <button class="top-nav__tab" data-tab="tab-3" aria-label="Tab 3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                </svg>
+                <span class="top-nav__label">Tab 3</span>
+            </button>
+        </nav>
 
-                            <button
-                                class="carousel__nav carousel__nav--next"
-                                id="carouselNext"
-                                aria-label="Next visualization"
-                            >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                >
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg>
-                            </button>
-                        </header>
-
-                        <main class="stage">
-                            <div class="carousel">
-                                <div class="carousel__container">
-                                    <div class="carousel__slide" data-slide="sphere">
-                                        <canvas id="sphereCanvas" aria-label="Sphere visualization" role="img"></canvas>
-                                        <div id="sphereStatus" class="status"></div>
-                                    </div>
-                                    <div class="carousel__slide" data-slide="plane">
-                                        <canvas id="planeCanvas" aria-label="Plane visualization" role="img"></canvas>
-                                        <div id="planeStatus" class="status"></div>
-                                    </div>
-                                    <div class="carousel__slide" data-slide="ring">
-                                        <canvas id="ringCanvas" aria-label="Ring visualization" role="img"></canvas>
-                                        <div id="ringStatus" class="status"></div>
-                                    </div>
-                                    <div class="carousel__slide" data-slide="cylinder">
-                                        <canvas
-                                            id="cylinderCanvas"
-                                            aria-label="Cylinder visualization"
-                                            role="img"
-                                        ></canvas>
-                                        <div id="cylinderStatus" class="status"></div>
-                                    </div>
-                                </div>
-
-                                <div class="carousel__indicators">
-                                    <button
-                                        class="carousel__indicator active"
-                                        data-index="0"
-                                        aria-label="Sphere view"
-                                    ></button>
-                                    <button class="carousel__indicator" data-index="1" aria-label="Plane view"></button>
-                                    <button class="carousel__indicator" data-index="2" aria-label="Ring view"></button>
-                                    <button
-                                        class="carousel__indicator"
-                                        data-index="3"
-                                        aria-label="Cylinder view"
-                                    ></button>
-                                </div>
-                            </div>
-                        </main>
+        <!-- Tab panels -->
+        <div class="tab-panel active" data-panel="light-paths">
+            <div class="app-container">
+                <nav class="sidebar">
+                    <div class="sidebar__header">
+                        <h2>Light Paths</h2>
+                        <input type="text" id="pathSearch" class="sidebar__search" placeholder="Search paths..." />
                     </div>
-
-                    <aside class="right-panel">
-                        <div class="right-panel__header">
-                            <h2>Current Selection</h2>
-                        </div>
-                        <div id="selectedData" class="right-panel__content">
-                            <!-- Selected data will be populated by JavaScript -->
-                        </div>
-                    </aside>
-                </div>
-            </div>
-
-            <div class="tab-panel" data-panel="divine-hexagon">
-                <nav class="hexagon-sidebar">
-                    <div class="hexagon-sidebar__header">
-                        <h2>Divine Hexagon</h2>
-                        <p>Enter 6 vertex coordinates</p>
-                    </div>
-                    <div class="hexagon-sidebar__form">
-                        <div class="coord-input" data-index="0">
-                            <label class="coord-input__label">Vertex 1</label>
-                            <input type="text" class="coord-input__field" placeholder="x, y, z" />
-                        </div>
-                        <div class="coord-input" data-index="1">
-                            <label class="coord-input__label">Vertex 2</label>
-                            <input type="text" class="coord-input__field" placeholder="x, y, z" />
-                        </div>
-                        <div class="coord-input" data-index="2">
-                            <label class="coord-input__label">Vertex 3</label>
-                            <input type="text" class="coord-input__field" placeholder="x, y, z" />
-                        </div>
-                        <div class="coord-input" data-index="3">
-                            <label class="coord-input__label">Vertex 4</label>
-                            <input type="text" class="coord-input__field" placeholder="x, y, z" />
-                        </div>
-                        <div class="coord-input" data-index="4">
-                            <label class="coord-input__label">Vertex 5</label>
-                            <input type="text" class="coord-input__field" placeholder="x, y, z" />
-                        </div>
-                        <div class="coord-input" data-index="5">
-                            <label class="coord-input__label">Vertex 6</label>
-                            <input type="text" class="coord-input__field" placeholder="x, y, z" />
-                        </div>
-                    </div>
-                    <div class="hexagon-sidebar__status" id="hexagonStatus"></div>
+                    <ul id="pathList" class="sidebar__list">
+                        <!-- Paths will be populated by JavaScript -->
+                    </ul>
                 </nav>
-                <div class="hexagon-content">
-                    <canvas id="hexagonCanvas" aria-label="Hexagon visualization" role="img"></canvas>
-                </div>
-            </div>
+                <div class="app">
+                    <header class="hero">
+                        <button class="carousel__nav carousel__nav--prev" id="carouselPrev"
+                            aria-label="Previous visualization">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
 
-            <div class="tab-panel" data-panel="puzzle">
-                <div class="puzzle-layout">
-                    <nav class="puzzle-sidebar">
-                        <div class="puzzle-sidebar__header">
-                            <h2>Puzzle Figures</h2>
-                            <p>Use Show to display a figure, Len to label each edge, and the arrow keys to reposition the selected figure.</p>
-                        </div>
-                        <ul id="puzzleFigureList" class="puzzle-figure-list">
-                            <!-- Figures are populated by JavaScript -->
-                        </ul>
-                        <div id="puzzleSidebarStatus" class="puzzle-sidebar__status"></div>
-                    </nav>
-
-                    <div class="puzzle-app">
-                        <header class="hero puzzle-hero">
-                            <div class="hero__content">
-                                <div class="carousel__titles">
-                                    <h3 class="carousel__title active">Puzzle</h3>
-                                </div>
-                                <div id="puzzleSelectionSummary" class="puzzle-selection-summary" hidden></div>
+                        <div class="hero__content">
+                            <div class="carousel__titles">
+                                <h3 class="carousel__title active" data-index="0">Sphere</h3>
+                                <h3 class="carousel__title" data-index="1">Plane</h3>
+                                <h3 class="carousel__title" data-index="2">Ring</h3>
+                                <h3 class="carousel__title" data-index="3">Cylinder</h3>
                             </div>
-                        </header>
+                            <div class="hero__actions">
+                                <span id="currentPath" class="current-path">default</span>
+                                <button id="toggleButton" class="primary" hidden disabled>Loading...</button>
+                            </div>
+                        </div>
 
-                        <main class="puzzle-stage">
-                            <section class="puzzle-view">
-                                <div class="puzzle-view__header">
-                                    <h2>Sphere</h2>
-                                </div>
-                                <div class="puzzle-view__canvas">
-                                    <canvas
-                                        id="puzzleSphereCanvas"
-                                        aria-label="Puzzle sphere visualization"
-                                        role="img"
-                                    ></canvas>
-                                    <div id="puzzleSphereStatus" class="status"></div>
-                                </div>
-                            </section>
+                        <button class="carousel__nav carousel__nav--next" id="carouselNext"
+                            aria-label="Next visualization">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </header>
 
-                            <section class="puzzle-view">
-                                <div class="puzzle-view__header">
-                                    <h2>Plane</h2>
+                    <main class="stage">
+                        <div class="carousel">
+                            <div class="carousel__container">
+                                <div class="carousel__slide" data-slide="sphere">
+                                    <canvas id="sphereCanvas" aria-label="Sphere visualization" role="img"></canvas>
+                                    <div id="sphereStatus" class="status"></div>
                                 </div>
-                                <div class="puzzle-view__canvas">
-                                    <canvas
-                                        id="puzzlePlaneCanvas"
-                                        aria-label="Puzzle plane visualization"
-                                        role="img"
-                                    ></canvas>
-                                    <div id="puzzlePlaneStatus" class="status"></div>
+                                <div class="carousel__slide" data-slide="plane">
+                                    <canvas id="planeCanvas" aria-label="Plane visualization" role="img"></canvas>
+                                    <div id="planeStatus" class="status"></div>
                                 </div>
-                            </section>
-                        </main>
+                                <div class="carousel__slide" data-slide="ring">
+                                    <canvas id="ringCanvas" aria-label="Ring visualization" role="img"></canvas>
+                                    <div id="ringStatus" class="status"></div>
+                                </div>
+                                <div class="carousel__slide" data-slide="cylinder">
+                                    <canvas id="cylinderCanvas" aria-label="Cylinder visualization" role="img"></canvas>
+                                    <div id="cylinderStatus" class="status"></div>
+                                </div>
+                            </div>
+
+                            <div class="carousel__indicators">
+                                <button class="carousel__indicator active" data-index="0"
+                                    aria-label="Sphere view"></button>
+                                <button class="carousel__indicator" data-index="1" aria-label="Plane view"></button>
+                                <button class="carousel__indicator" data-index="2" aria-label="Ring view"></button>
+                                <button class="carousel__indicator" data-index="3" aria-label="Cylinder view"></button>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+
+                <aside class="right-panel">
+                    <div class="right-panel__header">
+                        <h2>Current Selection</h2>
+                    </div>
+                    <div id="selectedData" class="right-panel__content">
+                        <!-- Selected data will be populated by JavaScript -->
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <div class="tab-panel" data-panel="divine-hexagon">
+            <nav class="hexagon-sidebar">
+                <div class="hexagon-sidebar__header">
+                    <h2>Divine Hexagon</h2>
+                    <p>Hard-coded tower top positions</p>
+                    <div class="hexagon-projection-toggle" role="group" aria-label="Hexagon projection mode">
+                        <button type="button" class="hexagon-projection-toggle__button active"
+                            data-hexagon-projection="perspective" aria-pressed="true">
+                            Perspective
+                        </button>
+                        <button type="button" class="hexagon-projection-toggle__button"
+                            data-hexagon-projection="orthographic" aria-pressed="false">
+                            Orthographic
+                        </button>
                     </div>
                 </div>
+                <div id="hexagonTowerList" class="hexagon-sidebar__list"></div>
+            </nav>
+            <div class="hexagon-content">
+                <canvas id="hexagonCanvas" aria-label="Hexagon visualization" role="img"></canvas>
             </div>
+        </div>
 
-            <div class="tab-panel" data-panel="tab-3">
-                <div class="tab-panel__empty">
-                    <h2>Tab 3</h2>
-                    <p>Content coming soon.</p>
+        <div class="tab-panel" data-panel="puzzle">
+            <div class="puzzle-layout">
+                <nav class="puzzle-sidebar">
+                    <div class="puzzle-sidebar__header">
+                        <h2>Puzzle Figures</h2>
+                        <p>Use Show to display a figure, Len to label each edge, and the arrow keys to reposition the
+                            selected figure.</p>
+                    </div>
+                    <ul id="puzzleFigureList" class="puzzle-figure-list">
+                        <!-- Figures are populated by JavaScript -->
+                    </ul>
+                    <div id="puzzleSidebarStatus" class="puzzle-sidebar__status"></div>
+                </nav>
+
+                <div class="puzzle-app">
+                    <header class="hero puzzle-hero">
+                        <div class="hero__content">
+                            <div class="carousel__titles">
+                                <h3 class="carousel__title active">Puzzle</h3>
+                            </div>
+                            <div id="puzzleSelectionSummary" class="puzzle-selection-summary" hidden></div>
+                        </div>
+                    </header>
+
+                    <main class="puzzle-stage">
+                        <section class="puzzle-view">
+                            <div class="puzzle-view__header">
+                                <h2>Sphere</h2>
+                            </div>
+                            <div class="puzzle-view__canvas">
+                                <canvas id="puzzleSphereCanvas" aria-label="Puzzle sphere visualization"
+                                    role="img"></canvas>
+                                <div id="puzzleSphereStatus" class="status"></div>
+                            </div>
+                        </section>
+
+                        <section class="puzzle-view">
+                            <div class="puzzle-view__header">
+                                <h2>Plane</h2>
+                            </div>
+                            <div class="puzzle-view__canvas">
+                                <canvas id="puzzlePlaneCanvas" aria-label="Puzzle plane visualization"
+                                    role="img"></canvas>
+                                <div id="puzzlePlaneStatus" class="status"></div>
+                            </div>
+                        </section>
+                    </main>
                 </div>
             </div>
         </div>
 
-        <script type="module" src="./main.js"></script>
-    </body>
+        <div class="tab-panel" data-panel="tab-3">
+            <div class="tab-panel__empty">
+                <h2>Tab 3</h2>
+                <p>Content coming soon.</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
 </html>

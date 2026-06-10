@@ -163,7 +163,43 @@ body {
     color: var(--muted);
 }
 
-.hexagon-sidebar__form {
+.hexagon-projection-toggle {
+    display: inline-flex;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 4px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.hexagon-projection-toggle__button {
+    border: none;
+    border-radius: 999px;
+    padding: 7px 12px;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+.hexagon-projection-toggle__button:hover {
+    color: var(--text);
+}
+
+.hexagon-projection-toggle__button.active {
+    background: rgba(108, 241, 255, 0.12);
+    color: var(--accent);
+    box-shadow: inset 0 0 0 1px rgba(108, 241, 255, 0.22);
+}
+
+.hexagon-sidebar__list {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -172,70 +208,105 @@ body {
     flex: 1;
 }
 
-.coord-input {
+.tower-top-card {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+        rgba(6, 10, 18, 0.72);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
-.coord-input__label {
-    font-size: 0.75rem;
+.tower-top-card__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tower-top-card__marker {
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    flex: none;
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.06),
+        0 0 18px currentColor;
+}
+
+.tower-top-card__name {
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--accent);
     letter-spacing: 0.03em;
 }
 
-/* Per-vertex label colors */
-.coord-input[data-index='0'] .coord-input__label {
+.tower-top-card__coords {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.tower-top-card__coord {
+    min-width: 0;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tower-top-card__coord-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+.tower-top-card__coord-value {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text);
+    font-family: 'Space Grotesk', monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Per-vertex card colors */
+.tower-top-card[data-index='0'] .tower-top-card__name,
+.tower-top-card[data-index='0'] .tower-top-card__marker {
     color: #33e650;
 }
-.coord-input[data-index='1'] .coord-input__label {
+
+.tower-top-card[data-index='1'] .tower-top-card__name,
+.tower-top-card[data-index='1'] .tower-top-card__marker {
     color: #4d80ff;
 }
-.coord-input[data-index='2'] .coord-input__label {
+
+.tower-top-card[data-index='2'] .tower-top-card__name,
+.tower-top-card[data-index='2'] .tower-top-card__marker {
     color: #ff9933;
 }
-.coord-input[data-index='3'] .coord-input__label {
+
+.tower-top-card[data-index='3'] .tower-top-card__name,
+.tower-top-card[data-index='3'] .tower-top-card__marker {
     color: #fff34d;
 }
-.coord-input[data-index='4'] .coord-input__label {
+
+.tower-top-card[data-index='4'] .tower-top-card__name,
+.tower-top-card[data-index='4'] .tower-top-card__marker {
     color: #b34dff;
 }
-.coord-input[data-index='5'] .coord-input__label {
+
+.tower-top-card[data-index='5'] .tower-top-card__name,
+.tower-top-card[data-index='5'] .tower-top-card__marker {
     color: #ff4d4d;
-}
-
-.coord-input__field {
-    width: 100%;
-    padding: 10px 12px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: var(--text);
-    font-size: 0.85rem;
-    font-family: 'Space Grotesk', monospace;
-    outline: none;
-    transition:
-        border-color 0.2s,
-        background 0.2s;
-}
-
-.coord-input__field:focus {
-    border-color: var(--accent);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.coord-input__field::placeholder {
-    color: var(--muted);
-    opacity: 0.6;
-}
-
-.hexagon-sidebar__status {
-    padding: 8px 20px;
-    font-size: 0.8rem;
-    color: var(--accent);
-    min-height: 1.6em;
-    border-top: 1px solid var(--border);
 }
 
 .hexagon-content {
@@ -244,6 +315,9 @@ body {
     overflow: hidden;
     height: 100vh;
     min-width: 0;
+    background:
+        radial-gradient(circle at 50% 15%, rgba(122, 215, 255, 0.14), transparent 42%),
+        linear-gradient(180deg, rgba(6, 10, 18, 0.98), rgba(8, 14, 24, 0.98));
 }
 
 .hexagon-content canvas {

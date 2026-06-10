@@ -124,10 +124,31 @@ export function createProjectionMatrix(fov: number, aspect: number, near: number
 
     // prettier-ignore
     return new Float32Array([
-        f / aspect,     0,      0,                          0,
-        0,              f,      0,                          0,
-        0,              0,      (near + far) * rangeInv,    -1,
-        0,              0,      near * far * rangeInv * 2,  0,
+        f / aspect, 0, 0, 0,
+        0, f, 0, 0,
+        0, 0, (near + far) * rangeInv, -1,
+        0, 0, near * far * rangeInv * 2, 0,
+    ]);
+}
+
+export function createOrthographicMatrix(
+    left: number,
+    right: number,
+    bottom: number,
+    top: number,
+    near: number,
+    far: number
+): Float32Array {
+    const width = right - left;
+    const height = top - bottom;
+    const depth = near - far;
+
+    // prettier-ignore
+    return new Float32Array([
+        2 / width, 0, 0, 0,
+        0, 2 / height, 0, 0,
+        0, 0, 1 / depth, 0,
+        -(right + left) / width, -(top + bottom) / height, near / depth, 1,
     ]);
 }
 
@@ -138,10 +159,10 @@ export function createViewMatrix(eye: Vec3, target: Vec3, up: Vec3): Float32Arra
 
     // prettier-ignore
     return new Float32Array([
-        x[0],           y[0],           z[0],           0,
-        x[1],           y[1],           z[1],           0,
-        x[2],           y[2],           z[2],           0,
-        -dot(x, eye),   -dot(y, eye),   -dot(z, eye),   1,
+        x[0], y[0], z[0], 0,
+        x[1], y[1], z[1], 0,
+        x[2], y[2], z[2], 0,
+        -dot(x, eye), -dot(y, eye), -dot(z, eye), 1,
     ]);
 }
 
