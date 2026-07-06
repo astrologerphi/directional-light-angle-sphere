@@ -15,6 +15,7 @@ import {
     getPathDataGroups,
     getPathDataGroupsFormatted,
     calculateAndFormatClosestFraction,
+    calculateAndPrintAngleFromTangent,
     getSphereLineIntersectionPoints,
 } from './utils';
 
@@ -654,6 +655,7 @@ window.printPathData = printPathData;
 window.getPathDataGroups = getPathDataGroups;
 window.getPathDataGroupsFormatted = getPathDataGroupsFormatted;
 window.calculateAndFormatClosestFraction = calculateAndFormatClosestFraction;
+window.calculateAndPrintAngleFromTangent = calculateAndPrintAngleFromTangent;
 window.getSphereLineIntersectionPoints = getSphereLineIntersectionPoints;
 window.towerTopPositions = TOWER_TOP_POSITIONS;
 

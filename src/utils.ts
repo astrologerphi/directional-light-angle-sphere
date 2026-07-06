@@ -105,6 +105,19 @@ export function calculateAndFormatClosestFraction(value: number, maxDenominator:
     return formatFraction(fraction.numerator, fraction.denominator);
 }
 
+export function calculateAndPrintAngleFromTangent(tangent: number, maxDenominator: number = 100): string {
+    if (!isFinite(tangent) || isNaN(tangent)) {
+        throw new Error('tangent must be a finite number');
+    }
+
+    const angle = Math.atan(tangent);
+    const formattedAngle = `pi * ${calculateAndFormatClosestFraction(angle / Math.PI, maxDenominator)}`;
+
+    console.log(formattedAngle);
+
+    return formattedAngle;
+}
+
 type SphereAnglePoint = { x: number; y: number };
 type SphereVector = { x: number; y: number; z: number };
 
